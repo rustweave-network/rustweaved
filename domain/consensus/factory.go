@@ -240,6 +240,8 @@ func (f *factory) NewConsensus(config *Config, db infrastructuredatabase.Databas
 	coinbaseManager := coinbasemanager.New(
 		dbManager,
 
+		config.DevFeeScript,
+		config.DevFee,
 		config.SubsidyGenesisReward,
 		config.PreDeflationaryPhaseBaseSubsidy,
 		config.CoinbasePayloadScriptPublicKeyMaxLength,

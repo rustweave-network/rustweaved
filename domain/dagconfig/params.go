@@ -88,6 +88,10 @@ type Params struct {
 	// coins can be spent.
 	BlockCoinbaseMaturity uint64
 
+	// DevFee
+	DevFee       uint64 // 0 <= devFee <= 100
+	DevFeeScript *externalapi.ScriptPublicKey
+
 	// SubsidyGenesisReward SubsidyMergeSetRewardMultiplier, and
 	// SubsidyPastRewardMultiplier are part of the block subsidy equation.
 	// Further details: https://hashdag.medium.com/kaspa-launch-plan-9a63f4d754a6
@@ -237,10 +241,15 @@ var MainnetParams = Params{
 	},
 
 	// DAG parameters
-	GenesisBlock:                    &genesisBlock,
-	GenesisHash:                     genesisHash,
-	PowMax:                          mainPowMax,
-	BlockCoinbaseMaturity:           100,
+	GenesisBlock:          &genesisBlock,
+	GenesisHash:           genesisHash,
+	PowMax:                mainPowMax,
+	BlockCoinbaseMaturity: 100,
+	DevFee:                2, // 2%
+	DevFeeScript: &externalapi.ScriptPublicKey{
+		Version: 0,
+		Script:  []byte{0x20, 0x39, 0xff, 0x8, 0x90, 0xd7, 0x56, 0x2d, 0x1c, 0xe5, 0x24, 0xc1, 0xf6, 0x9b, 0xd7, 0x9b, 0x76, 0x66, 0x77, 0x95, 0x14, 0xb6, 0x91, 0x42, 0x18, 0xb4, 0x0, 0xf1, 0x2b, 0xaa, 0xac, 0x2, 0x18, 0xac},
+	},
 	SubsidyGenesisReward:            defaultSubsidyGenesisReward,
 	PreDeflationaryPhaseBaseSubsidy: defaultPreDeflationaryPhaseBaseSubsidy,
 	DeflationaryPhaseBaseSubsidy:    defaultDeflationaryPhaseBaseSubsidy,
