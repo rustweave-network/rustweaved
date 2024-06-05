@@ -1,11 +1,12 @@
 package difficultymanager
 
 import (
+	"math"
+	"math/big"
+
 	"github.com/rustweave-network/rustweaved/domain/consensus/model"
 	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
 	"github.com/rustweave-network/rustweaved/util/difficulty"
-	"math"
-	"math/big"
 )
 
 type difficultyBlock struct {

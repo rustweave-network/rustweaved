@@ -1,8 +1,9 @@
 package dagconfig
 
 import (
-	"github.com/rustweave-network/rustweaved/domain/consensus/utils/constants"
 	"time"
+
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/constants"
 )
 
 // The documentation refers to the following constants which aren't explicated in the code:

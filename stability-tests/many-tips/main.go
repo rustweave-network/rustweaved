@@ -108,7 +108,7 @@ func startNode() (teardown func(), err error) {
 	}
 	log.Infof("rustweaved datadir: %s", dataDir)
 
-	rustweavedCmd, err := common.StartCmd("KASPAD",
+	rustweavedCmd, err := common.StartCmd("RUSTWEAVED",
 		"rustweaved",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"--appdir", dataDir,

@@ -44,7 +44,7 @@ func (c *gRPCConnection) sendLoop() error {
 		}
 
 		blockDelayOnce.Do(func() {
-			experimentalDelayEnv := os.Getenv("KASPA_EXPERIMENTAL_DELAY")
+			experimentalDelayEnv := os.Getenv("RUSTWEAVE_EXPERIMENTAL_DELAY")
 			if experimentalDelayEnv != "" {
 				blockDelay, err = strconv.Atoi(experimentalDelayEnv)
 				if err != nil {

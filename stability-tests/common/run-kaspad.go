@@ -16,7 +16,7 @@ func RunRustweavedForTesting(t *testing.T, testName string, rpcAddress string) f
 		t.Fatalf("TempDir: %s", err)
 	}
 
-	rustweavedRunCommand, err := StartCmd("KASPAD",
+	rustweavedRunCommand, err := StartCmd("RUSTWEAVED",
 		"rustweaved",
 		NetworkCliArgumentFromNetParams(&dagconfig.DevnetParams),
 		"--appdir", appDir,
