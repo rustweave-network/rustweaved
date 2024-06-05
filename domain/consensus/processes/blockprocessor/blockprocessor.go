@@ -3,10 +3,10 @@ package blockprocessor
 import (
 	"time"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/processes/blockprocessor/blocklogger"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/processes/blockprocessor/blocklogger"
+	"github.com/rustweave-network/rustweaved/infrastructure/logger"
 )
 
 // blockProcessor is responsible for processing incoming blocks

@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
 func (x *KaspadMessage_GetBlockCountRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_GetBlockCountRequest is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_GetBlockCountRequest is nil")
 	}
 	return &appmessage.GetBlockCountRequestMessage{}, nil
 }
@@ -19,7 +19,7 @@ func (x *KaspadMessage_GetBlockCountRequest) fromAppMessage(_ *appmessage.GetBlo
 
 func (x *KaspadMessage_GetBlockCountResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_GetBlockCountResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_GetBlockCountResponse is nil")
 	}
 	return x.GetBlockCountResponse.toAppMessage()
 }

@@ -1,19 +1,19 @@
 package blockrelay
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	"github.com/kaspanet/kaspad/app/protocol/flowcontext"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashset"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/protocol/common"
+	"github.com/rustweave-network/rustweaved/app/protocol/flowcontext"
+	peerpkg "github.com/rustweave-network/rustweaved/app/protocol/peer"
+	"github.com/rustweave-network/rustweaved/app/protocol/protocolerrors"
+	"github.com/rustweave-network/rustweaved/domain"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/ruleerrors"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/consensushashing"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/hashset"
+	"github.com/rustweave-network/rustweaved/infrastructure/config"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

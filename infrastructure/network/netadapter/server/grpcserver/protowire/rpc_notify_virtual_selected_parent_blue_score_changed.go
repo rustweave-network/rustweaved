@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
 func (x *KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest is nil")
 	}
 	return &appmessage.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage{}, nil
 }
@@ -19,7 +19,7 @@ func (x *KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) fromA
 
 func (x *KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse is nil")
 	}
 	return x.NotifyVirtualSelectedParentBlueScoreChangedResponse.toAppMessage()
 }
@@ -51,7 +51,7 @@ func (x *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage) toAppMessag
 
 func (x *KaspadMessage_VirtualSelectedParentBlueScoreChangedNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_VirtualSelectedParentBlueScoreChangedNotification is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_VirtualSelectedParentBlueScoreChangedNotification is nil")
 	}
 	return x.VirtualSelectedParentBlueScoreChangedNotification.toAppMessage()
 }

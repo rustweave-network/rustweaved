@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
 func (x *KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_NotifyPruningPointUTXOSetOverrideRequest is nil")
 	}
 	return &appmessage.NotifyPruningPointUTXOSetOverrideRequestMessage{}, nil
 }
@@ -19,7 +19,7 @@ func (x *KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest) fromAppMessage(
 
 func (x *KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_NotifyPruningPointUTXOSetOverrideResponse is nil")
 	}
 	return x.NotifyPruningPointUTXOSetOverrideResponse.toAppMessage()
 }
@@ -51,7 +51,7 @@ func (x *NotifyPruningPointUTXOSetOverrideResponseMessage) toAppMessage() (appme
 
 func (x *KaspadMessage_PruningPointUTXOSetOverrideNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_PruningPointUTXOSetOverrideNotification is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_PruningPointUTXOSetOverrideNotification is nil")
 	}
 	return &appmessage.PruningPointUTXOSetOverrideNotificationMessage{}, nil
 }
@@ -63,7 +63,7 @@ func (x *KaspadMessage_PruningPointUTXOSetOverrideNotification) fromAppMessage(_
 
 func (x *KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideRequest is nil")
 	}
 	return &appmessage.StopNotifyingPruningPointUTXOSetOverrideRequestMessage{}, nil
 }
@@ -75,7 +75,7 @@ func (x *KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) fromAppM
 
 func (x *KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideResponse is nil")
 	}
 	return x.StopNotifyingPruningPointUTXOSetOverrideResponse.toAppMessage()
 }

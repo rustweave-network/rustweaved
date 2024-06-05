@@ -9,9 +9,9 @@ import (
 
 	"github.com/btcsuite/winsvc/eventlog"
 	"github.com/btcsuite/winsvc/svc"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/os/signal"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/rustweave-network/rustweaved/infrastructure/config"
+	"github.com/rustweave-network/rustweaved/infrastructure/os/signal"
+	"github.com/rustweave-network/rustweaved/version"
 )
 
 // Service houses the main service handler which handles all service
@@ -64,7 +64,7 @@ func (s *Service) Execute(args []string, r <-chan svc.ChangeRequest, changes cha
 	// be properly logged
 	doneChan := make(chan error)
 	startedChan := make(chan struct{})
-	spawn("kaspadMain-windows", func() {
+	spawn("rustweavedMain-windows", func() {
 		err := s.main(startedChan)
 		doneChan <- err
 	})

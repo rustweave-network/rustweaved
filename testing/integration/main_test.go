@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/rustweave-network/rustweaved/infrastructure/logger"
 	"os"
 	"testing"
 )

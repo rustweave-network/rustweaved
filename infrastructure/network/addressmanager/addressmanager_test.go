@@ -9,10 +9,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/db/database/ldb"
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
+	"github.com/rustweave-network/rustweaved/infrastructure/config"
+	"github.com/rustweave-network/rustweaved/infrastructure/db/database/ldb"
+	"github.com/rustweave-network/rustweaved/util/mstime"
 )
 
 func newAddressManagerForTest(t *testing.T, testName string) (addressManager *AddressManager, teardown func()) {

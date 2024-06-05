@@ -2,19 +2,19 @@ package consensusstatemanager_test
 
 import (
 	"errors"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/utxo"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model"
 
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
+	"github.com/rustweave-network/rustweaved/domain/consensus/ruleerrors"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/consensushashing"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
+	"github.com/rustweave-network/rustweaved/domain/consensus"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/testutils"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/transactionhelper"
 )
 
 func TestDoubleSpends(t *testing.T) {

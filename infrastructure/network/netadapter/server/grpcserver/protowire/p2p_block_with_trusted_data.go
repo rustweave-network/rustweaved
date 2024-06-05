@@ -1,15 +1,15 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 	"math/big"
 )
 
 func (x *KaspadMessage_BlockWithTrustedData) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_BlockWithTrustedData is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_BlockWithTrustedData is nil")
 	}
 
 	msgBlock, err := x.BlockWithTrustedData.Block.toAppMessage()

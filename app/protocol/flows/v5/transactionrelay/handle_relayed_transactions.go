@@ -1,16 +1,16 @@
 package transactionrelay
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	"github.com/kaspanet/kaspad/app/protocol/flowcontext"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/protocol/common"
+	"github.com/rustweave-network/rustweaved/app/protocol/flowcontext"
+	"github.com/rustweave-network/rustweaved/app/protocol/protocolerrors"
+	"github.com/rustweave-network/rustweaved/domain"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/consensushashing"
+	"github.com/rustweave-network/rustweaved/domain/miningmanager/mempool"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/rustweave-network/rustweaved/infrastructure/logger"
+	"github.com/rustweave-network/rustweaved/stability-tests/common"
+	"github.com/rustweave-network/rustweaved/util/panics"
 )
 
 var (

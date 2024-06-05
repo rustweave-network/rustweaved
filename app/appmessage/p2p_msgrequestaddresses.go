@@ -5,7 +5,7 @@
 package appmessage
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
 )
 
 // MsgRequestAddresses implements the Message interface and represents a kaspa

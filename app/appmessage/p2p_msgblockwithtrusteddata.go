@@ -1,7 +1,7 @@
 package appmessage
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
 	"math/big"
 )
 

@@ -1,7 +1,7 @@
 package flowcontext
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/addressmanager"
 )
 
 // AddressManager returns the address manager associated to the flow context.

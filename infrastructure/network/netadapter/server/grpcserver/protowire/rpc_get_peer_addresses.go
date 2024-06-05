@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
 func (x *KaspadMessage_GetPeerAddressesRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_GetPeerAddressesRequest is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_GetPeerAddressesRequest is nil")
 	}
 	return &appmessage.GetPeerAddressesRequestMessage{}, nil
 }
@@ -18,7 +18,7 @@ func (x *KaspadMessage_GetPeerAddressesRequest) fromAppMessage(_ *appmessage.Get
 
 func (x *KaspadMessage_GetPeerAddressesResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_GetPeerAddressesResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_GetPeerAddressesResponse is nil")
 	}
 	return x.GetPeerAddressesResponse.toAppMessage()
 }

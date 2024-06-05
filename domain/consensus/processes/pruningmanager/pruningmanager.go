@@ -1,15 +1,15 @@
 package pruningmanager
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/multiset"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/virtual"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/util/staging"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/consensushashing"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/multiset"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/utxo"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/virtual"
+	"github.com/rustweave-network/rustweaved/infrastructure/db/database"
+	"github.com/rustweave-network/rustweaved/infrastructure/logger"
+	"github.com/rustweave-network/rustweaved/util/staging"
 	"github.com/pkg/errors"
 	"sort"
 )

@@ -1,7 +1,7 @@
 package flowcontext
 
 import (
-	"github.com/kaspanet/kaspad/domain"
+	"github.com/rustweave-network/rustweaved/domain"
 )
 
 // Domain returns the Domain object associated to the flow context.

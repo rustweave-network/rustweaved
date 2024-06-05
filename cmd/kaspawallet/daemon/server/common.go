@@ -1,6 +1,6 @@
 package server
 
-import "github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+import "github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
 
 type walletUTXO struct {
 	Outpoint  *externalapi.DomainOutpoint

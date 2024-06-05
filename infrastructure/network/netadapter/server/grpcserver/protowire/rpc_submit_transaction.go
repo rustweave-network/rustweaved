@@ -3,13 +3,13 @@ package protowire
 import (
 	"math"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
 func (x *KaspadMessage_SubmitTransactionRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_SubmitTransactionRequest is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_SubmitTransactionRequest is nil")
 	}
 	return x.SubmitTransactionRequest.toAppMessage()
 }
@@ -39,7 +39,7 @@ func (x *SubmitTransactionRequestMessage) toAppMessage() (appmessage.Message, er
 
 func (x *KaspadMessage_SubmitTransactionResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_SubmitTransactionResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_SubmitTransactionResponse is nil")
 	}
 	return x.SubmitTransactionResponse.toAppMessage()
 }

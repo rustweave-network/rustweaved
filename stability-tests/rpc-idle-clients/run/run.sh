@@ -24,7 +24,7 @@ KASPAD_EXIT_CODE=$?
 KASPAD_KILLED=1
 
 echo "Exit code: $TEST_EXIT_CODE"
-echo "Kaspad exit code: $KASPAD_EXIT_CODE"
+echo "Rustweaved exit code: $KASPAD_EXIT_CODE"
 
 if [ $TEST_EXIT_CODE -eq 0 ] && [ $KASPAD_EXIT_CODE -eq 0 ]; then
   echo "rpc-idle-clients test: PASSED"

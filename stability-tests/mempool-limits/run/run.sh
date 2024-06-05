@@ -19,7 +19,7 @@ wait $KASPAD_PID
 KASPAD_EXIT_CODE=$?
 
 echo "Exit code: $TEST_EXIT_CODE"
-echo "Kaspad exit code: $KASPAD_EXIT_CODE"
+echo "Rustweaved exit code: $KASPAD_EXIT_CODE"
 
 if [ $TEST_EXIT_CODE -eq 0 ] && [ $KASPAD_EXIT_CODE -eq 0 ]; then
   echo "mempool-limits test: PASSED"

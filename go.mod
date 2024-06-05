@@ -1,4 +1,4 @@
-module github.com/kaspanet/kaspad
+module github.com/rustweave-network/rustweaved
 
 go 1.18
 

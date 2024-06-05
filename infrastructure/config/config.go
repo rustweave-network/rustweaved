@@ -18,21 +18,21 @@ import (
 
 	"github.com/btcsuite/go-socks/socks"
 	"github.com/jessevdk/go-flags"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/util"
-	"github.com/kaspanet/kaspad/util/network"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/dagconfig"
+	"github.com/rustweave-network/rustweaved/infrastructure/logger"
+	"github.com/rustweave-network/rustweaved/util"
+	"github.com/rustweave-network/rustweaved/util/network"
+	"github.com/rustweave-network/rustweaved/version"
 	"github.com/pkg/errors"
 )
 
 const (
-	defaultConfigFilename      = "kaspad.conf"
+	defaultConfigFilename      = "rustweaved.conf"
 	defaultLogLevel            = "info"
 	defaultLogDirname          = "logs"
-	defaultLogFilename         = "kaspad.log"
-	defaultErrLogFilename      = "kaspad_err.log"
+	defaultLogFilename         = "rustweaved.log"
+	defaultErrLogFilename      = "rustweaved_err.log"
 	defaultTargetOutboundPeers = 8
 	defaultMaxInboundPeers     = 117
 	defaultBanDuration         = time.Hour * 24
@@ -58,7 +58,7 @@ const (
 
 var (
 	// DefaultAppDir is the default home directory for kaspad.
-	DefaultAppDir = util.AppDir("kaspad", false)
+	DefaultAppDir = util.AppDir("rustweaved", false)
 
 	defaultConfigFile  = filepath.Join(DefaultAppDir, defaultConfigFilename)
 	defaultDataDir     = filepath.Join(DefaultAppDir)

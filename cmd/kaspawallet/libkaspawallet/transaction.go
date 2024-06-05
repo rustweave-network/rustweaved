@@ -1,13 +1,13 @@
 package libkaspawallet
 
 import (
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/rustweave-network/rustweaved/cmd/kaspawallet/libkaspawallet/bip32"
+	"github.com/rustweave-network/rustweaved/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/constants"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/subnetworks"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/txscript"
+	"github.com/rustweave-network/rustweaved/util"
 	"github.com/pkg/errors"
 )
 

@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/rustweave-network/rustweaved/cmd/kaspawallet/daemon/pb"
+	"github.com/rustweave-network/rustweaved/cmd/kaspawallet/libkaspawallet"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/constants"
+	"github.com/rustweave-network/rustweaved/util"
 	"github.com/pkg/errors"
 )
 

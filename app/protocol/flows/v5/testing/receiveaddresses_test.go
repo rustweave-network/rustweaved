@@ -1,16 +1,16 @@
 package testing
 
 import (
-	"github.com/kaspanet/kaspad/app/protocol/flows/v5/addressexchange"
+	"github.com/rustweave-network/rustweaved/app/protocol/flows/v5/addressexchange"
 	"testing"
 	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
+	peerpkg "github.com/rustweave-network/rustweaved/app/protocol/peer"
+	"github.com/rustweave-network/rustweaved/domain/consensus"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/testutils"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/addressmanager"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter/router"
 )
 
 type fakeReceiveAddressesContext struct{}

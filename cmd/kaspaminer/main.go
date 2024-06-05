@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/rustweave-network/rustweaved/util"
 
-	"github.com/kaspanet/kaspad/version"
+	"github.com/rustweave-network/rustweaved/version"
 
 	"github.com/pkg/errors"
 
 	_ "net/http/pprof"
 
-	"github.com/kaspanet/kaspad/infrastructure/os/signal"
-	"github.com/kaspanet/kaspad/util/panics"
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/rustweave-network/rustweaved/infrastructure/os/signal"
+	"github.com/rustweave-network/rustweaved/util/panics"
+	"github.com/rustweave-network/rustweaved/util/profiling"
 )
 
 func main() {

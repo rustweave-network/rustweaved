@@ -1,13 +1,13 @@
 package ready
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/protocol/common"
 	"sync/atomic"
 
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	routerpkg "github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	peerpkg "github.com/rustweave-network/rustweaved/app/protocol/peer"
+	"github.com/rustweave-network/rustweaved/app/protocol/protocolerrors"
+	routerpkg "github.com/rustweave-network/rustweaved/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

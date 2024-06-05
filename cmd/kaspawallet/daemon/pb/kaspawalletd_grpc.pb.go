@@ -384,7 +384,7 @@ func _Kaspawalletd_GetVersion_Handler(srv interface{}, ctx context.Context, dec 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Kaspawalletd_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "kaspawalletd.kaspawalletd",
+	ServiceName: "rustweavewalletd.kaspawalletd",
 	HandlerType: (*KaspawalletdServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -429,5 +429,5 @@ var Kaspawalletd_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "kaspawalletd.proto",
+	Metadata: "rustweavewalletd.proto",
 }

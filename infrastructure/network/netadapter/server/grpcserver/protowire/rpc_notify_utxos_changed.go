@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
 func (x *KaspadMessage_NotifyUtxosChangedRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_NotifyUtxosChangedRequest is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_NotifyUtxosChangedRequest is nil")
 	}
 	return x.NotifyUtxosChangedRequest.toAppMessage()
 }
@@ -62,7 +62,7 @@ func (x *NotifyUtxosChangedResponseMessage) toAppMessage() (appmessage.Message, 
 
 func (x *KaspadMessage_UtxosChangedNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_UtxosChangedNotification is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_UtxosChangedNotification is nil")
 	}
 	return x.UtxosChangedNotification.toAppMessage()
 }

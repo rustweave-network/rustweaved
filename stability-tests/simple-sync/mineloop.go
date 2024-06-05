@@ -4,10 +4,10 @@ import (
 	"time"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/stability-tests/common/rpc"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
+	"github.com/rustweave-network/rustweaved/stability-tests/common"
+	"github.com/rustweave-network/rustweaved/stability-tests/common/rpc"
+	"github.com/rustweave-network/rustweaved/util"
 	"github.com/pkg/errors"
 )
 
@@ -130,7 +130,7 @@ func areTipsAreEqual(resultA, resultB *appmessage.GetBlockDAGInfoResponseMessage
 
 func mineBlock(syncerRPCAddress string, miningAddress util.Address) error {
 	kaspaMinerCmd, err := common.StartCmd("MINER",
-		"kaspaminer",
+		"rustweaveminer",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"-s", syncerRPCAddress,
 		"--mine-when-not-synced",

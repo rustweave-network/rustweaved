@@ -1,11 +1,11 @@
 package mempool
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool/model"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/ruleerrors"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/constants"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/utxo"
+	"github.com/rustweave-network/rustweaved/domain/miningmanager/mempool/model"
 	"github.com/pkg/errors"
 )
 

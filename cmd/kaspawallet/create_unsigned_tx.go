@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/client"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/utils"
+	"github.com/rustweave-network/rustweaved/cmd/kaspawallet/daemon/client"
+	"github.com/rustweave-network/rustweaved/cmd/kaspawallet/daemon/pb"
+	"github.com/rustweave-network/rustweaved/cmd/kaspawallet/utils"
 )
 
 func createUnsignedTransaction(conf *createUnsignedTransactionConfig) error {

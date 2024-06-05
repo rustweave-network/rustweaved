@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/rustweave-network/rustweaved/version"
 	"os"
 	"time"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter/server/grpcserver/protowire"
 
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/encoding/protojson"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient/grpcclient"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/rpcclient/grpcclient"
 )
 
 func main() {

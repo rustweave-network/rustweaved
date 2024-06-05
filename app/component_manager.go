@@ -4,22 +4,22 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
+	"github.com/rustweave-network/rustweaved/domain/miningmanager/mempool"
 
-	"github.com/kaspanet/kaspad/app/protocol"
-	"github.com/kaspanet/kaspad/app/rpc"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/utxoindex"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	infrastructuredatabase "github.com/kaspanet/kaspad/infrastructure/db/database"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/id"
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/rustweave-network/rustweaved/app/protocol"
+	"github.com/rustweave-network/rustweaved/app/rpc"
+	"github.com/rustweave-network/rustweaved/domain"
+	"github.com/rustweave-network/rustweaved/domain/consensus"
+	"github.com/rustweave-network/rustweaved/domain/utxoindex"
+	"github.com/rustweave-network/rustweaved/infrastructure/config"
+	infrastructuredatabase "github.com/rustweave-network/rustweaved/infrastructure/db/database"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/addressmanager"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/connmanager"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter/id"
+	"github.com/rustweave-network/rustweaved/util/panics"
 )
 
 // ComponentManager is a wrapper for all the kaspad services
@@ -55,11 +55,11 @@ func (a *ComponentManager) Start() {
 func (a *ComponentManager) Stop() {
 	// Make sure this only happens once.
 	if atomic.AddInt32(&a.shutdown, 1) != 1 {
-		log.Infof("Kaspad is already in the process of shutting down")
+		log.Infof("Rustweaved is already in the process of shutting down")
 		return
 	}
 
-	log.Warnf("Kaspad shutting down")
+	log.Warnf("Rustweaved shutting down")
 
 	a.connectionManager.Stop()
 

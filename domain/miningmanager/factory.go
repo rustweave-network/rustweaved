@@ -1,10 +1,10 @@
 package miningmanager
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensusreference"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/domain/miningmanager/blocktemplatebuilder"
-	mempoolpkg "github.com/kaspanet/kaspad/domain/miningmanager/mempool"
+	"github.com/rustweave-network/rustweaved/domain/consensusreference"
+	"github.com/rustweave-network/rustweaved/domain/dagconfig"
+	"github.com/rustweave-network/rustweaved/domain/miningmanager/blocktemplatebuilder"
+	mempoolpkg "github.com/rustweave-network/rustweaved/domain/miningmanager/mempool"
 	"sync"
 	"time"
 )

@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/stability-tests/common"
+	"github.com/rustweave-network/rustweaved/infrastructure/config"
+	"github.com/rustweave-network/rustweaved/stability-tests/common"
 )
 
 const (

@@ -5,15 +5,15 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/kaspanet/kaspad/domain/consensusreference"
+	"github.com/rustweave-network/rustweaved/domain/consensusreference"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/miningmanager"
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
-	"github.com/kaspanet/kaspad/domain/prefixmanager"
-	"github.com/kaspanet/kaspad/domain/prefixmanager/prefix"
-	infrastructuredatabase "github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/rustweave-network/rustweaved/domain/consensus"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/miningmanager"
+	"github.com/rustweave-network/rustweaved/domain/miningmanager/mempool"
+	"github.com/rustweave-network/rustweaved/domain/prefixmanager"
+	"github.com/rustweave-network/rustweaved/domain/prefixmanager/prefix"
+	infrastructuredatabase "github.com/rustweave-network/rustweaved/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

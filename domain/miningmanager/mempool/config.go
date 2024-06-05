@@ -3,11 +3,11 @@ package mempool
 import (
 	"time"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/constants"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/rustweave-network/rustweaved/util"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/rustweave-network/rustweaved/domain/dagconfig"
 )
 
 const (

@@ -8,20 +8,20 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/kaspanet/kaspad/version"
+	"github.com/rustweave-network/rustweaved/version"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/util/txmass"
+	"github.com/rustweave-network/rustweaved/util/txmass"
 
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/rustweave-network/rustweaved/util/profiling"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/keys"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
-	"github.com/kaspanet/kaspad/infrastructure/os/signal"
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/rustweave-network/rustweaved/cmd/kaspawallet/daemon/pb"
+	"github.com/rustweave-network/rustweaved/cmd/kaspawallet/keys"
+	"github.com/rustweave-network/rustweaved/domain/dagconfig"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/rpcclient"
+	"github.com/rustweave-network/rustweaved/infrastructure/os/signal"
+	"github.com/rustweave-network/rustweaved/util/panics"
 	"github.com/pkg/errors"
 
 	"google.golang.org/grpc"
@@ -101,7 +101,7 @@ func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath stri
 	}
 
 	coinbaseMaturity := params.BlockCoinbaseMaturity
-	if dagInfo.NetworkName == "kaspa-testnet-11" {
+	if dagInfo.NetworkName == "rustweave-testnet-11" {
 		coinbaseMaturity = 1000
 	}
 

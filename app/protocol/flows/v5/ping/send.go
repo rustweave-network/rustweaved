@@ -1,16 +1,16 @@
 package ping
 
 import (
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	"github.com/kaspanet/kaspad/app/protocol/flowcontext"
+	"github.com/rustweave-network/rustweaved/app/protocol/common"
+	"github.com/rustweave-network/rustweaved/app/protocol/flowcontext"
 	"github.com/pkg/errors"
 	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
-	"github.com/kaspanet/kaspad/util/random"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
+	peerpkg "github.com/rustweave-network/rustweaved/app/protocol/peer"
+	"github.com/rustweave-network/rustweaved/app/protocol/protocolerrors"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter/router"
+	"github.com/rustweave-network/rustweaved/util/random"
 )
 
 // SendPingsContext is the interface for the context needed for the SendPings flow.

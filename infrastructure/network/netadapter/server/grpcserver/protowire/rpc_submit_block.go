@@ -1,7 +1,7 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 	"math"
 )
@@ -35,7 +35,7 @@ func (x *SubmitBlockRequestMessage) toAppMessage() (appmessage.Message, error) {
 
 func (x *KaspadMessage_SubmitBlockResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_SubmitBlockResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_SubmitBlockResponse is nil")
 	}
 	return x.SubmitBlockResponse.toAppMessage()
 }

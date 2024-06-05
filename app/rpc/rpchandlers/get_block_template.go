@@ -1,14 +1,14 @@
 package rpchandlers
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
-	"github.com/kaspanet/kaspad/util"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/rpc/rpccontext"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/transactionhelper"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/txscript"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter/router"
+	"github.com/rustweave-network/rustweaved/util"
+	"github.com/rustweave-network/rustweaved/version"
 )
 
 // HandleGetBlockTemplate handles the respectively named RPC command

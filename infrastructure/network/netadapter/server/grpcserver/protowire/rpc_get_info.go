@@ -1,7 +1,7 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
@@ -16,7 +16,7 @@ func (x *KaspadMessage_GetInfoRequest) fromAppMessage(_ *appmessage.GetInfoReque
 
 func (x *KaspadMessage_GetInfoResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_GetInfoResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_GetInfoResponse is nil")
 	}
 	return x.GetInfoResponse.toAppMessage()
 }

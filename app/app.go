@@ -7,17 +7,17 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
-	"github.com/kaspanet/kaspad/infrastructure/db/database/ldb"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/infrastructure/os/execenv"
-	"github.com/kaspanet/kaspad/infrastructure/os/limits"
-	"github.com/kaspanet/kaspad/infrastructure/os/signal"
-	"github.com/kaspanet/kaspad/infrastructure/os/winservice"
-	"github.com/kaspanet/kaspad/util/panics"
-	"github.com/kaspanet/kaspad/util/profiling"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/rustweave-network/rustweaved/infrastructure/config"
+	"github.com/rustweave-network/rustweaved/infrastructure/db/database"
+	"github.com/rustweave-network/rustweaved/infrastructure/db/database/ldb"
+	"github.com/rustweave-network/rustweaved/infrastructure/logger"
+	"github.com/rustweave-network/rustweaved/infrastructure/os/execenv"
+	"github.com/rustweave-network/rustweaved/infrastructure/os/limits"
+	"github.com/rustweave-network/rustweaved/infrastructure/os/signal"
+	"github.com/rustweave-network/rustweaved/infrastructure/os/winservice"
+	"github.com/rustweave-network/rustweaved/util/panics"
+	"github.com/rustweave-network/rustweaved/util/profiling"
+	"github.com/rustweave-network/rustweaved/version"
 )
 
 const (
@@ -31,8 +31,8 @@ var desiredLimits = &limits.DesiredLimits{
 }
 
 var serviceDescription = &winservice.ServiceDescription{
-	Name:        "kaspadsvc",
-	DisplayName: "Kaspad Service",
+	Name:        "rustweavedsvc",
+	DisplayName: "Rustweaved Service",
 	Description: "Downloads and stays synchronized with the Kaspa blockDAG and " +
 		"provides DAG services to applications.",
 }
@@ -145,7 +145,7 @@ func (app *kaspadApp) main(startedChan chan<- struct{}) error {
 		case <-time.After(shutdownTimeout):
 			log.Criticalf("Graceful shutdown timed out %s. Terminating...", shutdownTimeout)
 		}
-		log.Infof("Kaspad shutdown complete")
+		log.Infof("Rustweaved shutdown complete")
 	}()
 
 	componentManager.Start()

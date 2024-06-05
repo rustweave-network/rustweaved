@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/rustweave-network/rustweaved/infrastructure/config"
 	"github.com/pkg/errors"
 	"os"
 

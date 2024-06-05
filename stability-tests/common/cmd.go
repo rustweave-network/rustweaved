@@ -5,8 +5,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/rustweave-network/rustweaved/domain/dagconfig"
+	"github.com/rustweave-network/rustweaved/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 
@@ -28,5 +28,5 @@ func StartCmd(name string, args ...string) (*exec.Cmd, error) {
 
 // NetworkCliArgumentFromNetParams returns the kaspad command line argument that starts the given network.
 func NetworkCliArgumentFromNetParams(params *dagconfig.Params) string {
-	return fmt.Sprintf("--%s", strings.TrimPrefix(params.Name, "kaspa-"))
+	return fmt.Sprintf("--%s", strings.TrimPrefix(params.Name, "rustweave-"))
 }

@@ -3,12 +3,12 @@ package standalone
 import (
 	"time"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter"
 
 	"github.com/pkg/errors"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter/router"
 )
 
 // Routes holds the incoming and outgoing routes of a connection created by MinimalNetAdapter

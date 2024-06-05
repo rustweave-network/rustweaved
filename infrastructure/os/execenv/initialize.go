@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/kaspanet/kaspad/infrastructure/os/limits"
+	"github.com/rustweave-network/rustweaved/infrastructure/os/limits"
 )
 
 // Initialize initializes the execution environment required to run kaspad

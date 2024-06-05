@@ -1,7 +1,7 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
@@ -16,7 +16,7 @@ func (x *KaspadMessage_NotifyBlockAddedRequest) fromAppMessage(_ *appmessage.Not
 
 func (x *KaspadMessage_NotifyBlockAddedResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_NotifyBlockAddedResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_NotifyBlockAddedResponse is nil")
 	}
 	return x.NotifyBlockAddedResponse.toAppMessage()
 }
@@ -48,7 +48,7 @@ func (x *NotifyBlockAddedResponseMessage) toAppMessage() (appmessage.Message, er
 
 func (x *KaspadMessage_BlockAddedNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_BlockAddedNotification is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_BlockAddedNotification is nil")
 	}
 	return x.BlockAddedNotification.toAppMessage()
 }

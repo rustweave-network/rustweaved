@@ -8,10 +8,10 @@ import (
 	"math/big"
 
 	"github.com/kaspanet/go-muhash"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/blockheader"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/blockheader"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/subnetworks"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/transactionhelper"
 )
 
 var genesisTxOuts = []*externalapi.DomainTransactionOutput{}

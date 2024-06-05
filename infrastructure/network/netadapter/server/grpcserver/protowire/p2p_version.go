@@ -1,15 +1,15 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/id"
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter/id"
+	"github.com/rustweave-network/rustweaved/util/mstime"
 	"github.com/pkg/errors"
 )
 
 func (x *KaspadMessage_Version) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_Version is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_Version is nil")
 	}
 	return x.Version.toAppMessage()
 }

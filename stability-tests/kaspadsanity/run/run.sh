@@ -5,8 +5,8 @@ TEST_EXIT_CODE=$?
 echo "Exit code: $TEST_EXIT_CODE"
 
 if [ $TEST_EXIT_CODE -eq 0 ]; then
-  echo "kaspadsanity test: PASSED"
+  echo "rustweavedsanity test: PASSED"
   exit 0
 fi
-echo "kaspadsanity test: FAILED"
+echo "rustweavedsanity test: FAILED"
 exit 1

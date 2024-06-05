@@ -1,13 +1,13 @@
 package rpccontext
 
 import (
-	"github.com/kaspanet/kaspad/app/protocol"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/utxoindex"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/rustweave-network/rustweaved/app/protocol"
+	"github.com/rustweave-network/rustweaved/domain"
+	"github.com/rustweave-network/rustweaved/domain/utxoindex"
+	"github.com/rustweave-network/rustweaved/infrastructure/config"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/addressmanager"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/connmanager"
+	"github.com/rustweave-network/rustweaved/infrastructure/network/netadapter"
 )
 
 // Context represents the RPC context

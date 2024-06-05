@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
 func (x *KaspadMessage_Block) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrap(errorNil, "KaspadMessage_Block is nil")
+		return nil, errors.Wrap(errorNil, "RustweavedMessage_Block is nil")
 	}
 	return x.Block.toAppMessage()
 }

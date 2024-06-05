@@ -7,24 +7,24 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/rustweave-network/rustweaved/infrastructure/config"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/rustweave-network/rustweaved/util"
 	"github.com/pkg/errors"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/rustweave-network/rustweaved/version"
 )
 
 const (
-	defaultLogFilename          = "kaspaminer.log"
-	defaultErrLogFilename       = "kaspaminer_err.log"
+	defaultLogFilename          = "rustweaveminer.log"
+	defaultErrLogFilename       = "rustweaveminer_err.log"
 	defaultTargetBlockRateRatio = 2.0
 )
 
 var (
 	// Default configuration options
-	defaultAppDir     = util.AppDir("kaspaminer", false)
+	defaultAppDir     = util.AppDir("rustweaveminer", false)
 	defaultLogFile    = filepath.Join(defaultAppDir, defaultLogFilename)
 	defaultErrLogFile = filepath.Join(defaultAppDir, defaultErrLogFilename)
 	defaultRPCServer  = "localhost"

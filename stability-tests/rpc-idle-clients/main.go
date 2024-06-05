@@ -3,10 +3,10 @@ package main
 import (
 	"time"
 
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/stability-tests/common/rpc"
-	"github.com/kaspanet/kaspad/util/panics"
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/rustweave-network/rustweaved/stability-tests/common"
+	"github.com/rustweave-network/rustweaved/stability-tests/common/rpc"
+	"github.com/rustweave-network/rustweaved/util/panics"
+	"github.com/rustweave-network/rustweaved/util/profiling"
 	"github.com/pkg/errors"
 )
 

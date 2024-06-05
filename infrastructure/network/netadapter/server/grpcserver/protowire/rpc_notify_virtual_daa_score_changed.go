@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
 func (x *KaspadMessage_NotifyVirtualDaaScoreChangedRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_NotifyVirtualDaaScoreChangedRequest is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_NotifyVirtualDaaScoreChangedRequest is nil")
 	}
 	return &appmessage.NotifyVirtualDaaScoreChangedRequestMessage{}, nil
 }
@@ -19,7 +19,7 @@ func (x *KaspadMessage_NotifyVirtualDaaScoreChangedRequest) fromAppMessage(_ *ap
 
 func (x *KaspadMessage_NotifyVirtualDaaScoreChangedResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_NotifyVirtualDaaScoreChangedResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_NotifyVirtualDaaScoreChangedResponse is nil")
 	}
 	return x.NotifyVirtualDaaScoreChangedResponse.toAppMessage()
 }
@@ -51,7 +51,7 @@ func (x *NotifyVirtualDaaScoreChangedResponseMessage) toAppMessage() (appmessage
 
 func (x *KaspadMessage_VirtualDaaScoreChangedNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_VirtualDaaScoreChangedNotification is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_VirtualDaaScoreChangedNotification is nil")
 	}
 	return x.VirtualDaaScoreChangedNotification.toAppMessage()
 }

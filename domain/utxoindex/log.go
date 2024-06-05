@@ -5,7 +5,7 @@
 package utxoindex
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/rustweave-network/rustweaved/infrastructure/logger"
 )
 
 var log = logger.RegisterSubSystem("UTIN")

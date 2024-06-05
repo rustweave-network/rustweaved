@@ -7,9 +7,9 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
+	"github.com/rustweave-network/rustweaved/domain/consensus/utils/subnetworks"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
 )
 
 func TestCreateDefaultConfigFile(t *testing.T) {
@@ -21,7 +21,7 @@ func TestCreateDefaultConfigFile(t *testing.T) {
 	sampleConfigFile := filepath.Join(filepath.Dir(path), "sample-kaspad.conf")
 
 	// Setup a temporary directory
-	tmpDir, err := ioutil.TempDir("", "kaspad")
+	tmpDir, err := ioutil.TempDir("", "rustweaved")
 	if err != nil {
 		t.Fatalf("Failed creating a temporary directory: %v", err)
 	}

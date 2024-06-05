@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
 func (x *KaspadMessage_UnbanRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_UnbanRequest is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_UnbanRequest is nil")
 	}
 	return x.UnbanRequest.toAppMessage()
 }
@@ -28,7 +28,7 @@ func (x *UnbanRequestMessage) toAppMessage() (appmessage.Message, error) {
 
 func (x *KaspadMessage_UnbanResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_UnbanResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_UnbanResponse is nil")
 	}
 	return x.UnbanResponse.toAppMessage()
 }

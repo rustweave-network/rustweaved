@@ -1,7 +1,7 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/rustweave-network/rustweaved/app/appmessage"
 	"github.com/pkg/errors"
 )
 
@@ -15,7 +15,7 @@ func (x *KaspadMessage_GetSelectedTipHashRequest) fromAppMessage(_ *appmessage.G
 
 func (x *KaspadMessage_GetSelectedTipHashResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_GetSelectedTipHashResponse is nil")
+		return nil, errors.Wrapf(errorNil, "RustweavedMessage_GetSelectedTipHashResponse is nil")
 	}
 	return x.GetSelectedTipHashResponse.toAppMessage()
 }
