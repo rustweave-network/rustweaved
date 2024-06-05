@@ -8,7 +8,7 @@ import (
 	"github.com/rustweave-network/rustweaved/infrastructure/os/limits"
 )
 
-// Initialize initializes the execution environment required to run kaspad
+// Initialize initializes the execution environment required to run rustweaved
 func Initialize(desiredLimits *limits.DesiredLimits) {
 	// Use all processor cores.
 	runtime.GOMAXPROCS(runtime.NumCPU())

@@ -9,4 +9,4 @@ import (
 	"github.com/rustweave-network/rustweaved/infrastructure/logger"
 )
 
-var log = logger.RegisterSubSystem("KASD")
+var log = logger.RegisterSubSystem("RWE")

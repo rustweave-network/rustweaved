@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/rustweave-network/rustweaved/cmd/kaspawallet/libkaspawallet"
+	"github.com/rustweave-network/rustweaved/cmd/rustweavewallet/librustweavewallet"
 	"github.com/rustweave-network/rustweaved/util"
 )
 
@@ -12,7 +12,7 @@ func main() {
 		panic(err)
 	}
 
-	privateKey, publicKey, err := libkaspawallet.CreateKeyPair(false)
+	privateKey, publicKey, err := librustweavewallet.CreateKeyPair(false)
 	if err != nil {
 		panic(err)
 	}

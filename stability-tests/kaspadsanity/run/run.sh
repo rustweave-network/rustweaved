@@ -1,5 +1,5 @@
 #!/bin/bash
-kaspadsanity --command-list-file ./commands-list --profile=7000
+rustweavedsanity --command-list-file ./commands-list --profile=7000
 TEST_EXIT_CODE=$?
 
 echo "Exit code: $TEST_EXIT_CODE"

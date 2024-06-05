@@ -108,7 +108,7 @@ func startNode() (teardown func(), err error) {
 	}
 	log.Infof("rustweaved datadir: %s", dataDir)
 
-	kaspadCmd, err := common.StartCmd("KASPAD",
+	rustweavedCmd, err := common.StartCmd("KASPAD",
 		"rustweaved",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"--appdir", dataDir,
@@ -124,14 +124,14 @@ func startNode() (teardown func(), err error) {
 
 	processesStoppedWg := sync.WaitGroup{}
 	processesStoppedWg.Add(1)
-	spawn("startNode-kaspadCmd.Wait", func() {
-		err := kaspadCmd.Wait()
+	spawn("startNode-rustweavedCmd.Wait", func() {
+		err := rustweavedCmd.Wait()
 		if err != nil {
 			if atomic.LoadUint64(&shutdown) == 0 {
 				panics.Exit(log, fmt.Sprintf("rustweavedCmd closed unexpectedly: %s. See logs at: %s", err, dataDir))
 			}
 			if !strings.Contains(err.Error(), "signal: killed") {
-				// TODO: Panic here and check why sometimes kaspad closes ungracefully
+				// TODO: Panic here and check why sometimes rustweaved closes ungracefully
 				log.Errorf("rustweavedCmd closed with an error: %s. See logs at: %s", err, dataDir)
 			}
 		}
@@ -140,7 +140,7 @@ func startNode() (teardown func(), err error) {
 	return func() {
 		log.Infof("defer start-node")
 		atomic.StoreUint64(&shutdown, 1)
-		killWithSigterm(kaspadCmd, "rustweavedCmd")
+		killWithSigterm(rustweavedCmd, "rustweavedCmd")
 
 		processesStoppedChan := make(chan struct{})
 		spawn("startNode-processStoppedWg.Wait", func() {
@@ -226,7 +226,7 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	}
 	numOfBlocksBeforeMining := dagInfo.BlockCount
 
-	kaspaMinerCmd, err := common.StartCmd("MINER",
+	rustweaveMinerCmd, err := common.StartCmd("MINER",
 		"rustweaveminer",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"-s", rpcAddress,
@@ -241,7 +241,7 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	shutdown := uint64(0)
 
 	spawn("rustweave-miner-Cmd.Wait", func() {
-		err := kaspaMinerCmd.Wait()
+		err := rustweaveMinerCmd.Wait()
 		if err != nil {
 			if atomic.LoadUint64(&shutdown) == 0 {
 				panics.Exit(log, fmt.Sprintf("minerCmd closed unexpectedly: %s.", err))
@@ -283,7 +283,7 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	numOfAddedBlocks := dagInfo.BlockCount - numOfBlocksBeforeMining
 	log.Infof("Added %d blocks to reach this.", numOfAddedBlocks)
 	atomic.StoreUint64(&shutdown, 1)
-	killWithSigterm(kaspaMinerCmd, "rustweaveMinerCmd")
+	killWithSigterm(rustweaveMinerCmd, "rustweaveMinerCmd")
 	return nil
 }
 

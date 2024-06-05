@@ -12,7 +12,7 @@ const (
 	// MaxScriptPublicKeyVersion is the current latest supported public key script version.
 	MaxScriptPublicKeyVersion uint16 = 0
 
-	// SompiPerRustweave is the number of sompi in one kaspa (1 KAS).
+	// SompiPerRustweave is the number of sompi in one rustweave (1 KAS).
 	SompiPerRustweave = 100_000_000
 
 	// MaxSompi is the maximum transaction amount allowed in sompi.

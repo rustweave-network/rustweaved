@@ -37,11 +37,11 @@ var serviceDescription = &winservice.ServiceDescription{
 		"provides DAG services to applications.",
 }
 
-type kaspadApp struct {
+type rustweavedApp struct {
 	cfg *config.Config
 }
 
-// StartApp starts the kaspad app, and blocks until it finishes running
+// StartApp starts the rustweaved app, and blocks until it finishes running
 func StartApp() error {
 	execenv.Initialize(desiredLimits)
 
@@ -55,7 +55,7 @@ func StartApp() error {
 	defer logger.BackendLog.Close()
 	defer panics.HandlePanic(log, "MAIN", nil)
 
-	app := &kaspadApp{cfg: cfg}
+	app := &rustweavedApp{cfg: cfg}
 
 	// Call serviceMain on Windows to handle running as a service. When
 	// the return isService flag is true, exit now since we ran as a
@@ -73,7 +73,7 @@ func StartApp() error {
 	return app.main(nil)
 }
 
-func (app *kaspadApp) main(startedChan chan<- struct{}) error {
+func (app *rustweavedApp) main(startedChan chan<- struct{}) error {
 	// Get a channel that will be closed when a shutdown signal has been
 	// triggered either from an OS signal such as SIGINT (Ctrl+C) or from
 	// another subsystem such as the RPC server.
@@ -125,12 +125,12 @@ func (app *kaspadApp) main(startedChan chan<- struct{}) error {
 	// Create componentManager and start it.
 	componentManager, err := NewComponentManager(app.cfg, databaseContext, interrupt)
 	if err != nil {
-		log.Errorf("Unable to start kaspad: %+v", err)
+		log.Errorf("Unable to start rustweaved: %+v", err)
 		return err
 	}
 
 	defer func() {
-		log.Infof("Gracefully shutting down kaspad...")
+		log.Infof("Gracefully shutting down rustweaved...")
 
 		shutdownDone := make(chan struct{})
 		go func() {

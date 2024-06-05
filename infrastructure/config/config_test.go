@@ -18,7 +18,7 @@ func TestCreateDefaultConfigFile(t *testing.T) {
 	if !ok {
 		t.Fatalf("Failed finding config file path")
 	}
-	sampleConfigFile := filepath.Join(filepath.Dir(path), "sample-kaspad.conf")
+	sampleConfigFile := filepath.Join(filepath.Dir(path), "sample-rustweaved.conf")
 
 	// Setup a temporary directory
 	tmpDir, err := ioutil.TempDir("", "rustweaved")
@@ -27,7 +27,7 @@ func TestCreateDefaultConfigFile(t *testing.T) {
 	}
 	testpath := filepath.Join(tmpDir, "test.conf")
 
-	// copy config file to location of kaspad binary
+	// copy config file to location of rustweaved binary
 	data, err := ioutil.ReadFile(sampleConfigFile)
 	if err != nil {
 		t.Fatalf("Failed reading sample config file: %v", err)
@@ -36,7 +36,7 @@ func TestCreateDefaultConfigFile(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed obtaining app path: %v", err)
 	}
-	tmpConfigFile := filepath.Join(appPath, "sample-kaspad.conf")
+	tmpConfigFile := filepath.Join(appPath, "sample-rustweaved.conf")
 	err = ioutil.WriteFile(tmpConfigFile, data, 0644)
 	if err != nil {
 		t.Fatalf("Failed copying sample config file: %v", err)

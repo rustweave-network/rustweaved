@@ -9,14 +9,14 @@ import (
 	"testing"
 )
 
-// RunRustweavedForTesting runs kaspad for testing purposes
+// RunRustweavedForTesting runs rustweaved for testing purposes
 func RunRustweavedForTesting(t *testing.T, testName string, rpcAddress string) func() {
 	appDir, err := TempDir(testName)
 	if err != nil {
 		t.Fatalf("TempDir: %s", err)
 	}
 
-	kaspadRunCommand, err := StartCmd("KASPAD",
+	rustweavedRunCommand, err := StartCmd("KASPAD",
 		"rustweaved",
 		NetworkCliArgumentFromNetParams(&dagconfig.DevnetParams),
 		"--appdir", appDir,
@@ -30,7 +30,7 @@ func RunRustweavedForTesting(t *testing.T, testName string, rpcAddress string) f
 
 	isShutdown := uint64(0)
 	go func() {
-		err := kaspadRunCommand.Wait()
+		err := rustweavedRunCommand.Wait()
 		if err != nil {
 			if atomic.LoadUint64(&isShutdown) == 0 {
 				panic(fmt.Sprintf("Rustweaved closed unexpectedly: %s. See logs at: %s", err, appDir))
@@ -39,7 +39,7 @@ func RunRustweavedForTesting(t *testing.T, testName string, rpcAddress string) f
 	}()
 
 	return func() {
-		err := kaspadRunCommand.Process.Signal(syscall.SIGTERM)
+		err := rustweavedRunCommand.Process.Signal(syscall.SIGTERM)
 		if err != nil {
 			t.Fatalf("Signal: %s", err)
 		}

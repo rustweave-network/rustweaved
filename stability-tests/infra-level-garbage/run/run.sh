@@ -1,7 +1,7 @@
 #!/bin/bash
-rm -rf /tmp/kaspad-temp
+rm -rf /tmp/rustweaved-temp
 
-kaspad --devnet --appdir=/tmp/kaspad-temp --profile=6061 &
+rustweaved --devnet --appdir=/tmp/rustweaved-temp --profile=6061 &
 KASPAD_PID=$!
 
 sleep 1

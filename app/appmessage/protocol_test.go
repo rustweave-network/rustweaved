@@ -33,7 +33,7 @@ func TestServiceFlagStringer(t *testing.T) {
 	}
 }
 
-// TestRustweaveNetStringer tests the stringized output for kaspa net types.
+// TestRustweaveNetStringer tests the stringized output for rustweave net types.
 func TestRustweaveNetStringer(t *testing.T) {
 	tests := []struct {
 		in   RustweaveNet

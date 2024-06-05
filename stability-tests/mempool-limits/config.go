@@ -21,7 +21,7 @@ var (
 type configFlags struct {
 	LogLevel         string `long:"loglevel" description:"Set log level {trace, debug, info, warn, error, critical}"`
 	Profile          string `long:"profile" description:"Enable HTTP profiling on given port -- NOTE port must be between 1024 and 65536"`
-	RustweavedRPCAddress string `long:"rpc-address" description:"RPC address of the kaspad node"`
+	RustweavedRPCAddress string `long:"rpc-address" description:"RPC address of the rustweaved node"`
 }
 
 var cfg *configFlags

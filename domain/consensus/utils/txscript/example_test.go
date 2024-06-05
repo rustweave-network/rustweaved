@@ -14,7 +14,7 @@ import (
 	"github.com/rustweave-network/rustweaved/util"
 )
 
-// This example demonstrates creating a script which pays to a kaspa address.
+// This example demonstrates creating a script which pays to a rustweave address.
 // It also prints the created script hex and uses the DisasmString function to
 // display the disassembled script.
 func ExamplePayToAddrScript() {
@@ -75,5 +75,5 @@ func ExampleExtractScriptPubKeyAddress() {
 
 	// Output:
 	// Script Class: pubkey
-	// Address: kaspa:qzy6cf82zzah2xh5jwtz8nx9u4gdj6zzke8gljs0v055ksmnl424u6fv7ajrs
+	// Address: rustweave:qzy6cf82zzah2xh5jwtz8nx9u4gdj6zzke8gljs0v055ksmnl424u6fv7ajrs
 }

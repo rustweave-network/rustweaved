@@ -94,7 +94,7 @@ type Params struct {
 
 	// SubsidyGenesisReward SubsidyMergeSetRewardMultiplier, and
 	// SubsidyPastRewardMultiplier are part of the block subsidy equation.
-	// Further details: https://hashdag.medium.com/kaspa-launch-plan-9a63f4d754a6
+	// Further details: https://hashdag.medium.com/rustweave-launch-plan-9a63f4d754a6
 	SubsidyGenesisReward            uint64
 	PreDeflationaryPhaseBaseSubsidy uint64
 	DeflationaryPhaseBaseSubsidy    uint64
@@ -179,7 +179,7 @@ type Params struct {
 	// CoinbasePayloadScriptPublicKeyMaxLength is the maximum allowed script public key in the coinbase's payload
 	CoinbasePayloadScriptPublicKeyMaxLength uint8
 
-	// PruningProofM is the 'm' constant in the pruning proof. For more details see: https://github.com/kaspanet/research/issues/3
+	// PruningProofM is the 'm' constant in the pruning proof. For more details see: https://github.com/rustweavenet/research/issues/3
 	PruningProofM uint64
 
 	// DeflationaryPhaseDaaScore is the DAA score after which the monetary policy switches
@@ -221,23 +221,23 @@ var MainnetParams = Params{
 		// This DNS seeder is run by Wolfie
 		"mainnet-dnsseed.kas.pa",
 		// This DNS seeder is run by Denis Mashkevich
-		"mainnet-dnsseed-1.kaspanet.org",
+		"mainnet-dnsseed-1.rustweavenet.org",
 		// This DNS seeder is run by Denis Mashkevich
-		"mainnet-dnsseed-2.kaspanet.org",
+		"mainnet-dnsseed-2.rustweavenet.org",
 		// This DNS seeder is run by Constantine Bytensky
 		"dnsseed.cbytensky.org",
 		// This DNS seeder is run by Georges Künzli
-		"seeder1.kaspad.net",
+		"seeder1.rustweaved.net",
 		// This DNS seeder is run by Georges Künzli
-		"seeder2.kaspad.net",
+		"seeder2.rustweaved.net",
 		// This DNS seeder is run by Georges Künzli
-		"seeder3.kaspad.net",
+		"seeder3.rustweaved.net",
 		// This DNS seeder is run by Georges Künzli
-		"seeder4.kaspad.net",
+		"seeder4.rustweaved.net",
 		// This DNS seeder is run by Tim
-		"rustweavedns.kaspacalc.net",
+		"rustweavedns.rustweavecalc.net",
 		// This DNS seeder is run by supertypo
-		"n-mainnet.kaspa.ws",
+		"n-mainnet.rustweave.ws",
 	},
 
 	// DAG parameters
@@ -311,7 +311,7 @@ var TestnetParams = Params{
 	DNSSeeds: []string{
 		"testnet-10-dnsseed.kas.pa",
 		// This DNS seeder is run by Tiram
-		"seeder1-testnet.kaspad.net",
+		"seeder1-testnet.rustweaved.net",
 	},
 
 	// DAG parameters

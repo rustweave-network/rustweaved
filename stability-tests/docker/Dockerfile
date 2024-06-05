@@ -1,8 +1,8 @@
 ARG KASPAD_IMAGE
 ARG KASPAMINER_IMAGE
 
-FROM ${KASPAD_IMAGE} as kaspad
-FROM ${KASPAMINER_IMAGE} as kaspaminer
+FROM ${KASPAD_IMAGE} as rustweaved
+FROM ${KASPAMINER_IMAGE} as rustweaveminer
 
 FROM golang:1.19-alpine
 
@@ -19,8 +19,8 @@ RUN go mod download
 
 COPY . .
 
-COPY --from=kaspad /app/ /app/
-COPY --from=kaspaminer /app/ /app/
+COPY --from=rustweaved /app/ /app/
+COPY --from=rustweaveminer /app/ /app/
 ENV PATH="/app:${PATH}"
 
 WORKDIR /go/src/github.com/rustweave-network/rustweaved/stability-tests

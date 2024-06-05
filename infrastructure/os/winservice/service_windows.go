@@ -51,16 +51,16 @@ func (s *Service) Start() error {
 
 // Execute is the main entry point the winsvc package calls when receiving
 // information from the Windows service control manager. It launches the
-// long-running kaspadMain (which is the real meat of kaspad), handles service
+// long-running rustweavedMain (which is the real meat of rustweaved), handles service
 // change requests, and notifies the service control manager of changes.
 func (s *Service) Execute(args []string, r <-chan svc.ChangeRequest, changes chan<- svc.Status) (bool, uint32) {
 	// Service start is pending.
 	const cmdsAccepted = svc.AcceptStop | svc.AcceptShutdown
 	changes <- svc.Status{State: svc.StartPending}
 
-	// Start kaspadMain in a separate goroutine so the service can start
+	// Start rustweavedMain in a separate goroutine so the service can start
 	// quickly. Shutdown (along with a potential error) is reported via
-	// doneChan. startedChan is notified once kaspad is started so this can
+	// doneChan. startedChan is notified once rustweaved is started so this can
 	// be properly logged
 	doneChan := make(chan error)
 	startedChan := make(chan struct{})
@@ -108,7 +108,7 @@ loop:
 	return false, 0
 }
 
-// logServiceStart logs information about kaspad when the main server has
+// logServiceStart logs information about rustweaved when the main server has
 // been started to the Windows event log.
 func (s *Service) logServiceStart() {
 	var message string

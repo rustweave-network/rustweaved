@@ -11,12 +11,12 @@ COPY go.mod .
 COPY go.sum .
 
 
-# Cache kaspad dependencies
+# Cache rustweaved dependencies
 RUN go mod download
 
 COPY . .
 
-RUN go build $FLAGS -o kaspad .
+RUN go build $FLAGS -o rustweaved .
 
 # --- multistage docker build: stage #2: runtime image
 FROM alpine
@@ -24,8 +24,8 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates tini
 
-COPY --from=build /go/src/github.com/rustweave-network/rustweaved/kaspad /app/
-COPY --from=build /go/src/github.com/rustweave-network/rustweaved/infrastructure/config/sample-kaspad.conf /app/
+COPY --from=build /go/src/github.com/rustweave-network/rustweaved/rustweaved /app/
+COPY --from=build /go/src/github.com/rustweave-network/rustweaved/infrastructure/config/sample-rustweaved.conf /app/
 
 USER nobody
 ENTRYPOINT [ "/sbin/tini", "--" ]

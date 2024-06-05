@@ -7,7 +7,7 @@ Rustweaved
 
 Rustweaved is the reference full node Rustweave implementation written in Go (golang).
 
-## What is kaspa
+## What is rustweave
 
 Rustweave is an attempt at a proof-of-work cryptocurrency with instant confirmations and sub-second block times. It is based on [the PHANTOM protocol](https://eprint.iacr.org/2018/104.pdf), a generalization of Nakamoto consensus.
 
@@ -28,11 +28,11 @@ Go 1.18 or later.
 $ go version
 ```
 
-- Run the following commands to obtain and install kaspad including all dependencies:
+- Run the following commands to obtain and install rustweaved including all dependencies:
 
 ```bash
 $ git clone https://github.com/rustweave-network/rustweaved
-$ cd kaspad
+$ cd rustweaved
 $ go install . ./cmd/...
 ```
 
@@ -47,7 +47,7 @@ Rustweaved has several configuration options available to tweak how it runs, but
 of the basic operations work with zero configuration.
 
 ```bash
-$ kaspad
+$ rustweaved
 ```
 
 ## Discord
@@ -58,11 +58,11 @@ Join our discord server using the following link: https://discord.gg/YNYnNN5Pf2
 The [integrated github issue tracker](https://github.com/rustweave-network/rustweaved/issues)
 is used for this project.
 
-Issue priorities may be seen at https://github.com/orgs/kaspanet/projects/4
+Issue priorities may be seen at https://github.com/orgs/rustweavenet/projects/4
 
 ## Documentation
 
-The [documentation](https://github.com/kaspanet/docs) is a work-in-progress
+The [documentation](https://github.com/rustweavenet/docs) is a work-in-progress
 
 ## License
 

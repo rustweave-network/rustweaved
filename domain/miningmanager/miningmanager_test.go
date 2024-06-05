@@ -1,7 +1,7 @@
 package miningmanager_test
 
 import (
-	"github.com/rustweave-network/rustweaved/cmd/kaspawallet/libkaspawallet"
+	"github.com/rustweave-network/rustweaved/cmd/rustweavewallet/librustweavewallet"
 	"github.com/rustweave-network/rustweaved/domain/consensusreference"
 	"github.com/rustweave-network/rustweaved/domain/miningmanager/model"
 	"github.com/rustweave-network/rustweaved/util"
@@ -885,7 +885,7 @@ func generateNewCoinbase(addressPrefix util.Bech32Prefix, op opType) (*externala
 			ExtraData:       nil,
 		}, nil
 	}
-	_, publicKey, err := libkaspawallet.CreateKeyPair(op == opECDSA)
+	_, publicKey, err := librustweavewallet.CreateKeyPair(op == opECDSA)
 	if err != nil {
 		return nil, err
 	}

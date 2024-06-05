@@ -2,7 +2,7 @@ package appmessage
 
 import "github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
 
-// MsgPruningPointUTXOSetChunk represents a kaspa PruningPointUTXOSetChunk message
+// MsgPruningPointUTXOSetChunk represents a rustweave PruningPointUTXOSetChunk message
 type MsgPruningPointUTXOSetChunk struct {
 	baseMessage
 	OutpointAndUTXOEntryPairs []*OutpointAndUTXOEntryPair

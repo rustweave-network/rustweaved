@@ -1,6 +1,6 @@
 package appmessage
 
-// MsgRequestPruningPointAndItsAnticone represents a kaspa RequestPruningPointAndItsAnticone message
+// MsgRequestPruningPointAndItsAnticone represents a rustweave RequestPruningPointAndItsAnticone message
 type MsgRequestPruningPointAndItsAnticone struct {
 	baseMessage
 }

@@ -4,7 +4,7 @@ import (
 	"github.com/rustweave-network/rustweaved/domain/consensus/model/externalapi"
 )
 
-// MsgIBDBlockLocatorHighestHash represents a kaspa BlockLocatorHighestHash message
+// MsgIBDBlockLocatorHighestHash represents a rustweave BlockLocatorHighestHash message
 type MsgIBDBlockLocatorHighestHash struct {
 	baseMessage
 	HighestHash *externalapi.DomainHash
