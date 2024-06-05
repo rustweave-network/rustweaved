@@ -1,15 +1,15 @@
 
-Kaspad
+Rustweaved
 ====
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/rustweave-network/rustweaved)
 
-Kaspad is the reference full node Kaspa implementation written in Go (golang).
+Rustweaved is the reference full node Rustweave implementation written in Go (golang).
 
 ## What is kaspa
 
-Kaspa is an attempt at a proof-of-work cryptocurrency with instant confirmations and sub-second block times. It is based on [the PHANTOM protocol](https://eprint.iacr.org/2018/104.pdf), a generalization of Nakamoto consensus.
+Rustweave is an attempt at a proof-of-work cryptocurrency with instant confirmations and sub-second block times. It is based on [the PHANTOM protocol](https://eprint.iacr.org/2018/104.pdf), a generalization of Nakamoto consensus.
 
 ## Requirements
 
@@ -36,14 +36,14 @@ $ cd kaspad
 $ go install . ./cmd/...
 ```
 
-- Kaspad (and utilities) should now be installed in `$(go env GOPATH)/bin`. If you did
+- Rustweaved (and utilities) should now be installed in `$(go env GOPATH)/bin`. If you did
   not already add the bin directory to your system path during Go installation,
   you are encouraged to do so now.
 
 
 ## Getting Started
 
-Kaspad has several configuration options available to tweak how it runs, but all
+Rustweaved has several configuration options available to tweak how it runs, but all
 of the basic operations work with zero configuration.
 
 ```bash
@@ -66,4 +66,4 @@ The [documentation](https://github.com/kaspanet/docs) is a work-in-progress
 
 ## License
 
-Kaspad is licensed under the copyfree [ISC License](https://choosealicense.com/licenses/isc/).
+Rustweaved is licensed under the copyfree [ISC License](https://choosealicense.com/licenses/isc/).

@@ -5,14 +5,14 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *KaspadMessage_Block) toAppMessage() (appmessage.Message, error) {
+func (x *RustweavedMessage_Block) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrap(errorNil, "RustweavedMessage_Block is nil")
 	}
 	return x.Block.toAppMessage()
 }
 
-func (x *KaspadMessage_Block) fromAppMessage(msgBlock *appmessage.MsgBlock) error {
+func (x *RustweavedMessage_Block) fromAppMessage(msgBlock *appmessage.MsgBlock) error {
 	x.Block = new(BlockMessage)
 	return x.Block.fromAppMessage(msgBlock)
 }

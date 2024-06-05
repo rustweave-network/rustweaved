@@ -9,38 +9,38 @@ import (
 )
 
 var commandTypes = []reflect.Type{
-	reflect.TypeOf(protowire.KaspadMessage_AddPeerRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetConnectedPeerInfoRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetPeerAddressesRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetCurrentNetworkRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetInfoRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_AddPeerRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetConnectedPeerInfoRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetPeerAddressesRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetCurrentNetworkRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetInfoRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_GetBlockRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetBlocksRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetHeadersRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetBlockCountRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetBlockDagInfoRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetSelectedTipHashRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetVirtualSelectedParentBlueScoreRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetVirtualSelectedParentChainFromBlockRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_ResolveFinalityConflictRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_EstimateNetworkHashesPerSecondRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetBlockRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetBlocksRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetHeadersRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetBlockCountRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetBlockDagInfoRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetSelectedTipHashRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetVirtualSelectedParentBlueScoreRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetVirtualSelectedParentChainFromBlockRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_ResolveFinalityConflictRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_EstimateNetworkHashesPerSecondRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_GetBlockTemplateRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_SubmitBlockRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetBlockTemplateRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_SubmitBlockRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_GetMempoolEntryRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetMempoolEntriesRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetMempoolEntriesByAddressesRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetMempoolEntryRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetMempoolEntriesRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetMempoolEntriesByAddressesRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_SubmitTransactionRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_SubmitTransactionRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_GetUtxosByAddressesRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetBalanceByAddressRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetCoinSupplyRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetUtxosByAddressesRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetBalanceByAddressRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_GetCoinSupplyRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_BanRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_UnbanRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_BanRequest{}),
+	reflect.TypeOf(protowire.RustweavedMessage_UnbanRequest{}),
 }
 
 type commandDescription struct {

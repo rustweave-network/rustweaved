@@ -4,12 +4,12 @@ rm -rf /tmp/kaspad-temp
 kaspad --devnet --appdir=/tmp/kaspad-temp --profile=6061 --loglevel=debug &
 KASPAD_PID=$!
 KASPAD_KILLED=0
-function killKaspadIfNotKilled() {
+function killRustweavedIfNotKilled() {
     if [ $KASPAD_KILLED -eq 0 ]; then
       kill $KASPAD_PID
     fi
 }
-trap "killKaspadIfNotKilled" EXIT
+trap "killRustweavedIfNotKilled" EXIT
 
 sleep 1
 

@@ -6,7 +6,7 @@ option go_package = "github.com/rustweave-network/rustweaved/protowire";
 import "p2p.proto";
 import "rpc.proto";
 
-message KaspadMessage {
+message RustweavedMessage {
   oneof payload {
     AddressesMessage addresses = 1;
     BlockMessage block = 2;
@@ -143,9 +143,9 @@ message KaspadMessage {
 }
 
 service P2P {
-  rpc MessageStream (stream KaspadMessage) returns (stream KaspadMessage) {}
+  rpc MessageStream (stream RustweavedMessage) returns (stream RustweavedMessage) {}
 }
 
 service RPC {
-  rpc MessageStream (stream KaspadMessage) returns (stream KaspadMessage) {}
+  rpc MessageStream (stream RustweavedMessage) returns (stream RustweavedMessage) {}
 }

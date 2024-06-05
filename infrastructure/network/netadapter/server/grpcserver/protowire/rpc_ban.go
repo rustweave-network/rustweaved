@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *KaspadMessage_BanRequest) toAppMessage() (appmessage.Message, error) {
+func (x *RustweavedMessage_BanRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "RustweavedMessage_BanRequest is nil")
 	}
@@ -21,12 +21,12 @@ func (x *BanRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *KaspadMessage_BanRequest) fromAppMessage(message *appmessage.BanRequestMessage) error {
+func (x *RustweavedMessage_BanRequest) fromAppMessage(message *appmessage.BanRequestMessage) error {
 	x.BanRequest = &BanRequestMessage{Ip: message.IP}
 	return nil
 }
 
-func (x *KaspadMessage_BanResponse) toAppMessage() (appmessage.Message, error) {
+func (x *RustweavedMessage_BanResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "RustweavedMessage_BanResponse is nil")
 	}
@@ -47,7 +47,7 @@ func (x *BanResponseMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *KaspadMessage_BanResponse) fromAppMessage(message *appmessage.BanResponseMessage) error {
+func (x *RustweavedMessage_BanResponse) fromAppMessage(message *appmessage.BanResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

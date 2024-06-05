@@ -1,6 +1,6 @@
 # kaspaminer
 
-Kaspaminer is a CPU-based miner for kaspad
+Rustweaveminer is a CPU-based miner for kaspad
 
 ## Requirements
 

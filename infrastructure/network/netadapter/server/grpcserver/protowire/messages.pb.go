@@ -20,147 +20,147 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type KaspadMessage struct {
+type RustweavedMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Payload:
-	//	*KaspadMessage_Addresses
-	//	*KaspadMessage_Block
-	//	*KaspadMessage_Transaction
-	//	*KaspadMessage_BlockLocator
-	//	*KaspadMessage_RequestAddresses
-	//	*KaspadMessage_RequestRelayBlocks
-	//	*KaspadMessage_RequestTransactions
-	//	*KaspadMessage_IbdBlock
-	//	*KaspadMessage_InvRelayBlock
-	//	*KaspadMessage_InvTransactions
-	//	*KaspadMessage_Ping
-	//	*KaspadMessage_Pong
-	//	*KaspadMessage_Verack
-	//	*KaspadMessage_Version
-	//	*KaspadMessage_TransactionNotFound
-	//	*KaspadMessage_Reject
-	//	*KaspadMessage_PruningPointUtxoSetChunk
-	//	*KaspadMessage_RequestIBDBlocks
-	//	*KaspadMessage_UnexpectedPruningPoint
-	//	*KaspadMessage_IbdBlockLocator
-	//	*KaspadMessage_IbdBlockLocatorHighestHash
-	//	*KaspadMessage_RequestNextPruningPointUtxoSetChunk
-	//	*KaspadMessage_DonePruningPointUtxoSetChunks
-	//	*KaspadMessage_IbdBlockLocatorHighestHashNotFound
-	//	*KaspadMessage_BlockWithTrustedData
-	//	*KaspadMessage_DoneBlocksWithTrustedData
-	//	*KaspadMessage_RequestPruningPointAndItsAnticone
-	//	*KaspadMessage_BlockHeaders
-	//	*KaspadMessage_RequestNextHeaders
-	//	*KaspadMessage_DoneHeaders
-	//	*KaspadMessage_RequestPruningPointUTXOSet
-	//	*KaspadMessage_RequestHeaders
-	//	*KaspadMessage_RequestBlockLocator
-	//	*KaspadMessage_PruningPoints
-	//	*KaspadMessage_RequestPruningPointProof
-	//	*KaspadMessage_PruningPointProof
-	//	*KaspadMessage_Ready
-	//	*KaspadMessage_BlockWithTrustedDataV4
-	//	*KaspadMessage_TrustedData
-	//	*KaspadMessage_RequestIBDChainBlockLocator
-	//	*KaspadMessage_IbdChainBlockLocator
-	//	*KaspadMessage_RequestAnticone
-	//	*KaspadMessage_RequestNextPruningPointAndItsAnticoneBlocks
-	//	*KaspadMessage_GetCurrentNetworkRequest
-	//	*KaspadMessage_GetCurrentNetworkResponse
-	//	*KaspadMessage_SubmitBlockRequest
-	//	*KaspadMessage_SubmitBlockResponse
-	//	*KaspadMessage_GetBlockTemplateRequest
-	//	*KaspadMessage_GetBlockTemplateResponse
-	//	*KaspadMessage_NotifyBlockAddedRequest
-	//	*KaspadMessage_NotifyBlockAddedResponse
-	//	*KaspadMessage_BlockAddedNotification
-	//	*KaspadMessage_GetPeerAddressesRequest
-	//	*KaspadMessage_GetPeerAddressesResponse
-	//	*KaspadMessage_GetSelectedTipHashRequest
-	//	*KaspadMessage_GetSelectedTipHashResponse
-	//	*KaspadMessage_GetMempoolEntryRequest
-	//	*KaspadMessage_GetMempoolEntryResponse
-	//	*KaspadMessage_GetConnectedPeerInfoRequest
-	//	*KaspadMessage_GetConnectedPeerInfoResponse
-	//	*KaspadMessage_AddPeerRequest
-	//	*KaspadMessage_AddPeerResponse
-	//	*KaspadMessage_SubmitTransactionRequest
-	//	*KaspadMessage_SubmitTransactionResponse
-	//	*KaspadMessage_NotifyVirtualSelectedParentChainChangedRequest
-	//	*KaspadMessage_NotifyVirtualSelectedParentChainChangedResponse
-	//	*KaspadMessage_VirtualSelectedParentChainChangedNotification
-	//	*KaspadMessage_GetBlockRequest
-	//	*KaspadMessage_GetBlockResponse
-	//	*KaspadMessage_GetSubnetworkRequest
-	//	*KaspadMessage_GetSubnetworkResponse
-	//	*KaspadMessage_GetVirtualSelectedParentChainFromBlockRequest
-	//	*KaspadMessage_GetVirtualSelectedParentChainFromBlockResponse
-	//	*KaspadMessage_GetBlocksRequest
-	//	*KaspadMessage_GetBlocksResponse
-	//	*KaspadMessage_GetBlockCountRequest
-	//	*KaspadMessage_GetBlockCountResponse
-	//	*KaspadMessage_GetBlockDagInfoRequest
-	//	*KaspadMessage_GetBlockDagInfoResponse
-	//	*KaspadMessage_ResolveFinalityConflictRequest
-	//	*KaspadMessage_ResolveFinalityConflictResponse
-	//	*KaspadMessage_NotifyFinalityConflictsRequest
-	//	*KaspadMessage_NotifyFinalityConflictsResponse
-	//	*KaspadMessage_FinalityConflictNotification
-	//	*KaspadMessage_FinalityConflictResolvedNotification
-	//	*KaspadMessage_GetMempoolEntriesRequest
-	//	*KaspadMessage_GetMempoolEntriesResponse
-	//	*KaspadMessage_ShutDownRequest
-	//	*KaspadMessage_ShutDownResponse
-	//	*KaspadMessage_GetHeadersRequest
-	//	*KaspadMessage_GetHeadersResponse
-	//	*KaspadMessage_NotifyUtxosChangedRequest
-	//	*KaspadMessage_NotifyUtxosChangedResponse
-	//	*KaspadMessage_UtxosChangedNotification
-	//	*KaspadMessage_GetUtxosByAddressesRequest
-	//	*KaspadMessage_GetUtxosByAddressesResponse
-	//	*KaspadMessage_GetVirtualSelectedParentBlueScoreRequest
-	//	*KaspadMessage_GetVirtualSelectedParentBlueScoreResponse
-	//	*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest
-	//	*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse
-	//	*KaspadMessage_VirtualSelectedParentBlueScoreChangedNotification
-	//	*KaspadMessage_BanRequest
-	//	*KaspadMessage_BanResponse
-	//	*KaspadMessage_UnbanRequest
-	//	*KaspadMessage_UnbanResponse
-	//	*KaspadMessage_GetInfoRequest
-	//	*KaspadMessage_GetInfoResponse
-	//	*KaspadMessage_StopNotifyingUtxosChangedRequest
-	//	*KaspadMessage_StopNotifyingUtxosChangedResponse
-	//	*KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest
-	//	*KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse
-	//	*KaspadMessage_PruningPointUTXOSetOverrideNotification
-	//	*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest
-	//	*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse
-	//	*KaspadMessage_EstimateNetworkHashesPerSecondRequest
-	//	*KaspadMessage_EstimateNetworkHashesPerSecondResponse
-	//	*KaspadMessage_NotifyVirtualDaaScoreChangedRequest
-	//	*KaspadMessage_NotifyVirtualDaaScoreChangedResponse
-	//	*KaspadMessage_VirtualDaaScoreChangedNotification
-	//	*KaspadMessage_GetBalanceByAddressRequest
-	//	*KaspadMessage_GetBalanceByAddressResponse
-	//	*KaspadMessage_GetBalancesByAddressesRequest
-	//	*KaspadMessage_GetBalancesByAddressesResponse
-	//	*KaspadMessage_NotifyNewBlockTemplateRequest
-	//	*KaspadMessage_NotifyNewBlockTemplateResponse
-	//	*KaspadMessage_NewBlockTemplateNotification
-	//	*KaspadMessage_GetMempoolEntriesByAddressesRequest
-	//	*KaspadMessage_GetMempoolEntriesByAddressesResponse
-	//	*KaspadMessage_GetCoinSupplyRequest
-	//	*KaspadMessage_GetCoinSupplyResponse
-	Payload isKaspadMessage_Payload `protobuf_oneof:"payload"`
+	//	*RustweavedMessage_Addresses
+	//	*RustweavedMessage_Block
+	//	*RustweavedMessage_Transaction
+	//	*RustweavedMessage_BlockLocator
+	//	*RustweavedMessage_RequestAddresses
+	//	*RustweavedMessage_RequestRelayBlocks
+	//	*RustweavedMessage_RequestTransactions
+	//	*RustweavedMessage_IbdBlock
+	//	*RustweavedMessage_InvRelayBlock
+	//	*RustweavedMessage_InvTransactions
+	//	*RustweavedMessage_Ping
+	//	*RustweavedMessage_Pong
+	//	*RustweavedMessage_Verack
+	//	*RustweavedMessage_Version
+	//	*RustweavedMessage_TransactionNotFound
+	//	*RustweavedMessage_Reject
+	//	*RustweavedMessage_PruningPointUtxoSetChunk
+	//	*RustweavedMessage_RequestIBDBlocks
+	//	*RustweavedMessage_UnexpectedPruningPoint
+	//	*RustweavedMessage_IbdBlockLocator
+	//	*RustweavedMessage_IbdBlockLocatorHighestHash
+	//	*RustweavedMessage_RequestNextPruningPointUtxoSetChunk
+	//	*RustweavedMessage_DonePruningPointUtxoSetChunks
+	//	*RustweavedMessage_IbdBlockLocatorHighestHashNotFound
+	//	*RustweavedMessage_BlockWithTrustedData
+	//	*RustweavedMessage_DoneBlocksWithTrustedData
+	//	*RustweavedMessage_RequestPruningPointAndItsAnticone
+	//	*RustweavedMessage_BlockHeaders
+	//	*RustweavedMessage_RequestNextHeaders
+	//	*RustweavedMessage_DoneHeaders
+	//	*RustweavedMessage_RequestPruningPointUTXOSet
+	//	*RustweavedMessage_RequestHeaders
+	//	*RustweavedMessage_RequestBlockLocator
+	//	*RustweavedMessage_PruningPoints
+	//	*RustweavedMessage_RequestPruningPointProof
+	//	*RustweavedMessage_PruningPointProof
+	//	*RustweavedMessage_Ready
+	//	*RustweavedMessage_BlockWithTrustedDataV4
+	//	*RustweavedMessage_TrustedData
+	//	*RustweavedMessage_RequestIBDChainBlockLocator
+	//	*RustweavedMessage_IbdChainBlockLocator
+	//	*RustweavedMessage_RequestAnticone
+	//	*RustweavedMessage_RequestNextPruningPointAndItsAnticoneBlocks
+	//	*RustweavedMessage_GetCurrentNetworkRequest
+	//	*RustweavedMessage_GetCurrentNetworkResponse
+	//	*RustweavedMessage_SubmitBlockRequest
+	//	*RustweavedMessage_SubmitBlockResponse
+	//	*RustweavedMessage_GetBlockTemplateRequest
+	//	*RustweavedMessage_GetBlockTemplateResponse
+	//	*RustweavedMessage_NotifyBlockAddedRequest
+	//	*RustweavedMessage_NotifyBlockAddedResponse
+	//	*RustweavedMessage_BlockAddedNotification
+	//	*RustweavedMessage_GetPeerAddressesRequest
+	//	*RustweavedMessage_GetPeerAddressesResponse
+	//	*RustweavedMessage_GetSelectedTipHashRequest
+	//	*RustweavedMessage_GetSelectedTipHashResponse
+	//	*RustweavedMessage_GetMempoolEntryRequest
+	//	*RustweavedMessage_GetMempoolEntryResponse
+	//	*RustweavedMessage_GetConnectedPeerInfoRequest
+	//	*RustweavedMessage_GetConnectedPeerInfoResponse
+	//	*RustweavedMessage_AddPeerRequest
+	//	*RustweavedMessage_AddPeerResponse
+	//	*RustweavedMessage_SubmitTransactionRequest
+	//	*RustweavedMessage_SubmitTransactionResponse
+	//	*RustweavedMessage_NotifyVirtualSelectedParentChainChangedRequest
+	//	*RustweavedMessage_NotifyVirtualSelectedParentChainChangedResponse
+	//	*RustweavedMessage_VirtualSelectedParentChainChangedNotification
+	//	*RustweavedMessage_GetBlockRequest
+	//	*RustweavedMessage_GetBlockResponse
+	//	*RustweavedMessage_GetSubnetworkRequest
+	//	*RustweavedMessage_GetSubnetworkResponse
+	//	*RustweavedMessage_GetVirtualSelectedParentChainFromBlockRequest
+	//	*RustweavedMessage_GetVirtualSelectedParentChainFromBlockResponse
+	//	*RustweavedMessage_GetBlocksRequest
+	//	*RustweavedMessage_GetBlocksResponse
+	//	*RustweavedMessage_GetBlockCountRequest
+	//	*RustweavedMessage_GetBlockCountResponse
+	//	*RustweavedMessage_GetBlockDagInfoRequest
+	//	*RustweavedMessage_GetBlockDagInfoResponse
+	//	*RustweavedMessage_ResolveFinalityConflictRequest
+	//	*RustweavedMessage_ResolveFinalityConflictResponse
+	//	*RustweavedMessage_NotifyFinalityConflictsRequest
+	//	*RustweavedMessage_NotifyFinalityConflictsResponse
+	//	*RustweavedMessage_FinalityConflictNotification
+	//	*RustweavedMessage_FinalityConflictResolvedNotification
+	//	*RustweavedMessage_GetMempoolEntriesRequest
+	//	*RustweavedMessage_GetMempoolEntriesResponse
+	//	*RustweavedMessage_ShutDownRequest
+	//	*RustweavedMessage_ShutDownResponse
+	//	*RustweavedMessage_GetHeadersRequest
+	//	*RustweavedMessage_GetHeadersResponse
+	//	*RustweavedMessage_NotifyUtxosChangedRequest
+	//	*RustweavedMessage_NotifyUtxosChangedResponse
+	//	*RustweavedMessage_UtxosChangedNotification
+	//	*RustweavedMessage_GetUtxosByAddressesRequest
+	//	*RustweavedMessage_GetUtxosByAddressesResponse
+	//	*RustweavedMessage_GetVirtualSelectedParentBlueScoreRequest
+	//	*RustweavedMessage_GetVirtualSelectedParentBlueScoreResponse
+	//	*RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest
+	//	*RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse
+	//	*RustweavedMessage_VirtualSelectedParentBlueScoreChangedNotification
+	//	*RustweavedMessage_BanRequest
+	//	*RustweavedMessage_BanResponse
+	//	*RustweavedMessage_UnbanRequest
+	//	*RustweavedMessage_UnbanResponse
+	//	*RustweavedMessage_GetInfoRequest
+	//	*RustweavedMessage_GetInfoResponse
+	//	*RustweavedMessage_StopNotifyingUtxosChangedRequest
+	//	*RustweavedMessage_StopNotifyingUtxosChangedResponse
+	//	*RustweavedMessage_NotifyPruningPointUTXOSetOverrideRequest
+	//	*RustweavedMessage_NotifyPruningPointUTXOSetOverrideResponse
+	//	*RustweavedMessage_PruningPointUTXOSetOverrideNotification
+	//	*RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideRequest
+	//	*RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideResponse
+	//	*RustweavedMessage_EstimateNetworkHashesPerSecondRequest
+	//	*RustweavedMessage_EstimateNetworkHashesPerSecondResponse
+	//	*RustweavedMessage_NotifyVirtualDaaScoreChangedRequest
+	//	*RustweavedMessage_NotifyVirtualDaaScoreChangedResponse
+	//	*RustweavedMessage_VirtualDaaScoreChangedNotification
+	//	*RustweavedMessage_GetBalanceByAddressRequest
+	//	*RustweavedMessage_GetBalanceByAddressResponse
+	//	*RustweavedMessage_GetBalancesByAddressesRequest
+	//	*RustweavedMessage_GetBalancesByAddressesResponse
+	//	*RustweavedMessage_NotifyNewBlockTemplateRequest
+	//	*RustweavedMessage_NotifyNewBlockTemplateResponse
+	//	*RustweavedMessage_NewBlockTemplateNotification
+	//	*RustweavedMessage_GetMempoolEntriesByAddressesRequest
+	//	*RustweavedMessage_GetMempoolEntriesByAddressesResponse
+	//	*RustweavedMessage_GetCoinSupplyRequest
+	//	*RustweavedMessage_GetCoinSupplyResponse
+	Payload isRustweavedMessage_Payload `protobuf_oneof:"payload"`
 }
 
-func (x *KaspadMessage) Reset() {
-	*x = KaspadMessage{}
+func (x *RustweavedMessage) Reset() {
+	*x = RustweavedMessage{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_messages_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -168,13 +168,13 @@ func (x *KaspadMessage) Reset() {
 	}
 }
 
-func (x *KaspadMessage) String() string {
+func (x *RustweavedMessage) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*KaspadMessage) ProtoMessage() {}
+func (*RustweavedMessage) ProtoMessage() {}
 
-func (x *KaspadMessage) ProtoReflect() protoreflect.Message {
+func (x *RustweavedMessage) ProtoReflect() protoreflect.Message {
 	mi := &file_messages_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -186,1711 +186,1711 @@ func (x *KaspadMessage) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use KaspadMessage.ProtoReflect.Descriptor instead.
-func (*KaspadMessage) Descriptor() ([]byte, []int) {
+// Deprecated: Use RustweavedMessage.ProtoReflect.Descriptor instead.
+func (*RustweavedMessage) Descriptor() ([]byte, []int) {
 	return file_messages_proto_rawDescGZIP(), []int{0}
 }
 
-func (m *KaspadMessage) GetPayload() isKaspadMessage_Payload {
+func (m *RustweavedMessage) GetPayload() isRustweavedMessage_Payload {
 	if m != nil {
 		return m.Payload
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetAddresses() *AddressesMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_Addresses); ok {
+func (x *RustweavedMessage) GetAddresses() *AddressesMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_Addresses); ok {
 		return x.Addresses
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetBlock() *BlockMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_Block); ok {
+func (x *RustweavedMessage) GetBlock() *BlockMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_Block); ok {
 		return x.Block
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetTransaction() *TransactionMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_Transaction); ok {
+func (x *RustweavedMessage) GetTransaction() *TransactionMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_Transaction); ok {
 		return x.Transaction
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetBlockLocator() *BlockLocatorMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_BlockLocator); ok {
+func (x *RustweavedMessage) GetBlockLocator() *BlockLocatorMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_BlockLocator); ok {
 		return x.BlockLocator
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestAddresses() *RequestAddressesMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestAddresses); ok {
+func (x *RustweavedMessage) GetRequestAddresses() *RequestAddressesMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestAddresses); ok {
 		return x.RequestAddresses
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestRelayBlocks() *RequestRelayBlocksMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestRelayBlocks); ok {
+func (x *RustweavedMessage) GetRequestRelayBlocks() *RequestRelayBlocksMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestRelayBlocks); ok {
 		return x.RequestRelayBlocks
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestTransactions() *RequestTransactionsMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestTransactions); ok {
+func (x *RustweavedMessage) GetRequestTransactions() *RequestTransactionsMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestTransactions); ok {
 		return x.RequestTransactions
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetIbdBlock() *BlockMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_IbdBlock); ok {
+func (x *RustweavedMessage) GetIbdBlock() *BlockMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_IbdBlock); ok {
 		return x.IbdBlock
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetInvRelayBlock() *InvRelayBlockMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_InvRelayBlock); ok {
+func (x *RustweavedMessage) GetInvRelayBlock() *InvRelayBlockMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_InvRelayBlock); ok {
 		return x.InvRelayBlock
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetInvTransactions() *InvTransactionsMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_InvTransactions); ok {
+func (x *RustweavedMessage) GetInvTransactions() *InvTransactionsMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_InvTransactions); ok {
 		return x.InvTransactions
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetPing() *PingMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_Ping); ok {
+func (x *RustweavedMessage) GetPing() *PingMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_Ping); ok {
 		return x.Ping
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetPong() *PongMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_Pong); ok {
+func (x *RustweavedMessage) GetPong() *PongMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_Pong); ok {
 		return x.Pong
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetVerack() *VerackMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_Verack); ok {
+func (x *RustweavedMessage) GetVerack() *VerackMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_Verack); ok {
 		return x.Verack
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetVersion() *VersionMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_Version); ok {
+func (x *RustweavedMessage) GetVersion() *VersionMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_Version); ok {
 		return x.Version
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetTransactionNotFound() *TransactionNotFoundMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_TransactionNotFound); ok {
+func (x *RustweavedMessage) GetTransactionNotFound() *TransactionNotFoundMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_TransactionNotFound); ok {
 		return x.TransactionNotFound
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetReject() *RejectMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_Reject); ok {
+func (x *RustweavedMessage) GetReject() *RejectMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_Reject); ok {
 		return x.Reject
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetPruningPointUtxoSetChunk() *PruningPointUtxoSetChunkMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_PruningPointUtxoSetChunk); ok {
+func (x *RustweavedMessage) GetPruningPointUtxoSetChunk() *PruningPointUtxoSetChunkMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_PruningPointUtxoSetChunk); ok {
 		return x.PruningPointUtxoSetChunk
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestIBDBlocks() *RequestIBDBlocksMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestIBDBlocks); ok {
+func (x *RustweavedMessage) GetRequestIBDBlocks() *RequestIBDBlocksMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestIBDBlocks); ok {
 		return x.RequestIBDBlocks
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetUnexpectedPruningPoint() *UnexpectedPruningPointMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_UnexpectedPruningPoint); ok {
+func (x *RustweavedMessage) GetUnexpectedPruningPoint() *UnexpectedPruningPointMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_UnexpectedPruningPoint); ok {
 		return x.UnexpectedPruningPoint
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetIbdBlockLocator() *IbdBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_IbdBlockLocator); ok {
+func (x *RustweavedMessage) GetIbdBlockLocator() *IbdBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_IbdBlockLocator); ok {
 		return x.IbdBlockLocator
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetIbdBlockLocatorHighestHash() *IbdBlockLocatorHighestHashMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_IbdBlockLocatorHighestHash); ok {
+func (x *RustweavedMessage) GetIbdBlockLocatorHighestHash() *IbdBlockLocatorHighestHashMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_IbdBlockLocatorHighestHash); ok {
 		return x.IbdBlockLocatorHighestHash
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestNextPruningPointUtxoSetChunk() *RequestNextPruningPointUtxoSetChunkMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestNextPruningPointUtxoSetChunk); ok {
+func (x *RustweavedMessage) GetRequestNextPruningPointUtxoSetChunk() *RequestNextPruningPointUtxoSetChunkMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestNextPruningPointUtxoSetChunk); ok {
 		return x.RequestNextPruningPointUtxoSetChunk
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetDonePruningPointUtxoSetChunks() *DonePruningPointUtxoSetChunksMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_DonePruningPointUtxoSetChunks); ok {
+func (x *RustweavedMessage) GetDonePruningPointUtxoSetChunks() *DonePruningPointUtxoSetChunksMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_DonePruningPointUtxoSetChunks); ok {
 		return x.DonePruningPointUtxoSetChunks
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetIbdBlockLocatorHighestHashNotFound() *IbdBlockLocatorHighestHashNotFoundMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_IbdBlockLocatorHighestHashNotFound); ok {
+func (x *RustweavedMessage) GetIbdBlockLocatorHighestHashNotFound() *IbdBlockLocatorHighestHashNotFoundMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_IbdBlockLocatorHighestHashNotFound); ok {
 		return x.IbdBlockLocatorHighestHashNotFound
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetBlockWithTrustedData() *BlockWithTrustedDataMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_BlockWithTrustedData); ok {
+func (x *RustweavedMessage) GetBlockWithTrustedData() *BlockWithTrustedDataMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_BlockWithTrustedData); ok {
 		return x.BlockWithTrustedData
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetDoneBlocksWithTrustedData() *DoneBlocksWithTrustedDataMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_DoneBlocksWithTrustedData); ok {
+func (x *RustweavedMessage) GetDoneBlocksWithTrustedData() *DoneBlocksWithTrustedDataMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_DoneBlocksWithTrustedData); ok {
 		return x.DoneBlocksWithTrustedData
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestPruningPointAndItsAnticone() *RequestPruningPointAndItsAnticoneMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestPruningPointAndItsAnticone); ok {
+func (x *RustweavedMessage) GetRequestPruningPointAndItsAnticone() *RequestPruningPointAndItsAnticoneMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestPruningPointAndItsAnticone); ok {
 		return x.RequestPruningPointAndItsAnticone
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetBlockHeaders() *BlockHeadersMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_BlockHeaders); ok {
+func (x *RustweavedMessage) GetBlockHeaders() *BlockHeadersMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_BlockHeaders); ok {
 		return x.BlockHeaders
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestNextHeaders() *RequestNextHeadersMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestNextHeaders); ok {
+func (x *RustweavedMessage) GetRequestNextHeaders() *RequestNextHeadersMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestNextHeaders); ok {
 		return x.RequestNextHeaders
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetDoneHeaders() *DoneHeadersMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_DoneHeaders); ok {
+func (x *RustweavedMessage) GetDoneHeaders() *DoneHeadersMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_DoneHeaders); ok {
 		return x.DoneHeaders
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestPruningPointUTXOSet() *RequestPruningPointUTXOSetMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestPruningPointUTXOSet); ok {
+func (x *RustweavedMessage) GetRequestPruningPointUTXOSet() *RequestPruningPointUTXOSetMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestPruningPointUTXOSet); ok {
 		return x.RequestPruningPointUTXOSet
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestHeaders() *RequestHeadersMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestHeaders); ok {
+func (x *RustweavedMessage) GetRequestHeaders() *RequestHeadersMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestHeaders); ok {
 		return x.RequestHeaders
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestBlockLocator() *RequestBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestBlockLocator); ok {
+func (x *RustweavedMessage) GetRequestBlockLocator() *RequestBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestBlockLocator); ok {
 		return x.RequestBlockLocator
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetPruningPoints() *PruningPointsMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_PruningPoints); ok {
+func (x *RustweavedMessage) GetPruningPoints() *PruningPointsMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_PruningPoints); ok {
 		return x.PruningPoints
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestPruningPointProof() *RequestPruningPointProofMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestPruningPointProof); ok {
+func (x *RustweavedMessage) GetRequestPruningPointProof() *RequestPruningPointProofMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestPruningPointProof); ok {
 		return x.RequestPruningPointProof
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetPruningPointProof() *PruningPointProofMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_PruningPointProof); ok {
+func (x *RustweavedMessage) GetPruningPointProof() *PruningPointProofMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_PruningPointProof); ok {
 		return x.PruningPointProof
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetReady() *ReadyMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_Ready); ok {
+func (x *RustweavedMessage) GetReady() *ReadyMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_Ready); ok {
 		return x.Ready
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetBlockWithTrustedDataV4() *BlockWithTrustedDataV4Message {
-	if x, ok := x.GetPayload().(*KaspadMessage_BlockWithTrustedDataV4); ok {
+func (x *RustweavedMessage) GetBlockWithTrustedDataV4() *BlockWithTrustedDataV4Message {
+	if x, ok := x.GetPayload().(*RustweavedMessage_BlockWithTrustedDataV4); ok {
 		return x.BlockWithTrustedDataV4
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetTrustedData() *TrustedDataMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_TrustedData); ok {
+func (x *RustweavedMessage) GetTrustedData() *TrustedDataMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_TrustedData); ok {
 		return x.TrustedData
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestIBDChainBlockLocator() *RequestIBDChainBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestIBDChainBlockLocator); ok {
+func (x *RustweavedMessage) GetRequestIBDChainBlockLocator() *RequestIBDChainBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestIBDChainBlockLocator); ok {
 		return x.RequestIBDChainBlockLocator
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetIbdChainBlockLocator() *IbdChainBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_IbdChainBlockLocator); ok {
+func (x *RustweavedMessage) GetIbdChainBlockLocator() *IbdChainBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_IbdChainBlockLocator); ok {
 		return x.IbdChainBlockLocator
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestAnticone() *RequestAnticoneMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestAnticone); ok {
+func (x *RustweavedMessage) GetRequestAnticone() *RequestAnticoneMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestAnticone); ok {
 		return x.RequestAnticone
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetRequestNextPruningPointAndItsAnticoneBlocks() *RequestNextPruningPointAndItsAnticoneBlocksMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_RequestNextPruningPointAndItsAnticoneBlocks); ok {
+func (x *RustweavedMessage) GetRequestNextPruningPointAndItsAnticoneBlocks() *RequestNextPruningPointAndItsAnticoneBlocksMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_RequestNextPruningPointAndItsAnticoneBlocks); ok {
 		return x.RequestNextPruningPointAndItsAnticoneBlocks
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetCurrentNetworkRequest() *GetCurrentNetworkRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetCurrentNetworkRequest); ok {
+func (x *RustweavedMessage) GetGetCurrentNetworkRequest() *GetCurrentNetworkRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetCurrentNetworkRequest); ok {
 		return x.GetCurrentNetworkRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetCurrentNetworkResponse() *GetCurrentNetworkResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetCurrentNetworkResponse); ok {
+func (x *RustweavedMessage) GetGetCurrentNetworkResponse() *GetCurrentNetworkResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetCurrentNetworkResponse); ok {
 		return x.GetCurrentNetworkResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetSubmitBlockRequest() *SubmitBlockRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_SubmitBlockRequest); ok {
+func (x *RustweavedMessage) GetSubmitBlockRequest() *SubmitBlockRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_SubmitBlockRequest); ok {
 		return x.SubmitBlockRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetSubmitBlockResponse() *SubmitBlockResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_SubmitBlockResponse); ok {
+func (x *RustweavedMessage) GetSubmitBlockResponse() *SubmitBlockResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_SubmitBlockResponse); ok {
 		return x.SubmitBlockResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBlockTemplateRequest() *GetBlockTemplateRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBlockTemplateRequest); ok {
+func (x *RustweavedMessage) GetGetBlockTemplateRequest() *GetBlockTemplateRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBlockTemplateRequest); ok {
 		return x.GetBlockTemplateRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBlockTemplateResponse() *GetBlockTemplateResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBlockTemplateResponse); ok {
+func (x *RustweavedMessage) GetGetBlockTemplateResponse() *GetBlockTemplateResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBlockTemplateResponse); ok {
 		return x.GetBlockTemplateResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyBlockAddedRequest() *NotifyBlockAddedRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyBlockAddedRequest); ok {
+func (x *RustweavedMessage) GetNotifyBlockAddedRequest() *NotifyBlockAddedRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyBlockAddedRequest); ok {
 		return x.NotifyBlockAddedRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyBlockAddedResponse() *NotifyBlockAddedResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyBlockAddedResponse); ok {
+func (x *RustweavedMessage) GetNotifyBlockAddedResponse() *NotifyBlockAddedResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyBlockAddedResponse); ok {
 		return x.NotifyBlockAddedResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetBlockAddedNotification() *BlockAddedNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_BlockAddedNotification); ok {
+func (x *RustweavedMessage) GetBlockAddedNotification() *BlockAddedNotificationMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_BlockAddedNotification); ok {
 		return x.BlockAddedNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetPeerAddressesRequest() *GetPeerAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetPeerAddressesRequest); ok {
+func (x *RustweavedMessage) GetGetPeerAddressesRequest() *GetPeerAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetPeerAddressesRequest); ok {
 		return x.GetPeerAddressesRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetPeerAddressesResponse() *GetPeerAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetPeerAddressesResponse); ok {
+func (x *RustweavedMessage) GetGetPeerAddressesResponse() *GetPeerAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetPeerAddressesResponse); ok {
 		return x.GetPeerAddressesResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetSelectedTipHashRequest() *GetSelectedTipHashRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetSelectedTipHashRequest); ok {
+func (x *RustweavedMessage) GetGetSelectedTipHashRequest() *GetSelectedTipHashRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetSelectedTipHashRequest); ok {
 		return x.GetSelectedTipHashRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetSelectedTipHashResponse() *GetSelectedTipHashResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetSelectedTipHashResponse); ok {
+func (x *RustweavedMessage) GetGetSelectedTipHashResponse() *GetSelectedTipHashResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetSelectedTipHashResponse); ok {
 		return x.GetSelectedTipHashResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetMempoolEntryRequest() *GetMempoolEntryRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetMempoolEntryRequest); ok {
+func (x *RustweavedMessage) GetGetMempoolEntryRequest() *GetMempoolEntryRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetMempoolEntryRequest); ok {
 		return x.GetMempoolEntryRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetMempoolEntryResponse() *GetMempoolEntryResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetMempoolEntryResponse); ok {
+func (x *RustweavedMessage) GetGetMempoolEntryResponse() *GetMempoolEntryResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetMempoolEntryResponse); ok {
 		return x.GetMempoolEntryResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetConnectedPeerInfoRequest() *GetConnectedPeerInfoRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetConnectedPeerInfoRequest); ok {
+func (x *RustweavedMessage) GetGetConnectedPeerInfoRequest() *GetConnectedPeerInfoRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetConnectedPeerInfoRequest); ok {
 		return x.GetConnectedPeerInfoRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetConnectedPeerInfoResponse() *GetConnectedPeerInfoResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetConnectedPeerInfoResponse); ok {
+func (x *RustweavedMessage) GetGetConnectedPeerInfoResponse() *GetConnectedPeerInfoResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetConnectedPeerInfoResponse); ok {
 		return x.GetConnectedPeerInfoResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetAddPeerRequest() *AddPeerRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_AddPeerRequest); ok {
+func (x *RustweavedMessage) GetAddPeerRequest() *AddPeerRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_AddPeerRequest); ok {
 		return x.AddPeerRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetAddPeerResponse() *AddPeerResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_AddPeerResponse); ok {
+func (x *RustweavedMessage) GetAddPeerResponse() *AddPeerResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_AddPeerResponse); ok {
 		return x.AddPeerResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetSubmitTransactionRequest() *SubmitTransactionRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_SubmitTransactionRequest); ok {
+func (x *RustweavedMessage) GetSubmitTransactionRequest() *SubmitTransactionRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_SubmitTransactionRequest); ok {
 		return x.SubmitTransactionRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetSubmitTransactionResponse() *SubmitTransactionResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_SubmitTransactionResponse); ok {
+func (x *RustweavedMessage) GetSubmitTransactionResponse() *SubmitTransactionResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_SubmitTransactionResponse); ok {
 		return x.SubmitTransactionResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyVirtualSelectedParentChainChangedRequest() *NotifyVirtualSelectedParentChainChangedRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyVirtualSelectedParentChainChangedRequest); ok {
+func (x *RustweavedMessage) GetNotifyVirtualSelectedParentChainChangedRequest() *NotifyVirtualSelectedParentChainChangedRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyVirtualSelectedParentChainChangedRequest); ok {
 		return x.NotifyVirtualSelectedParentChainChangedRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyVirtualSelectedParentChainChangedResponse() *NotifyVirtualSelectedParentChainChangedResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyVirtualSelectedParentChainChangedResponse); ok {
+func (x *RustweavedMessage) GetNotifyVirtualSelectedParentChainChangedResponse() *NotifyVirtualSelectedParentChainChangedResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyVirtualSelectedParentChainChangedResponse); ok {
 		return x.NotifyVirtualSelectedParentChainChangedResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetVirtualSelectedParentChainChangedNotification() *VirtualSelectedParentChainChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_VirtualSelectedParentChainChangedNotification); ok {
+func (x *RustweavedMessage) GetVirtualSelectedParentChainChangedNotification() *VirtualSelectedParentChainChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_VirtualSelectedParentChainChangedNotification); ok {
 		return x.VirtualSelectedParentChainChangedNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBlockRequest() *GetBlockRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBlockRequest); ok {
+func (x *RustweavedMessage) GetGetBlockRequest() *GetBlockRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBlockRequest); ok {
 		return x.GetBlockRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBlockResponse() *GetBlockResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBlockResponse); ok {
+func (x *RustweavedMessage) GetGetBlockResponse() *GetBlockResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBlockResponse); ok {
 		return x.GetBlockResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetSubnetworkRequest() *GetSubnetworkRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetSubnetworkRequest); ok {
+func (x *RustweavedMessage) GetGetSubnetworkRequest() *GetSubnetworkRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetSubnetworkRequest); ok {
 		return x.GetSubnetworkRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetSubnetworkResponse() *GetSubnetworkResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetSubnetworkResponse); ok {
+func (x *RustweavedMessage) GetGetSubnetworkResponse() *GetSubnetworkResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetSubnetworkResponse); ok {
 		return x.GetSubnetworkResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetVirtualSelectedParentChainFromBlockRequest() *GetVirtualSelectedParentChainFromBlockRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetVirtualSelectedParentChainFromBlockRequest); ok {
+func (x *RustweavedMessage) GetGetVirtualSelectedParentChainFromBlockRequest() *GetVirtualSelectedParentChainFromBlockRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetVirtualSelectedParentChainFromBlockRequest); ok {
 		return x.GetVirtualSelectedParentChainFromBlockRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetVirtualSelectedParentChainFromBlockResponse() *GetVirtualSelectedParentChainFromBlockResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetVirtualSelectedParentChainFromBlockResponse); ok {
+func (x *RustweavedMessage) GetGetVirtualSelectedParentChainFromBlockResponse() *GetVirtualSelectedParentChainFromBlockResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetVirtualSelectedParentChainFromBlockResponse); ok {
 		return x.GetVirtualSelectedParentChainFromBlockResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBlocksRequest() *GetBlocksRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBlocksRequest); ok {
+func (x *RustweavedMessage) GetGetBlocksRequest() *GetBlocksRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBlocksRequest); ok {
 		return x.GetBlocksRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBlocksResponse() *GetBlocksResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBlocksResponse); ok {
+func (x *RustweavedMessage) GetGetBlocksResponse() *GetBlocksResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBlocksResponse); ok {
 		return x.GetBlocksResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBlockCountRequest() *GetBlockCountRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBlockCountRequest); ok {
+func (x *RustweavedMessage) GetGetBlockCountRequest() *GetBlockCountRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBlockCountRequest); ok {
 		return x.GetBlockCountRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBlockCountResponse() *GetBlockCountResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBlockCountResponse); ok {
+func (x *RustweavedMessage) GetGetBlockCountResponse() *GetBlockCountResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBlockCountResponse); ok {
 		return x.GetBlockCountResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBlockDagInfoRequest() *GetBlockDagInfoRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBlockDagInfoRequest); ok {
+func (x *RustweavedMessage) GetGetBlockDagInfoRequest() *GetBlockDagInfoRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBlockDagInfoRequest); ok {
 		return x.GetBlockDagInfoRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBlockDagInfoResponse() *GetBlockDagInfoResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBlockDagInfoResponse); ok {
+func (x *RustweavedMessage) GetGetBlockDagInfoResponse() *GetBlockDagInfoResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBlockDagInfoResponse); ok {
 		return x.GetBlockDagInfoResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetResolveFinalityConflictRequest() *ResolveFinalityConflictRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_ResolveFinalityConflictRequest); ok {
+func (x *RustweavedMessage) GetResolveFinalityConflictRequest() *ResolveFinalityConflictRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_ResolveFinalityConflictRequest); ok {
 		return x.ResolveFinalityConflictRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetResolveFinalityConflictResponse() *ResolveFinalityConflictResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_ResolveFinalityConflictResponse); ok {
+func (x *RustweavedMessage) GetResolveFinalityConflictResponse() *ResolveFinalityConflictResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_ResolveFinalityConflictResponse); ok {
 		return x.ResolveFinalityConflictResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyFinalityConflictsRequest() *NotifyFinalityConflictsRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyFinalityConflictsRequest); ok {
+func (x *RustweavedMessage) GetNotifyFinalityConflictsRequest() *NotifyFinalityConflictsRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyFinalityConflictsRequest); ok {
 		return x.NotifyFinalityConflictsRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyFinalityConflictsResponse() *NotifyFinalityConflictsResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyFinalityConflictsResponse); ok {
+func (x *RustweavedMessage) GetNotifyFinalityConflictsResponse() *NotifyFinalityConflictsResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyFinalityConflictsResponse); ok {
 		return x.NotifyFinalityConflictsResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetFinalityConflictNotification() *FinalityConflictNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_FinalityConflictNotification); ok {
+func (x *RustweavedMessage) GetFinalityConflictNotification() *FinalityConflictNotificationMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_FinalityConflictNotification); ok {
 		return x.FinalityConflictNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetFinalityConflictResolvedNotification() *FinalityConflictResolvedNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_FinalityConflictResolvedNotification); ok {
+func (x *RustweavedMessage) GetFinalityConflictResolvedNotification() *FinalityConflictResolvedNotificationMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_FinalityConflictResolvedNotification); ok {
 		return x.FinalityConflictResolvedNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetMempoolEntriesRequest() *GetMempoolEntriesRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetMempoolEntriesRequest); ok {
+func (x *RustweavedMessage) GetGetMempoolEntriesRequest() *GetMempoolEntriesRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetMempoolEntriesRequest); ok {
 		return x.GetMempoolEntriesRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetMempoolEntriesResponse() *GetMempoolEntriesResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetMempoolEntriesResponse); ok {
+func (x *RustweavedMessage) GetGetMempoolEntriesResponse() *GetMempoolEntriesResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetMempoolEntriesResponse); ok {
 		return x.GetMempoolEntriesResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetShutDownRequest() *ShutDownRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_ShutDownRequest); ok {
+func (x *RustweavedMessage) GetShutDownRequest() *ShutDownRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_ShutDownRequest); ok {
 		return x.ShutDownRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetShutDownResponse() *ShutDownResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_ShutDownResponse); ok {
+func (x *RustweavedMessage) GetShutDownResponse() *ShutDownResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_ShutDownResponse); ok {
 		return x.ShutDownResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetHeadersRequest() *GetHeadersRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetHeadersRequest); ok {
+func (x *RustweavedMessage) GetGetHeadersRequest() *GetHeadersRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetHeadersRequest); ok {
 		return x.GetHeadersRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetHeadersResponse() *GetHeadersResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetHeadersResponse); ok {
+func (x *RustweavedMessage) GetGetHeadersResponse() *GetHeadersResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetHeadersResponse); ok {
 		return x.GetHeadersResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyUtxosChangedRequest() *NotifyUtxosChangedRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyUtxosChangedRequest); ok {
+func (x *RustweavedMessage) GetNotifyUtxosChangedRequest() *NotifyUtxosChangedRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyUtxosChangedRequest); ok {
 		return x.NotifyUtxosChangedRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyUtxosChangedResponse() *NotifyUtxosChangedResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyUtxosChangedResponse); ok {
+func (x *RustweavedMessage) GetNotifyUtxosChangedResponse() *NotifyUtxosChangedResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyUtxosChangedResponse); ok {
 		return x.NotifyUtxosChangedResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetUtxosChangedNotification() *UtxosChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_UtxosChangedNotification); ok {
+func (x *RustweavedMessage) GetUtxosChangedNotification() *UtxosChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_UtxosChangedNotification); ok {
 		return x.UtxosChangedNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetUtxosByAddressesRequest() *GetUtxosByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetUtxosByAddressesRequest); ok {
+func (x *RustweavedMessage) GetGetUtxosByAddressesRequest() *GetUtxosByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetUtxosByAddressesRequest); ok {
 		return x.GetUtxosByAddressesRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetUtxosByAddressesResponse() *GetUtxosByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetUtxosByAddressesResponse); ok {
+func (x *RustweavedMessage) GetGetUtxosByAddressesResponse() *GetUtxosByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetUtxosByAddressesResponse); ok {
 		return x.GetUtxosByAddressesResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetVirtualSelectedParentBlueScoreRequest() *GetVirtualSelectedParentBlueScoreRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetVirtualSelectedParentBlueScoreRequest); ok {
+func (x *RustweavedMessage) GetGetVirtualSelectedParentBlueScoreRequest() *GetVirtualSelectedParentBlueScoreRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetVirtualSelectedParentBlueScoreRequest); ok {
 		return x.GetVirtualSelectedParentBlueScoreRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetVirtualSelectedParentBlueScoreResponse() *GetVirtualSelectedParentBlueScoreResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetVirtualSelectedParentBlueScoreResponse); ok {
+func (x *RustweavedMessage) GetGetVirtualSelectedParentBlueScoreResponse() *GetVirtualSelectedParentBlueScoreResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetVirtualSelectedParentBlueScoreResponse); ok {
 		return x.GetVirtualSelectedParentBlueScoreResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyVirtualSelectedParentBlueScoreChangedRequest() *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest); ok {
+func (x *RustweavedMessage) GetNotifyVirtualSelectedParentBlueScoreChangedRequest() *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest); ok {
 		return x.NotifyVirtualSelectedParentBlueScoreChangedRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyVirtualSelectedParentBlueScoreChangedResponse() *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse); ok {
+func (x *RustweavedMessage) GetNotifyVirtualSelectedParentBlueScoreChangedResponse() *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse); ok {
 		return x.NotifyVirtualSelectedParentBlueScoreChangedResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetVirtualSelectedParentBlueScoreChangedNotification() *VirtualSelectedParentBlueScoreChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_VirtualSelectedParentBlueScoreChangedNotification); ok {
+func (x *RustweavedMessage) GetVirtualSelectedParentBlueScoreChangedNotification() *VirtualSelectedParentBlueScoreChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_VirtualSelectedParentBlueScoreChangedNotification); ok {
 		return x.VirtualSelectedParentBlueScoreChangedNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetBanRequest() *BanRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_BanRequest); ok {
+func (x *RustweavedMessage) GetBanRequest() *BanRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_BanRequest); ok {
 		return x.BanRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetBanResponse() *BanResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_BanResponse); ok {
+func (x *RustweavedMessage) GetBanResponse() *BanResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_BanResponse); ok {
 		return x.BanResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetUnbanRequest() *UnbanRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_UnbanRequest); ok {
+func (x *RustweavedMessage) GetUnbanRequest() *UnbanRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_UnbanRequest); ok {
 		return x.UnbanRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetUnbanResponse() *UnbanResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_UnbanResponse); ok {
+func (x *RustweavedMessage) GetUnbanResponse() *UnbanResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_UnbanResponse); ok {
 		return x.UnbanResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetInfoRequest() *GetInfoRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetInfoRequest); ok {
+func (x *RustweavedMessage) GetGetInfoRequest() *GetInfoRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetInfoRequest); ok {
 		return x.GetInfoRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetInfoResponse() *GetInfoResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetInfoResponse); ok {
+func (x *RustweavedMessage) GetGetInfoResponse() *GetInfoResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetInfoResponse); ok {
 		return x.GetInfoResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetStopNotifyingUtxosChangedRequest() *StopNotifyingUtxosChangedRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_StopNotifyingUtxosChangedRequest); ok {
+func (x *RustweavedMessage) GetStopNotifyingUtxosChangedRequest() *StopNotifyingUtxosChangedRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_StopNotifyingUtxosChangedRequest); ok {
 		return x.StopNotifyingUtxosChangedRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetStopNotifyingUtxosChangedResponse() *StopNotifyingUtxosChangedResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_StopNotifyingUtxosChangedResponse); ok {
+func (x *RustweavedMessage) GetStopNotifyingUtxosChangedResponse() *StopNotifyingUtxosChangedResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_StopNotifyingUtxosChangedResponse); ok {
 		return x.StopNotifyingUtxosChangedResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyPruningPointUTXOSetOverrideRequest() *NotifyPruningPointUTXOSetOverrideRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest); ok {
+func (x *RustweavedMessage) GetNotifyPruningPointUTXOSetOverrideRequest() *NotifyPruningPointUTXOSetOverrideRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyPruningPointUTXOSetOverrideRequest); ok {
 		return x.NotifyPruningPointUTXOSetOverrideRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyPruningPointUTXOSetOverrideResponse() *NotifyPruningPointUTXOSetOverrideResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse); ok {
+func (x *RustweavedMessage) GetNotifyPruningPointUTXOSetOverrideResponse() *NotifyPruningPointUTXOSetOverrideResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyPruningPointUTXOSetOverrideResponse); ok {
 		return x.NotifyPruningPointUTXOSetOverrideResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetPruningPointUTXOSetOverrideNotification() *PruningPointUTXOSetOverrideNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_PruningPointUTXOSetOverrideNotification); ok {
+func (x *RustweavedMessage) GetPruningPointUTXOSetOverrideNotification() *PruningPointUTXOSetOverrideNotificationMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_PruningPointUTXOSetOverrideNotification); ok {
 		return x.PruningPointUTXOSetOverrideNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetStopNotifyingPruningPointUTXOSetOverrideRequest() *StopNotifyingPruningPointUTXOSetOverrideRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest); ok {
+func (x *RustweavedMessage) GetStopNotifyingPruningPointUTXOSetOverrideRequest() *StopNotifyingPruningPointUTXOSetOverrideRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideRequest); ok {
 		return x.StopNotifyingPruningPointUTXOSetOverrideRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetStopNotifyingPruningPointUTXOSetOverrideResponse() *StopNotifyingPruningPointUTXOSetOverrideResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse); ok {
+func (x *RustweavedMessage) GetStopNotifyingPruningPointUTXOSetOverrideResponse() *StopNotifyingPruningPointUTXOSetOverrideResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideResponse); ok {
 		return x.StopNotifyingPruningPointUTXOSetOverrideResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetEstimateNetworkHashesPerSecondRequest() *EstimateNetworkHashesPerSecondRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_EstimateNetworkHashesPerSecondRequest); ok {
+func (x *RustweavedMessage) GetEstimateNetworkHashesPerSecondRequest() *EstimateNetworkHashesPerSecondRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_EstimateNetworkHashesPerSecondRequest); ok {
 		return x.EstimateNetworkHashesPerSecondRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetEstimateNetworkHashesPerSecondResponse() *EstimateNetworkHashesPerSecondResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_EstimateNetworkHashesPerSecondResponse); ok {
+func (x *RustweavedMessage) GetEstimateNetworkHashesPerSecondResponse() *EstimateNetworkHashesPerSecondResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_EstimateNetworkHashesPerSecondResponse); ok {
 		return x.EstimateNetworkHashesPerSecondResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyVirtualDaaScoreChangedRequest() *NotifyVirtualDaaScoreChangedRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyVirtualDaaScoreChangedRequest); ok {
+func (x *RustweavedMessage) GetNotifyVirtualDaaScoreChangedRequest() *NotifyVirtualDaaScoreChangedRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyVirtualDaaScoreChangedRequest); ok {
 		return x.NotifyVirtualDaaScoreChangedRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyVirtualDaaScoreChangedResponse() *NotifyVirtualDaaScoreChangedResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyVirtualDaaScoreChangedResponse); ok {
+func (x *RustweavedMessage) GetNotifyVirtualDaaScoreChangedResponse() *NotifyVirtualDaaScoreChangedResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyVirtualDaaScoreChangedResponse); ok {
 		return x.NotifyVirtualDaaScoreChangedResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetVirtualDaaScoreChangedNotification() *VirtualDaaScoreChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_VirtualDaaScoreChangedNotification); ok {
+func (x *RustweavedMessage) GetVirtualDaaScoreChangedNotification() *VirtualDaaScoreChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_VirtualDaaScoreChangedNotification); ok {
 		return x.VirtualDaaScoreChangedNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBalanceByAddressRequest() *GetBalanceByAddressRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBalanceByAddressRequest); ok {
+func (x *RustweavedMessage) GetGetBalanceByAddressRequest() *GetBalanceByAddressRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBalanceByAddressRequest); ok {
 		return x.GetBalanceByAddressRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBalanceByAddressResponse() *GetBalanceByAddressResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBalanceByAddressResponse); ok {
+func (x *RustweavedMessage) GetGetBalanceByAddressResponse() *GetBalanceByAddressResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBalanceByAddressResponse); ok {
 		return x.GetBalanceByAddressResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBalancesByAddressesRequest() *GetBalancesByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBalancesByAddressesRequest); ok {
+func (x *RustweavedMessage) GetGetBalancesByAddressesRequest() *GetBalancesByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBalancesByAddressesRequest); ok {
 		return x.GetBalancesByAddressesRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBalancesByAddressesResponse() *GetBalancesByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBalancesByAddressesResponse); ok {
+func (x *RustweavedMessage) GetGetBalancesByAddressesResponse() *GetBalancesByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetBalancesByAddressesResponse); ok {
 		return x.GetBalancesByAddressesResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyNewBlockTemplateRequest() *NotifyNewBlockTemplateRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyNewBlockTemplateRequest); ok {
+func (x *RustweavedMessage) GetNotifyNewBlockTemplateRequest() *NotifyNewBlockTemplateRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyNewBlockTemplateRequest); ok {
 		return x.NotifyNewBlockTemplateRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyNewBlockTemplateResponse() *NotifyNewBlockTemplateResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyNewBlockTemplateResponse); ok {
+func (x *RustweavedMessage) GetNotifyNewBlockTemplateResponse() *NotifyNewBlockTemplateResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NotifyNewBlockTemplateResponse); ok {
 		return x.NotifyNewBlockTemplateResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNewBlockTemplateNotification() *NewBlockTemplateNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NewBlockTemplateNotification); ok {
+func (x *RustweavedMessage) GetNewBlockTemplateNotification() *NewBlockTemplateNotificationMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_NewBlockTemplateNotification); ok {
 		return x.NewBlockTemplateNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetMempoolEntriesByAddressesRequest() *GetMempoolEntriesByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetMempoolEntriesByAddressesRequest); ok {
+func (x *RustweavedMessage) GetGetMempoolEntriesByAddressesRequest() *GetMempoolEntriesByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetMempoolEntriesByAddressesRequest); ok {
 		return x.GetMempoolEntriesByAddressesRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetMempoolEntriesByAddressesResponse() *GetMempoolEntriesByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetMempoolEntriesByAddressesResponse); ok {
+func (x *RustweavedMessage) GetGetMempoolEntriesByAddressesResponse() *GetMempoolEntriesByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetMempoolEntriesByAddressesResponse); ok {
 		return x.GetMempoolEntriesByAddressesResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetCoinSupplyRequest() *GetCoinSupplyRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetCoinSupplyRequest); ok {
+func (x *RustweavedMessage) GetGetCoinSupplyRequest() *GetCoinSupplyRequestMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetCoinSupplyRequest); ok {
 		return x.GetCoinSupplyRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetCoinSupplyResponse() *GetCoinSupplyResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetCoinSupplyResponse); ok {
+func (x *RustweavedMessage) GetGetCoinSupplyResponse() *GetCoinSupplyResponseMessage {
+	if x, ok := x.GetPayload().(*RustweavedMessage_GetCoinSupplyResponse); ok {
 		return x.GetCoinSupplyResponse
 	}
 	return nil
 }
 
-type isKaspadMessage_Payload interface {
-	isKaspadMessage_Payload()
+type isRustweavedMessage_Payload interface {
+	isRustweavedMessage_Payload()
 }
 
-type KaspadMessage_Addresses struct {
+type RustweavedMessage_Addresses struct {
 	Addresses *AddressesMessage `protobuf:"bytes,1,opt,name=addresses,proto3,oneof"`
 }
 
-type KaspadMessage_Block struct {
+type RustweavedMessage_Block struct {
 	Block *BlockMessage `protobuf:"bytes,2,opt,name=block,proto3,oneof"`
 }
 
-type KaspadMessage_Transaction struct {
+type RustweavedMessage_Transaction struct {
 	Transaction *TransactionMessage `protobuf:"bytes,3,opt,name=transaction,proto3,oneof"`
 }
 
-type KaspadMessage_BlockLocator struct {
+type RustweavedMessage_BlockLocator struct {
 	BlockLocator *BlockLocatorMessage `protobuf:"bytes,5,opt,name=blockLocator,proto3,oneof"`
 }
 
-type KaspadMessage_RequestAddresses struct {
+type RustweavedMessage_RequestAddresses struct {
 	RequestAddresses *RequestAddressesMessage `protobuf:"bytes,6,opt,name=requestAddresses,proto3,oneof"`
 }
 
-type KaspadMessage_RequestRelayBlocks struct {
+type RustweavedMessage_RequestRelayBlocks struct {
 	RequestRelayBlocks *RequestRelayBlocksMessage `protobuf:"bytes,10,opt,name=requestRelayBlocks,proto3,oneof"`
 }
 
-type KaspadMessage_RequestTransactions struct {
+type RustweavedMessage_RequestTransactions struct {
 	RequestTransactions *RequestTransactionsMessage `protobuf:"bytes,12,opt,name=requestTransactions,proto3,oneof"`
 }
 
-type KaspadMessage_IbdBlock struct {
+type RustweavedMessage_IbdBlock struct {
 	IbdBlock *BlockMessage `protobuf:"bytes,13,opt,name=ibdBlock,proto3,oneof"`
 }
 
-type KaspadMessage_InvRelayBlock struct {
+type RustweavedMessage_InvRelayBlock struct {
 	InvRelayBlock *InvRelayBlockMessage `protobuf:"bytes,14,opt,name=invRelayBlock,proto3,oneof"`
 }
 
-type KaspadMessage_InvTransactions struct {
+type RustweavedMessage_InvTransactions struct {
 	InvTransactions *InvTransactionsMessage `protobuf:"bytes,15,opt,name=invTransactions,proto3,oneof"`
 }
 
-type KaspadMessage_Ping struct {
+type RustweavedMessage_Ping struct {
 	Ping *PingMessage `protobuf:"bytes,16,opt,name=ping,proto3,oneof"`
 }
 
-type KaspadMessage_Pong struct {
+type RustweavedMessage_Pong struct {
 	Pong *PongMessage `protobuf:"bytes,17,opt,name=pong,proto3,oneof"`
 }
 
-type KaspadMessage_Verack struct {
+type RustweavedMessage_Verack struct {
 	Verack *VerackMessage `protobuf:"bytes,19,opt,name=verack,proto3,oneof"`
 }
 
-type KaspadMessage_Version struct {
+type RustweavedMessage_Version struct {
 	Version *VersionMessage `protobuf:"bytes,20,opt,name=version,proto3,oneof"`
 }
 
-type KaspadMessage_TransactionNotFound struct {
+type RustweavedMessage_TransactionNotFound struct {
 	TransactionNotFound *TransactionNotFoundMessage `protobuf:"bytes,21,opt,name=transactionNotFound,proto3,oneof"`
 }
 
-type KaspadMessage_Reject struct {
+type RustweavedMessage_Reject struct {
 	Reject *RejectMessage `protobuf:"bytes,22,opt,name=reject,proto3,oneof"`
 }
 
-type KaspadMessage_PruningPointUtxoSetChunk struct {
+type RustweavedMessage_PruningPointUtxoSetChunk struct {
 	PruningPointUtxoSetChunk *PruningPointUtxoSetChunkMessage `protobuf:"bytes,25,opt,name=pruningPointUtxoSetChunk,proto3,oneof"`
 }
 
-type KaspadMessage_RequestIBDBlocks struct {
+type RustweavedMessage_RequestIBDBlocks struct {
 	RequestIBDBlocks *RequestIBDBlocksMessage `protobuf:"bytes,26,opt,name=requestIBDBlocks,proto3,oneof"`
 }
 
-type KaspadMessage_UnexpectedPruningPoint struct {
+type RustweavedMessage_UnexpectedPruningPoint struct {
 	UnexpectedPruningPoint *UnexpectedPruningPointMessage `protobuf:"bytes,27,opt,name=unexpectedPruningPoint,proto3,oneof"`
 }
 
-type KaspadMessage_IbdBlockLocator struct {
+type RustweavedMessage_IbdBlockLocator struct {
 	IbdBlockLocator *IbdBlockLocatorMessage `protobuf:"bytes,30,opt,name=ibdBlockLocator,proto3,oneof"`
 }
 
-type KaspadMessage_IbdBlockLocatorHighestHash struct {
+type RustweavedMessage_IbdBlockLocatorHighestHash struct {
 	IbdBlockLocatorHighestHash *IbdBlockLocatorHighestHashMessage `protobuf:"bytes,31,opt,name=ibdBlockLocatorHighestHash,proto3,oneof"`
 }
 
-type KaspadMessage_RequestNextPruningPointUtxoSetChunk struct {
+type RustweavedMessage_RequestNextPruningPointUtxoSetChunk struct {
 	RequestNextPruningPointUtxoSetChunk *RequestNextPruningPointUtxoSetChunkMessage `protobuf:"bytes,33,opt,name=requestNextPruningPointUtxoSetChunk,proto3,oneof"`
 }
 
-type KaspadMessage_DonePruningPointUtxoSetChunks struct {
+type RustweavedMessage_DonePruningPointUtxoSetChunks struct {
 	DonePruningPointUtxoSetChunks *DonePruningPointUtxoSetChunksMessage `protobuf:"bytes,34,opt,name=donePruningPointUtxoSetChunks,proto3,oneof"`
 }
 
-type KaspadMessage_IbdBlockLocatorHighestHashNotFound struct {
+type RustweavedMessage_IbdBlockLocatorHighestHashNotFound struct {
 	IbdBlockLocatorHighestHashNotFound *IbdBlockLocatorHighestHashNotFoundMessage `protobuf:"bytes,35,opt,name=ibdBlockLocatorHighestHashNotFound,proto3,oneof"`
 }
 
-type KaspadMessage_BlockWithTrustedData struct {
+type RustweavedMessage_BlockWithTrustedData struct {
 	BlockWithTrustedData *BlockWithTrustedDataMessage `protobuf:"bytes,36,opt,name=blockWithTrustedData,proto3,oneof"`
 }
 
-type KaspadMessage_DoneBlocksWithTrustedData struct {
+type RustweavedMessage_DoneBlocksWithTrustedData struct {
 	DoneBlocksWithTrustedData *DoneBlocksWithTrustedDataMessage `protobuf:"bytes,37,opt,name=doneBlocksWithTrustedData,proto3,oneof"`
 }
 
-type KaspadMessage_RequestPruningPointAndItsAnticone struct {
+type RustweavedMessage_RequestPruningPointAndItsAnticone struct {
 	RequestPruningPointAndItsAnticone *RequestPruningPointAndItsAnticoneMessage `protobuf:"bytes,40,opt,name=requestPruningPointAndItsAnticone,proto3,oneof"`
 }
 
-type KaspadMessage_BlockHeaders struct {
+type RustweavedMessage_BlockHeaders struct {
 	BlockHeaders *BlockHeadersMessage `protobuf:"bytes,41,opt,name=blockHeaders,proto3,oneof"`
 }
 
-type KaspadMessage_RequestNextHeaders struct {
+type RustweavedMessage_RequestNextHeaders struct {
 	RequestNextHeaders *RequestNextHeadersMessage `protobuf:"bytes,42,opt,name=requestNextHeaders,proto3,oneof"`
 }
 
-type KaspadMessage_DoneHeaders struct {
+type RustweavedMessage_DoneHeaders struct {
 	DoneHeaders *DoneHeadersMessage `protobuf:"bytes,43,opt,name=DoneHeaders,proto3,oneof"`
 }
 
-type KaspadMessage_RequestPruningPointUTXOSet struct {
+type RustweavedMessage_RequestPruningPointUTXOSet struct {
 	RequestPruningPointUTXOSet *RequestPruningPointUTXOSetMessage `protobuf:"bytes,44,opt,name=requestPruningPointUTXOSet,proto3,oneof"`
 }
 
-type KaspadMessage_RequestHeaders struct {
+type RustweavedMessage_RequestHeaders struct {
 	RequestHeaders *RequestHeadersMessage `protobuf:"bytes,45,opt,name=requestHeaders,proto3,oneof"`
 }
 
-type KaspadMessage_RequestBlockLocator struct {
+type RustweavedMessage_RequestBlockLocator struct {
 	RequestBlockLocator *RequestBlockLocatorMessage `protobuf:"bytes,46,opt,name=requestBlockLocator,proto3,oneof"`
 }
 
-type KaspadMessage_PruningPoints struct {
+type RustweavedMessage_PruningPoints struct {
 	PruningPoints *PruningPointsMessage `protobuf:"bytes,47,opt,name=pruningPoints,proto3,oneof"`
 }
 
-type KaspadMessage_RequestPruningPointProof struct {
+type RustweavedMessage_RequestPruningPointProof struct {
 	RequestPruningPointProof *RequestPruningPointProofMessage `protobuf:"bytes,48,opt,name=requestPruningPointProof,proto3,oneof"`
 }
 
-type KaspadMessage_PruningPointProof struct {
+type RustweavedMessage_PruningPointProof struct {
 	PruningPointProof *PruningPointProofMessage `protobuf:"bytes,49,opt,name=pruningPointProof,proto3,oneof"`
 }
 
-type KaspadMessage_Ready struct {
+type RustweavedMessage_Ready struct {
 	Ready *ReadyMessage `protobuf:"bytes,50,opt,name=ready,proto3,oneof"`
 }
 
-type KaspadMessage_BlockWithTrustedDataV4 struct {
+type RustweavedMessage_BlockWithTrustedDataV4 struct {
 	BlockWithTrustedDataV4 *BlockWithTrustedDataV4Message `protobuf:"bytes,51,opt,name=blockWithTrustedDataV4,proto3,oneof"`
 }
 
-type KaspadMessage_TrustedData struct {
+type RustweavedMessage_TrustedData struct {
 	TrustedData *TrustedDataMessage `protobuf:"bytes,52,opt,name=trustedData,proto3,oneof"`
 }
 
-type KaspadMessage_RequestIBDChainBlockLocator struct {
+type RustweavedMessage_RequestIBDChainBlockLocator struct {
 	RequestIBDChainBlockLocator *RequestIBDChainBlockLocatorMessage `protobuf:"bytes,53,opt,name=requestIBDChainBlockLocator,proto3,oneof"`
 }
 
-type KaspadMessage_IbdChainBlockLocator struct {
+type RustweavedMessage_IbdChainBlockLocator struct {
 	IbdChainBlockLocator *IbdChainBlockLocatorMessage `protobuf:"bytes,54,opt,name=ibdChainBlockLocator,proto3,oneof"`
 }
 
-type KaspadMessage_RequestAnticone struct {
+type RustweavedMessage_RequestAnticone struct {
 	RequestAnticone *RequestAnticoneMessage `protobuf:"bytes,55,opt,name=requestAnticone,proto3,oneof"`
 }
 
-type KaspadMessage_RequestNextPruningPointAndItsAnticoneBlocks struct {
+type RustweavedMessage_RequestNextPruningPointAndItsAnticoneBlocks struct {
 	RequestNextPruningPointAndItsAnticoneBlocks *RequestNextPruningPointAndItsAnticoneBlocksMessage `protobuf:"bytes,56,opt,name=requestNextPruningPointAndItsAnticoneBlocks,proto3,oneof"`
 }
 
-type KaspadMessage_GetCurrentNetworkRequest struct {
+type RustweavedMessage_GetCurrentNetworkRequest struct {
 	GetCurrentNetworkRequest *GetCurrentNetworkRequestMessage `protobuf:"bytes,1001,opt,name=getCurrentNetworkRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetCurrentNetworkResponse struct {
+type RustweavedMessage_GetCurrentNetworkResponse struct {
 	GetCurrentNetworkResponse *GetCurrentNetworkResponseMessage `protobuf:"bytes,1002,opt,name=getCurrentNetworkResponse,proto3,oneof"`
 }
 
-type KaspadMessage_SubmitBlockRequest struct {
+type RustweavedMessage_SubmitBlockRequest struct {
 	SubmitBlockRequest *SubmitBlockRequestMessage `protobuf:"bytes,1003,opt,name=submitBlockRequest,proto3,oneof"`
 }
 
-type KaspadMessage_SubmitBlockResponse struct {
+type RustweavedMessage_SubmitBlockResponse struct {
 	SubmitBlockResponse *SubmitBlockResponseMessage `protobuf:"bytes,1004,opt,name=submitBlockResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockTemplateRequest struct {
+type RustweavedMessage_GetBlockTemplateRequest struct {
 	GetBlockTemplateRequest *GetBlockTemplateRequestMessage `protobuf:"bytes,1005,opt,name=getBlockTemplateRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockTemplateResponse struct {
+type RustweavedMessage_GetBlockTemplateResponse struct {
 	GetBlockTemplateResponse *GetBlockTemplateResponseMessage `protobuf:"bytes,1006,opt,name=getBlockTemplateResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyBlockAddedRequest struct {
+type RustweavedMessage_NotifyBlockAddedRequest struct {
 	NotifyBlockAddedRequest *NotifyBlockAddedRequestMessage `protobuf:"bytes,1007,opt,name=notifyBlockAddedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyBlockAddedResponse struct {
+type RustweavedMessage_NotifyBlockAddedResponse struct {
 	NotifyBlockAddedResponse *NotifyBlockAddedResponseMessage `protobuf:"bytes,1008,opt,name=notifyBlockAddedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_BlockAddedNotification struct {
+type RustweavedMessage_BlockAddedNotification struct {
 	BlockAddedNotification *BlockAddedNotificationMessage `protobuf:"bytes,1009,opt,name=blockAddedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetPeerAddressesRequest struct {
+type RustweavedMessage_GetPeerAddressesRequest struct {
 	GetPeerAddressesRequest *GetPeerAddressesRequestMessage `protobuf:"bytes,1010,opt,name=getPeerAddressesRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetPeerAddressesResponse struct {
+type RustweavedMessage_GetPeerAddressesResponse struct {
 	GetPeerAddressesResponse *GetPeerAddressesResponseMessage `protobuf:"bytes,1011,opt,name=getPeerAddressesResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetSelectedTipHashRequest struct {
+type RustweavedMessage_GetSelectedTipHashRequest struct {
 	GetSelectedTipHashRequest *GetSelectedTipHashRequestMessage `protobuf:"bytes,1012,opt,name=getSelectedTipHashRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetSelectedTipHashResponse struct {
+type RustweavedMessage_GetSelectedTipHashResponse struct {
 	GetSelectedTipHashResponse *GetSelectedTipHashResponseMessage `protobuf:"bytes,1013,opt,name=getSelectedTipHashResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntryRequest struct {
+type RustweavedMessage_GetMempoolEntryRequest struct {
 	GetMempoolEntryRequest *GetMempoolEntryRequestMessage `protobuf:"bytes,1014,opt,name=getMempoolEntryRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntryResponse struct {
+type RustweavedMessage_GetMempoolEntryResponse struct {
 	GetMempoolEntryResponse *GetMempoolEntryResponseMessage `protobuf:"bytes,1015,opt,name=getMempoolEntryResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetConnectedPeerInfoRequest struct {
+type RustweavedMessage_GetConnectedPeerInfoRequest struct {
 	GetConnectedPeerInfoRequest *GetConnectedPeerInfoRequestMessage `protobuf:"bytes,1016,opt,name=getConnectedPeerInfoRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetConnectedPeerInfoResponse struct {
+type RustweavedMessage_GetConnectedPeerInfoResponse struct {
 	GetConnectedPeerInfoResponse *GetConnectedPeerInfoResponseMessage `protobuf:"bytes,1017,opt,name=getConnectedPeerInfoResponse,proto3,oneof"`
 }
 
-type KaspadMessage_AddPeerRequest struct {
+type RustweavedMessage_AddPeerRequest struct {
 	AddPeerRequest *AddPeerRequestMessage `protobuf:"bytes,1018,opt,name=addPeerRequest,proto3,oneof"`
 }
 
-type KaspadMessage_AddPeerResponse struct {
+type RustweavedMessage_AddPeerResponse struct {
 	AddPeerResponse *AddPeerResponseMessage `protobuf:"bytes,1019,opt,name=addPeerResponse,proto3,oneof"`
 }
 
-type KaspadMessage_SubmitTransactionRequest struct {
+type RustweavedMessage_SubmitTransactionRequest struct {
 	SubmitTransactionRequest *SubmitTransactionRequestMessage `protobuf:"bytes,1020,opt,name=submitTransactionRequest,proto3,oneof"`
 }
 
-type KaspadMessage_SubmitTransactionResponse struct {
+type RustweavedMessage_SubmitTransactionResponse struct {
 	SubmitTransactionResponse *SubmitTransactionResponseMessage `protobuf:"bytes,1021,opt,name=submitTransactionResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualSelectedParentChainChangedRequest struct {
+type RustweavedMessage_NotifyVirtualSelectedParentChainChangedRequest struct {
 	NotifyVirtualSelectedParentChainChangedRequest *NotifyVirtualSelectedParentChainChangedRequestMessage `protobuf:"bytes,1022,opt,name=notifyVirtualSelectedParentChainChangedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualSelectedParentChainChangedResponse struct {
+type RustweavedMessage_NotifyVirtualSelectedParentChainChangedResponse struct {
 	NotifyVirtualSelectedParentChainChangedResponse *NotifyVirtualSelectedParentChainChangedResponseMessage `protobuf:"bytes,1023,opt,name=notifyVirtualSelectedParentChainChangedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_VirtualSelectedParentChainChangedNotification struct {
+type RustweavedMessage_VirtualSelectedParentChainChangedNotification struct {
 	VirtualSelectedParentChainChangedNotification *VirtualSelectedParentChainChangedNotificationMessage `protobuf:"bytes,1024,opt,name=virtualSelectedParentChainChangedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockRequest struct {
+type RustweavedMessage_GetBlockRequest struct {
 	GetBlockRequest *GetBlockRequestMessage `protobuf:"bytes,1025,opt,name=getBlockRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockResponse struct {
+type RustweavedMessage_GetBlockResponse struct {
 	GetBlockResponse *GetBlockResponseMessage `protobuf:"bytes,1026,opt,name=getBlockResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetSubnetworkRequest struct {
+type RustweavedMessage_GetSubnetworkRequest struct {
 	GetSubnetworkRequest *GetSubnetworkRequestMessage `protobuf:"bytes,1027,opt,name=getSubnetworkRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetSubnetworkResponse struct {
+type RustweavedMessage_GetSubnetworkResponse struct {
 	GetSubnetworkResponse *GetSubnetworkResponseMessage `protobuf:"bytes,1028,opt,name=getSubnetworkResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetVirtualSelectedParentChainFromBlockRequest struct {
+type RustweavedMessage_GetVirtualSelectedParentChainFromBlockRequest struct {
 	GetVirtualSelectedParentChainFromBlockRequest *GetVirtualSelectedParentChainFromBlockRequestMessage `protobuf:"bytes,1029,opt,name=getVirtualSelectedParentChainFromBlockRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetVirtualSelectedParentChainFromBlockResponse struct {
+type RustweavedMessage_GetVirtualSelectedParentChainFromBlockResponse struct {
 	GetVirtualSelectedParentChainFromBlockResponse *GetVirtualSelectedParentChainFromBlockResponseMessage `protobuf:"bytes,1030,opt,name=getVirtualSelectedParentChainFromBlockResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlocksRequest struct {
+type RustweavedMessage_GetBlocksRequest struct {
 	GetBlocksRequest *GetBlocksRequestMessage `protobuf:"bytes,1031,opt,name=getBlocksRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlocksResponse struct {
+type RustweavedMessage_GetBlocksResponse struct {
 	GetBlocksResponse *GetBlocksResponseMessage `protobuf:"bytes,1032,opt,name=getBlocksResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockCountRequest struct {
+type RustweavedMessage_GetBlockCountRequest struct {
 	GetBlockCountRequest *GetBlockCountRequestMessage `protobuf:"bytes,1033,opt,name=getBlockCountRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockCountResponse struct {
+type RustweavedMessage_GetBlockCountResponse struct {
 	GetBlockCountResponse *GetBlockCountResponseMessage `protobuf:"bytes,1034,opt,name=getBlockCountResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockDagInfoRequest struct {
+type RustweavedMessage_GetBlockDagInfoRequest struct {
 	GetBlockDagInfoRequest *GetBlockDagInfoRequestMessage `protobuf:"bytes,1035,opt,name=getBlockDagInfoRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockDagInfoResponse struct {
+type RustweavedMessage_GetBlockDagInfoResponse struct {
 	GetBlockDagInfoResponse *GetBlockDagInfoResponseMessage `protobuf:"bytes,1036,opt,name=getBlockDagInfoResponse,proto3,oneof"`
 }
 
-type KaspadMessage_ResolveFinalityConflictRequest struct {
+type RustweavedMessage_ResolveFinalityConflictRequest struct {
 	ResolveFinalityConflictRequest *ResolveFinalityConflictRequestMessage `protobuf:"bytes,1037,opt,name=resolveFinalityConflictRequest,proto3,oneof"`
 }
 
-type KaspadMessage_ResolveFinalityConflictResponse struct {
+type RustweavedMessage_ResolveFinalityConflictResponse struct {
 	ResolveFinalityConflictResponse *ResolveFinalityConflictResponseMessage `protobuf:"bytes,1038,opt,name=resolveFinalityConflictResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyFinalityConflictsRequest struct {
+type RustweavedMessage_NotifyFinalityConflictsRequest struct {
 	NotifyFinalityConflictsRequest *NotifyFinalityConflictsRequestMessage `protobuf:"bytes,1039,opt,name=notifyFinalityConflictsRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyFinalityConflictsResponse struct {
+type RustweavedMessage_NotifyFinalityConflictsResponse struct {
 	NotifyFinalityConflictsResponse *NotifyFinalityConflictsResponseMessage `protobuf:"bytes,1040,opt,name=notifyFinalityConflictsResponse,proto3,oneof"`
 }
 
-type KaspadMessage_FinalityConflictNotification struct {
+type RustweavedMessage_FinalityConflictNotification struct {
 	FinalityConflictNotification *FinalityConflictNotificationMessage `protobuf:"bytes,1041,opt,name=finalityConflictNotification,proto3,oneof"`
 }
 
-type KaspadMessage_FinalityConflictResolvedNotification struct {
+type RustweavedMessage_FinalityConflictResolvedNotification struct {
 	FinalityConflictResolvedNotification *FinalityConflictResolvedNotificationMessage `protobuf:"bytes,1042,opt,name=finalityConflictResolvedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntriesRequest struct {
+type RustweavedMessage_GetMempoolEntriesRequest struct {
 	GetMempoolEntriesRequest *GetMempoolEntriesRequestMessage `protobuf:"bytes,1043,opt,name=getMempoolEntriesRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntriesResponse struct {
+type RustweavedMessage_GetMempoolEntriesResponse struct {
 	GetMempoolEntriesResponse *GetMempoolEntriesResponseMessage `protobuf:"bytes,1044,opt,name=getMempoolEntriesResponse,proto3,oneof"`
 }
 
-type KaspadMessage_ShutDownRequest struct {
+type RustweavedMessage_ShutDownRequest struct {
 	ShutDownRequest *ShutDownRequestMessage `protobuf:"bytes,1045,opt,name=shutDownRequest,proto3,oneof"`
 }
 
-type KaspadMessage_ShutDownResponse struct {
+type RustweavedMessage_ShutDownResponse struct {
 	ShutDownResponse *ShutDownResponseMessage `protobuf:"bytes,1046,opt,name=shutDownResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetHeadersRequest struct {
+type RustweavedMessage_GetHeadersRequest struct {
 	GetHeadersRequest *GetHeadersRequestMessage `protobuf:"bytes,1047,opt,name=getHeadersRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetHeadersResponse struct {
+type RustweavedMessage_GetHeadersResponse struct {
 	GetHeadersResponse *GetHeadersResponseMessage `protobuf:"bytes,1048,opt,name=getHeadersResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyUtxosChangedRequest struct {
+type RustweavedMessage_NotifyUtxosChangedRequest struct {
 	NotifyUtxosChangedRequest *NotifyUtxosChangedRequestMessage `protobuf:"bytes,1049,opt,name=notifyUtxosChangedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyUtxosChangedResponse struct {
+type RustweavedMessage_NotifyUtxosChangedResponse struct {
 	NotifyUtxosChangedResponse *NotifyUtxosChangedResponseMessage `protobuf:"bytes,1050,opt,name=notifyUtxosChangedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_UtxosChangedNotification struct {
+type RustweavedMessage_UtxosChangedNotification struct {
 	UtxosChangedNotification *UtxosChangedNotificationMessage `protobuf:"bytes,1051,opt,name=utxosChangedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetUtxosByAddressesRequest struct {
+type RustweavedMessage_GetUtxosByAddressesRequest struct {
 	GetUtxosByAddressesRequest *GetUtxosByAddressesRequestMessage `protobuf:"bytes,1052,opt,name=getUtxosByAddressesRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetUtxosByAddressesResponse struct {
+type RustweavedMessage_GetUtxosByAddressesResponse struct {
 	GetUtxosByAddressesResponse *GetUtxosByAddressesResponseMessage `protobuf:"bytes,1053,opt,name=getUtxosByAddressesResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetVirtualSelectedParentBlueScoreRequest struct {
+type RustweavedMessage_GetVirtualSelectedParentBlueScoreRequest struct {
 	GetVirtualSelectedParentBlueScoreRequest *GetVirtualSelectedParentBlueScoreRequestMessage `protobuf:"bytes,1054,opt,name=getVirtualSelectedParentBlueScoreRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetVirtualSelectedParentBlueScoreResponse struct {
+type RustweavedMessage_GetVirtualSelectedParentBlueScoreResponse struct {
 	GetVirtualSelectedParentBlueScoreResponse *GetVirtualSelectedParentBlueScoreResponseMessage `protobuf:"bytes,1055,opt,name=getVirtualSelectedParentBlueScoreResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest struct {
+type RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest struct {
 	NotifyVirtualSelectedParentBlueScoreChangedRequest *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage `protobuf:"bytes,1056,opt,name=notifyVirtualSelectedParentBlueScoreChangedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse struct {
+type RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse struct {
 	NotifyVirtualSelectedParentBlueScoreChangedResponse *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage `protobuf:"bytes,1057,opt,name=notifyVirtualSelectedParentBlueScoreChangedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_VirtualSelectedParentBlueScoreChangedNotification struct {
+type RustweavedMessage_VirtualSelectedParentBlueScoreChangedNotification struct {
 	VirtualSelectedParentBlueScoreChangedNotification *VirtualSelectedParentBlueScoreChangedNotificationMessage `protobuf:"bytes,1058,opt,name=virtualSelectedParentBlueScoreChangedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_BanRequest struct {
+type RustweavedMessage_BanRequest struct {
 	BanRequest *BanRequestMessage `protobuf:"bytes,1059,opt,name=banRequest,proto3,oneof"`
 }
 
-type KaspadMessage_BanResponse struct {
+type RustweavedMessage_BanResponse struct {
 	BanResponse *BanResponseMessage `protobuf:"bytes,1060,opt,name=banResponse,proto3,oneof"`
 }
 
-type KaspadMessage_UnbanRequest struct {
+type RustweavedMessage_UnbanRequest struct {
 	UnbanRequest *UnbanRequestMessage `protobuf:"bytes,1061,opt,name=unbanRequest,proto3,oneof"`
 }
 
-type KaspadMessage_UnbanResponse struct {
+type RustweavedMessage_UnbanResponse struct {
 	UnbanResponse *UnbanResponseMessage `protobuf:"bytes,1062,opt,name=unbanResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetInfoRequest struct {
+type RustweavedMessage_GetInfoRequest struct {
 	GetInfoRequest *GetInfoRequestMessage `protobuf:"bytes,1063,opt,name=getInfoRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetInfoResponse struct {
+type RustweavedMessage_GetInfoResponse struct {
 	GetInfoResponse *GetInfoResponseMessage `protobuf:"bytes,1064,opt,name=getInfoResponse,proto3,oneof"`
 }
 
-type KaspadMessage_StopNotifyingUtxosChangedRequest struct {
+type RustweavedMessage_StopNotifyingUtxosChangedRequest struct {
 	StopNotifyingUtxosChangedRequest *StopNotifyingUtxosChangedRequestMessage `protobuf:"bytes,1065,opt,name=stopNotifyingUtxosChangedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_StopNotifyingUtxosChangedResponse struct {
+type RustweavedMessage_StopNotifyingUtxosChangedResponse struct {
 	StopNotifyingUtxosChangedResponse *StopNotifyingUtxosChangedResponseMessage `protobuf:"bytes,1066,opt,name=stopNotifyingUtxosChangedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest struct {
+type RustweavedMessage_NotifyPruningPointUTXOSetOverrideRequest struct {
 	NotifyPruningPointUTXOSetOverrideRequest *NotifyPruningPointUTXOSetOverrideRequestMessage `protobuf:"bytes,1067,opt,name=notifyPruningPointUTXOSetOverrideRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse struct {
+type RustweavedMessage_NotifyPruningPointUTXOSetOverrideResponse struct {
 	NotifyPruningPointUTXOSetOverrideResponse *NotifyPruningPointUTXOSetOverrideResponseMessage `protobuf:"bytes,1068,opt,name=notifyPruningPointUTXOSetOverrideResponse,proto3,oneof"`
 }
 
-type KaspadMessage_PruningPointUTXOSetOverrideNotification struct {
+type RustweavedMessage_PruningPointUTXOSetOverrideNotification struct {
 	PruningPointUTXOSetOverrideNotification *PruningPointUTXOSetOverrideNotificationMessage `protobuf:"bytes,1069,opt,name=pruningPointUTXOSetOverrideNotification,proto3,oneof"`
 }
 
-type KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest struct {
+type RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideRequest struct {
 	StopNotifyingPruningPointUTXOSetOverrideRequest *StopNotifyingPruningPointUTXOSetOverrideRequestMessage `protobuf:"bytes,1070,opt,name=stopNotifyingPruningPointUTXOSetOverrideRequest,proto3,oneof"`
 }
 
-type KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse struct {
+type RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideResponse struct {
 	StopNotifyingPruningPointUTXOSetOverrideResponse *StopNotifyingPruningPointUTXOSetOverrideResponseMessage `protobuf:"bytes,1071,opt,name=stopNotifyingPruningPointUTXOSetOverrideResponse,proto3,oneof"`
 }
 
-type KaspadMessage_EstimateNetworkHashesPerSecondRequest struct {
+type RustweavedMessage_EstimateNetworkHashesPerSecondRequest struct {
 	EstimateNetworkHashesPerSecondRequest *EstimateNetworkHashesPerSecondRequestMessage `protobuf:"bytes,1072,opt,name=estimateNetworkHashesPerSecondRequest,proto3,oneof"`
 }
 
-type KaspadMessage_EstimateNetworkHashesPerSecondResponse struct {
+type RustweavedMessage_EstimateNetworkHashesPerSecondResponse struct {
 	EstimateNetworkHashesPerSecondResponse *EstimateNetworkHashesPerSecondResponseMessage `protobuf:"bytes,1073,opt,name=estimateNetworkHashesPerSecondResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualDaaScoreChangedRequest struct {
+type RustweavedMessage_NotifyVirtualDaaScoreChangedRequest struct {
 	NotifyVirtualDaaScoreChangedRequest *NotifyVirtualDaaScoreChangedRequestMessage `protobuf:"bytes,1074,opt,name=notifyVirtualDaaScoreChangedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualDaaScoreChangedResponse struct {
+type RustweavedMessage_NotifyVirtualDaaScoreChangedResponse struct {
 	NotifyVirtualDaaScoreChangedResponse *NotifyVirtualDaaScoreChangedResponseMessage `protobuf:"bytes,1075,opt,name=notifyVirtualDaaScoreChangedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_VirtualDaaScoreChangedNotification struct {
+type RustweavedMessage_VirtualDaaScoreChangedNotification struct {
 	VirtualDaaScoreChangedNotification *VirtualDaaScoreChangedNotificationMessage `protobuf:"bytes,1076,opt,name=virtualDaaScoreChangedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetBalanceByAddressRequest struct {
+type RustweavedMessage_GetBalanceByAddressRequest struct {
 	GetBalanceByAddressRequest *GetBalanceByAddressRequestMessage `protobuf:"bytes,1077,opt,name=getBalanceByAddressRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBalanceByAddressResponse struct {
+type RustweavedMessage_GetBalanceByAddressResponse struct {
 	GetBalanceByAddressResponse *GetBalanceByAddressResponseMessage `protobuf:"bytes,1078,opt,name=getBalanceByAddressResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetBalancesByAddressesRequest struct {
+type RustweavedMessage_GetBalancesByAddressesRequest struct {
 	GetBalancesByAddressesRequest *GetBalancesByAddressesRequestMessage `protobuf:"bytes,1079,opt,name=getBalancesByAddressesRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBalancesByAddressesResponse struct {
+type RustweavedMessage_GetBalancesByAddressesResponse struct {
 	GetBalancesByAddressesResponse *GetBalancesByAddressesResponseMessage `protobuf:"bytes,1080,opt,name=getBalancesByAddressesResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyNewBlockTemplateRequest struct {
+type RustweavedMessage_NotifyNewBlockTemplateRequest struct {
 	NotifyNewBlockTemplateRequest *NotifyNewBlockTemplateRequestMessage `protobuf:"bytes,1081,opt,name=notifyNewBlockTemplateRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyNewBlockTemplateResponse struct {
+type RustweavedMessage_NotifyNewBlockTemplateResponse struct {
 	NotifyNewBlockTemplateResponse *NotifyNewBlockTemplateResponseMessage `protobuf:"bytes,1082,opt,name=notifyNewBlockTemplateResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NewBlockTemplateNotification struct {
+type RustweavedMessage_NewBlockTemplateNotification struct {
 	NewBlockTemplateNotification *NewBlockTemplateNotificationMessage `protobuf:"bytes,1083,opt,name=newBlockTemplateNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntriesByAddressesRequest struct {
+type RustweavedMessage_GetMempoolEntriesByAddressesRequest struct {
 	GetMempoolEntriesByAddressesRequest *GetMempoolEntriesByAddressesRequestMessage `protobuf:"bytes,1084,opt,name=getMempoolEntriesByAddressesRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntriesByAddressesResponse struct {
+type RustweavedMessage_GetMempoolEntriesByAddressesResponse struct {
 	GetMempoolEntriesByAddressesResponse *GetMempoolEntriesByAddressesResponseMessage `protobuf:"bytes,1085,opt,name=getMempoolEntriesByAddressesResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetCoinSupplyRequest struct {
+type RustweavedMessage_GetCoinSupplyRequest struct {
 	GetCoinSupplyRequest *GetCoinSupplyRequestMessage `protobuf:"bytes,1086,opt,name=getCoinSupplyRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetCoinSupplyResponse struct {
+type RustweavedMessage_GetCoinSupplyResponse struct {
 	GetCoinSupplyResponse *GetCoinSupplyResponseMessage `protobuf:"bytes,1087,opt,name=getCoinSupplyResponse,proto3,oneof"`
 }
 
-func (*KaspadMessage_Addresses) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_Addresses) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_Block) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_Block) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_Transaction) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_Transaction) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_BlockLocator) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_BlockLocator) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestAddresses) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestAddresses) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestRelayBlocks) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestRelayBlocks) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestTransactions) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestTransactions) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_IbdBlock) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_IbdBlock) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_InvRelayBlock) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_InvRelayBlock) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_InvTransactions) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_InvTransactions) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_Ping) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_Ping) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_Pong) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_Pong) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_Verack) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_Verack) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_Version) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_Version) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_TransactionNotFound) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_TransactionNotFound) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_Reject) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_Reject) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_PruningPointUtxoSetChunk) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_PruningPointUtxoSetChunk) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestIBDBlocks) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestIBDBlocks) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_UnexpectedPruningPoint) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_UnexpectedPruningPoint) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_IbdBlockLocator) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_IbdBlockLocator) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_IbdBlockLocatorHighestHash) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_IbdBlockLocatorHighestHash) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestNextPruningPointUtxoSetChunk) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestNextPruningPointUtxoSetChunk) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_DonePruningPointUtxoSetChunks) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_DonePruningPointUtxoSetChunks) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_IbdBlockLocatorHighestHashNotFound) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_IbdBlockLocatorHighestHashNotFound) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_BlockWithTrustedData) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_BlockWithTrustedData) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_DoneBlocksWithTrustedData) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_DoneBlocksWithTrustedData) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestPruningPointAndItsAnticone) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestPruningPointAndItsAnticone) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_BlockHeaders) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_BlockHeaders) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestNextHeaders) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestNextHeaders) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_DoneHeaders) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_DoneHeaders) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestPruningPointUTXOSet) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestPruningPointUTXOSet) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestHeaders) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestHeaders) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestBlockLocator) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestBlockLocator) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_PruningPoints) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_PruningPoints) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestPruningPointProof) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestPruningPointProof) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_PruningPointProof) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_PruningPointProof) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_Ready) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_Ready) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_BlockWithTrustedDataV4) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_BlockWithTrustedDataV4) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_TrustedData) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_TrustedData) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestIBDChainBlockLocator) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestIBDChainBlockLocator) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_IbdChainBlockLocator) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_IbdChainBlockLocator) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestAnticone) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestAnticone) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_RequestNextPruningPointAndItsAnticoneBlocks) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_RequestNextPruningPointAndItsAnticoneBlocks) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetCurrentNetworkRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetCurrentNetworkRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetCurrentNetworkResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetCurrentNetworkResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_SubmitBlockRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_SubmitBlockRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_SubmitBlockResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_SubmitBlockResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockTemplateRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBlockTemplateRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockTemplateResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBlockTemplateResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyBlockAddedRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyBlockAddedRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyBlockAddedResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyBlockAddedResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_BlockAddedNotification) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_BlockAddedNotification) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetPeerAddressesRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetPeerAddressesRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetPeerAddressesResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetPeerAddressesResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetSelectedTipHashRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetSelectedTipHashRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetSelectedTipHashResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetSelectedTipHashResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntryRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetMempoolEntryRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntryResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetMempoolEntryResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetConnectedPeerInfoRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetConnectedPeerInfoRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetConnectedPeerInfoResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetConnectedPeerInfoResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_AddPeerRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_AddPeerRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_AddPeerResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_AddPeerResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_SubmitTransactionRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_SubmitTransactionRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_SubmitTransactionResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_SubmitTransactionResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualSelectedParentChainChangedRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyVirtualSelectedParentChainChangedRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualSelectedParentChainChangedResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyVirtualSelectedParentChainChangedResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_VirtualSelectedParentChainChangedNotification) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_VirtualSelectedParentChainChangedNotification) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBlockRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBlockResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetSubnetworkRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetSubnetworkRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetSubnetworkResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetSubnetworkResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetVirtualSelectedParentChainFromBlockRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetVirtualSelectedParentChainFromBlockRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetVirtualSelectedParentChainFromBlockResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetVirtualSelectedParentChainFromBlockResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBlocksRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBlocksRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBlocksResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBlocksResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockCountRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBlockCountRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockCountResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBlockCountResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockDagInfoRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBlockDagInfoRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockDagInfoResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBlockDagInfoResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_ResolveFinalityConflictRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_ResolveFinalityConflictRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_ResolveFinalityConflictResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_ResolveFinalityConflictResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyFinalityConflictsRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyFinalityConflictsRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyFinalityConflictsResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyFinalityConflictsResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_FinalityConflictNotification) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_FinalityConflictNotification) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_FinalityConflictResolvedNotification) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_FinalityConflictResolvedNotification) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntriesRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetMempoolEntriesRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntriesResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetMempoolEntriesResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_ShutDownRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_ShutDownRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_ShutDownResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_ShutDownResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetHeadersRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetHeadersRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetHeadersResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetHeadersResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyUtxosChangedRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyUtxosChangedRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyUtxosChangedResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyUtxosChangedResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_UtxosChangedNotification) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_UtxosChangedNotification) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetUtxosByAddressesRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetUtxosByAddressesRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetUtxosByAddressesResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetUtxosByAddressesResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetVirtualSelectedParentBlueScoreRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetVirtualSelectedParentBlueScoreRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetVirtualSelectedParentBlueScoreResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetVirtualSelectedParentBlueScoreResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_VirtualSelectedParentBlueScoreChangedNotification) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_VirtualSelectedParentBlueScoreChangedNotification) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_BanRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_BanRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_BanResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_BanResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_UnbanRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_UnbanRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_UnbanResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_UnbanResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetInfoRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetInfoRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetInfoResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetInfoResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_StopNotifyingUtxosChangedRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_StopNotifyingUtxosChangedRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_StopNotifyingUtxosChangedResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_StopNotifyingUtxosChangedResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyPruningPointUTXOSetOverrideRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyPruningPointUTXOSetOverrideResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_PruningPointUTXOSetOverrideNotification) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_PruningPointUTXOSetOverrideNotification) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_EstimateNetworkHashesPerSecondRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_EstimateNetworkHashesPerSecondRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_EstimateNetworkHashesPerSecondResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_EstimateNetworkHashesPerSecondResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualDaaScoreChangedRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyVirtualDaaScoreChangedRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualDaaScoreChangedResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyVirtualDaaScoreChangedResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_VirtualDaaScoreChangedNotification) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_VirtualDaaScoreChangedNotification) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBalanceByAddressRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBalanceByAddressRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBalanceByAddressResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBalanceByAddressResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBalancesByAddressesRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBalancesByAddressesRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetBalancesByAddressesResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetBalancesByAddressesResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyNewBlockTemplateRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyNewBlockTemplateRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NotifyNewBlockTemplateResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NotifyNewBlockTemplateResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_NewBlockTemplateNotification) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_NewBlockTemplateNotification) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntriesByAddressesRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetMempoolEntriesByAddressesRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntriesByAddressesResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetMempoolEntriesByAddressesResponse) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetCoinSupplyRequest) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetCoinSupplyRequest) isRustweavedMessage_Payload() {}
 
-func (*KaspadMessage_GetCoinSupplyResponse) isKaspadMessage_Payload() {}
+func (*RustweavedMessage_GetCoinSupplyResponse) isRustweavedMessage_Payload() {}
 
 var File_messages_proto protoreflect.FileDescriptor
 
@@ -2804,7 +2804,7 @@ func file_messages_proto_rawDescGZIP() []byte {
 
 var file_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_messages_proto_goTypes = []interface{}{
-	(*KaspadMessage)(nil),                                              // 0: protowire.KaspadMessage
+	(*RustweavedMessage)(nil),                                              // 0: protowire.RustweavedMessage
 	(*AddressesMessage)(nil),                                           // 1: protowire.AddressesMessage
 	(*BlockMessage)(nil),                                               // 2: protowire.BlockMessage
 	(*TransactionMessage)(nil),                                         // 3: protowire.TransactionMessage
@@ -2936,140 +2936,140 @@ var file_messages_proto_goTypes = []interface{}{
 	(*GetCoinSupplyResponseMessage)(nil),                               // 129: protowire.GetCoinSupplyResponseMessage
 }
 var file_messages_proto_depIdxs = []int32{
-	1,   // 0: protowire.KaspadMessage.addresses:type_name -> protowire.AddressesMessage
-	2,   // 1: protowire.KaspadMessage.block:type_name -> protowire.BlockMessage
-	3,   // 2: protowire.KaspadMessage.transaction:type_name -> protowire.TransactionMessage
-	4,   // 3: protowire.KaspadMessage.blockLocator:type_name -> protowire.BlockLocatorMessage
-	5,   // 4: protowire.KaspadMessage.requestAddresses:type_name -> protowire.RequestAddressesMessage
-	6,   // 5: protowire.KaspadMessage.requestRelayBlocks:type_name -> protowire.RequestRelayBlocksMessage
-	7,   // 6: protowire.KaspadMessage.requestTransactions:type_name -> protowire.RequestTransactionsMessage
-	2,   // 7: protowire.KaspadMessage.ibdBlock:type_name -> protowire.BlockMessage
-	8,   // 8: protowire.KaspadMessage.invRelayBlock:type_name -> protowire.InvRelayBlockMessage
-	9,   // 9: protowire.KaspadMessage.invTransactions:type_name -> protowire.InvTransactionsMessage
-	10,  // 10: protowire.KaspadMessage.ping:type_name -> protowire.PingMessage
-	11,  // 11: protowire.KaspadMessage.pong:type_name -> protowire.PongMessage
-	12,  // 12: protowire.KaspadMessage.verack:type_name -> protowire.VerackMessage
-	13,  // 13: protowire.KaspadMessage.version:type_name -> protowire.VersionMessage
-	14,  // 14: protowire.KaspadMessage.transactionNotFound:type_name -> protowire.TransactionNotFoundMessage
-	15,  // 15: protowire.KaspadMessage.reject:type_name -> protowire.RejectMessage
-	16,  // 16: protowire.KaspadMessage.pruningPointUtxoSetChunk:type_name -> protowire.PruningPointUtxoSetChunkMessage
-	17,  // 17: protowire.KaspadMessage.requestIBDBlocks:type_name -> protowire.RequestIBDBlocksMessage
-	18,  // 18: protowire.KaspadMessage.unexpectedPruningPoint:type_name -> protowire.UnexpectedPruningPointMessage
-	19,  // 19: protowire.KaspadMessage.ibdBlockLocator:type_name -> protowire.IbdBlockLocatorMessage
-	20,  // 20: protowire.KaspadMessage.ibdBlockLocatorHighestHash:type_name -> protowire.IbdBlockLocatorHighestHashMessage
-	21,  // 21: protowire.KaspadMessage.requestNextPruningPointUtxoSetChunk:type_name -> protowire.RequestNextPruningPointUtxoSetChunkMessage
-	22,  // 22: protowire.KaspadMessage.donePruningPointUtxoSetChunks:type_name -> protowire.DonePruningPointUtxoSetChunksMessage
-	23,  // 23: protowire.KaspadMessage.ibdBlockLocatorHighestHashNotFound:type_name -> protowire.IbdBlockLocatorHighestHashNotFoundMessage
-	24,  // 24: protowire.KaspadMessage.blockWithTrustedData:type_name -> protowire.BlockWithTrustedDataMessage
-	25,  // 25: protowire.KaspadMessage.doneBlocksWithTrustedData:type_name -> protowire.DoneBlocksWithTrustedDataMessage
-	26,  // 26: protowire.KaspadMessage.requestPruningPointAndItsAnticone:type_name -> protowire.RequestPruningPointAndItsAnticoneMessage
-	27,  // 27: protowire.KaspadMessage.blockHeaders:type_name -> protowire.BlockHeadersMessage
-	28,  // 28: protowire.KaspadMessage.requestNextHeaders:type_name -> protowire.RequestNextHeadersMessage
-	29,  // 29: protowire.KaspadMessage.DoneHeaders:type_name -> protowire.DoneHeadersMessage
-	30,  // 30: protowire.KaspadMessage.requestPruningPointUTXOSet:type_name -> protowire.RequestPruningPointUTXOSetMessage
-	31,  // 31: protowire.KaspadMessage.requestHeaders:type_name -> protowire.RequestHeadersMessage
-	32,  // 32: protowire.KaspadMessage.requestBlockLocator:type_name -> protowire.RequestBlockLocatorMessage
-	33,  // 33: protowire.KaspadMessage.pruningPoints:type_name -> protowire.PruningPointsMessage
-	34,  // 34: protowire.KaspadMessage.requestPruningPointProof:type_name -> protowire.RequestPruningPointProofMessage
-	35,  // 35: protowire.KaspadMessage.pruningPointProof:type_name -> protowire.PruningPointProofMessage
-	36,  // 36: protowire.KaspadMessage.ready:type_name -> protowire.ReadyMessage
-	37,  // 37: protowire.KaspadMessage.blockWithTrustedDataV4:type_name -> protowire.BlockWithTrustedDataV4Message
-	38,  // 38: protowire.KaspadMessage.trustedData:type_name -> protowire.TrustedDataMessage
-	39,  // 39: protowire.KaspadMessage.requestIBDChainBlockLocator:type_name -> protowire.RequestIBDChainBlockLocatorMessage
-	40,  // 40: protowire.KaspadMessage.ibdChainBlockLocator:type_name -> protowire.IbdChainBlockLocatorMessage
-	41,  // 41: protowire.KaspadMessage.requestAnticone:type_name -> protowire.RequestAnticoneMessage
-	42,  // 42: protowire.KaspadMessage.requestNextPruningPointAndItsAnticoneBlocks:type_name -> protowire.RequestNextPruningPointAndItsAnticoneBlocksMessage
-	43,  // 43: protowire.KaspadMessage.getCurrentNetworkRequest:type_name -> protowire.GetCurrentNetworkRequestMessage
-	44,  // 44: protowire.KaspadMessage.getCurrentNetworkResponse:type_name -> protowire.GetCurrentNetworkResponseMessage
-	45,  // 45: protowire.KaspadMessage.submitBlockRequest:type_name -> protowire.SubmitBlockRequestMessage
-	46,  // 46: protowire.KaspadMessage.submitBlockResponse:type_name -> protowire.SubmitBlockResponseMessage
-	47,  // 47: protowire.KaspadMessage.getBlockTemplateRequest:type_name -> protowire.GetBlockTemplateRequestMessage
-	48,  // 48: protowire.KaspadMessage.getBlockTemplateResponse:type_name -> protowire.GetBlockTemplateResponseMessage
-	49,  // 49: protowire.KaspadMessage.notifyBlockAddedRequest:type_name -> protowire.NotifyBlockAddedRequestMessage
-	50,  // 50: protowire.KaspadMessage.notifyBlockAddedResponse:type_name -> protowire.NotifyBlockAddedResponseMessage
-	51,  // 51: protowire.KaspadMessage.blockAddedNotification:type_name -> protowire.BlockAddedNotificationMessage
-	52,  // 52: protowire.KaspadMessage.getPeerAddressesRequest:type_name -> protowire.GetPeerAddressesRequestMessage
-	53,  // 53: protowire.KaspadMessage.getPeerAddressesResponse:type_name -> protowire.GetPeerAddressesResponseMessage
-	54,  // 54: protowire.KaspadMessage.getSelectedTipHashRequest:type_name -> protowire.GetSelectedTipHashRequestMessage
-	55,  // 55: protowire.KaspadMessage.getSelectedTipHashResponse:type_name -> protowire.GetSelectedTipHashResponseMessage
-	56,  // 56: protowire.KaspadMessage.getMempoolEntryRequest:type_name -> protowire.GetMempoolEntryRequestMessage
-	57,  // 57: protowire.KaspadMessage.getMempoolEntryResponse:type_name -> protowire.GetMempoolEntryResponseMessage
-	58,  // 58: protowire.KaspadMessage.getConnectedPeerInfoRequest:type_name -> protowire.GetConnectedPeerInfoRequestMessage
-	59,  // 59: protowire.KaspadMessage.getConnectedPeerInfoResponse:type_name -> protowire.GetConnectedPeerInfoResponseMessage
-	60,  // 60: protowire.KaspadMessage.addPeerRequest:type_name -> protowire.AddPeerRequestMessage
-	61,  // 61: protowire.KaspadMessage.addPeerResponse:type_name -> protowire.AddPeerResponseMessage
-	62,  // 62: protowire.KaspadMessage.submitTransactionRequest:type_name -> protowire.SubmitTransactionRequestMessage
-	63,  // 63: protowire.KaspadMessage.submitTransactionResponse:type_name -> protowire.SubmitTransactionResponseMessage
-	64,  // 64: protowire.KaspadMessage.notifyVirtualSelectedParentChainChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentChainChangedRequestMessage
-	65,  // 65: protowire.KaspadMessage.notifyVirtualSelectedParentChainChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentChainChangedResponseMessage
-	66,  // 66: protowire.KaspadMessage.virtualSelectedParentChainChangedNotification:type_name -> protowire.VirtualSelectedParentChainChangedNotificationMessage
-	67,  // 67: protowire.KaspadMessage.getBlockRequest:type_name -> protowire.GetBlockRequestMessage
-	68,  // 68: protowire.KaspadMessage.getBlockResponse:type_name -> protowire.GetBlockResponseMessage
-	69,  // 69: protowire.KaspadMessage.getSubnetworkRequest:type_name -> protowire.GetSubnetworkRequestMessage
-	70,  // 70: protowire.KaspadMessage.getSubnetworkResponse:type_name -> protowire.GetSubnetworkResponseMessage
-	71,  // 71: protowire.KaspadMessage.getVirtualSelectedParentChainFromBlockRequest:type_name -> protowire.GetVirtualSelectedParentChainFromBlockRequestMessage
-	72,  // 72: protowire.KaspadMessage.getVirtualSelectedParentChainFromBlockResponse:type_name -> protowire.GetVirtualSelectedParentChainFromBlockResponseMessage
-	73,  // 73: protowire.KaspadMessage.getBlocksRequest:type_name -> protowire.GetBlocksRequestMessage
-	74,  // 74: protowire.KaspadMessage.getBlocksResponse:type_name -> protowire.GetBlocksResponseMessage
-	75,  // 75: protowire.KaspadMessage.getBlockCountRequest:type_name -> protowire.GetBlockCountRequestMessage
-	76,  // 76: protowire.KaspadMessage.getBlockCountResponse:type_name -> protowire.GetBlockCountResponseMessage
-	77,  // 77: protowire.KaspadMessage.getBlockDagInfoRequest:type_name -> protowire.GetBlockDagInfoRequestMessage
-	78,  // 78: protowire.KaspadMessage.getBlockDagInfoResponse:type_name -> protowire.GetBlockDagInfoResponseMessage
-	79,  // 79: protowire.KaspadMessage.resolveFinalityConflictRequest:type_name -> protowire.ResolveFinalityConflictRequestMessage
-	80,  // 80: protowire.KaspadMessage.resolveFinalityConflictResponse:type_name -> protowire.ResolveFinalityConflictResponseMessage
-	81,  // 81: protowire.KaspadMessage.notifyFinalityConflictsRequest:type_name -> protowire.NotifyFinalityConflictsRequestMessage
-	82,  // 82: protowire.KaspadMessage.notifyFinalityConflictsResponse:type_name -> protowire.NotifyFinalityConflictsResponseMessage
-	83,  // 83: protowire.KaspadMessage.finalityConflictNotification:type_name -> protowire.FinalityConflictNotificationMessage
-	84,  // 84: protowire.KaspadMessage.finalityConflictResolvedNotification:type_name -> protowire.FinalityConflictResolvedNotificationMessage
-	85,  // 85: protowire.KaspadMessage.getMempoolEntriesRequest:type_name -> protowire.GetMempoolEntriesRequestMessage
-	86,  // 86: protowire.KaspadMessage.getMempoolEntriesResponse:type_name -> protowire.GetMempoolEntriesResponseMessage
-	87,  // 87: protowire.KaspadMessage.shutDownRequest:type_name -> protowire.ShutDownRequestMessage
-	88,  // 88: protowire.KaspadMessage.shutDownResponse:type_name -> protowire.ShutDownResponseMessage
-	89,  // 89: protowire.KaspadMessage.getHeadersRequest:type_name -> protowire.GetHeadersRequestMessage
-	90,  // 90: protowire.KaspadMessage.getHeadersResponse:type_name -> protowire.GetHeadersResponseMessage
-	91,  // 91: protowire.KaspadMessage.notifyUtxosChangedRequest:type_name -> protowire.NotifyUtxosChangedRequestMessage
-	92,  // 92: protowire.KaspadMessage.notifyUtxosChangedResponse:type_name -> protowire.NotifyUtxosChangedResponseMessage
-	93,  // 93: protowire.KaspadMessage.utxosChangedNotification:type_name -> protowire.UtxosChangedNotificationMessage
-	94,  // 94: protowire.KaspadMessage.getUtxosByAddressesRequest:type_name -> protowire.GetUtxosByAddressesRequestMessage
-	95,  // 95: protowire.KaspadMessage.getUtxosByAddressesResponse:type_name -> protowire.GetUtxosByAddressesResponseMessage
-	96,  // 96: protowire.KaspadMessage.getVirtualSelectedParentBlueScoreRequest:type_name -> protowire.GetVirtualSelectedParentBlueScoreRequestMessage
-	97,  // 97: protowire.KaspadMessage.getVirtualSelectedParentBlueScoreResponse:type_name -> protowire.GetVirtualSelectedParentBlueScoreResponseMessage
-	98,  // 98: protowire.KaspadMessage.notifyVirtualSelectedParentBlueScoreChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage
-	99,  // 99: protowire.KaspadMessage.notifyVirtualSelectedParentBlueScoreChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage
-	100, // 100: protowire.KaspadMessage.virtualSelectedParentBlueScoreChangedNotification:type_name -> protowire.VirtualSelectedParentBlueScoreChangedNotificationMessage
-	101, // 101: protowire.KaspadMessage.banRequest:type_name -> protowire.BanRequestMessage
-	102, // 102: protowire.KaspadMessage.banResponse:type_name -> protowire.BanResponseMessage
-	103, // 103: protowire.KaspadMessage.unbanRequest:type_name -> protowire.UnbanRequestMessage
-	104, // 104: protowire.KaspadMessage.unbanResponse:type_name -> protowire.UnbanResponseMessage
-	105, // 105: protowire.KaspadMessage.getInfoRequest:type_name -> protowire.GetInfoRequestMessage
-	106, // 106: protowire.KaspadMessage.getInfoResponse:type_name -> protowire.GetInfoResponseMessage
-	107, // 107: protowire.KaspadMessage.stopNotifyingUtxosChangedRequest:type_name -> protowire.StopNotifyingUtxosChangedRequestMessage
-	108, // 108: protowire.KaspadMessage.stopNotifyingUtxosChangedResponse:type_name -> protowire.StopNotifyingUtxosChangedResponseMessage
-	109, // 109: protowire.KaspadMessage.notifyPruningPointUTXOSetOverrideRequest:type_name -> protowire.NotifyPruningPointUTXOSetOverrideRequestMessage
-	110, // 110: protowire.KaspadMessage.notifyPruningPointUTXOSetOverrideResponse:type_name -> protowire.NotifyPruningPointUTXOSetOverrideResponseMessage
-	111, // 111: protowire.KaspadMessage.pruningPointUTXOSetOverrideNotification:type_name -> protowire.PruningPointUTXOSetOverrideNotificationMessage
-	112, // 112: protowire.KaspadMessage.stopNotifyingPruningPointUTXOSetOverrideRequest:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideRequestMessage
-	113, // 113: protowire.KaspadMessage.stopNotifyingPruningPointUTXOSetOverrideResponse:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideResponseMessage
-	114, // 114: protowire.KaspadMessage.estimateNetworkHashesPerSecondRequest:type_name -> protowire.EstimateNetworkHashesPerSecondRequestMessage
-	115, // 115: protowire.KaspadMessage.estimateNetworkHashesPerSecondResponse:type_name -> protowire.EstimateNetworkHashesPerSecondResponseMessage
-	116, // 116: protowire.KaspadMessage.notifyVirtualDaaScoreChangedRequest:type_name -> protowire.NotifyVirtualDaaScoreChangedRequestMessage
-	117, // 117: protowire.KaspadMessage.notifyVirtualDaaScoreChangedResponse:type_name -> protowire.NotifyVirtualDaaScoreChangedResponseMessage
-	118, // 118: protowire.KaspadMessage.virtualDaaScoreChangedNotification:type_name -> protowire.VirtualDaaScoreChangedNotificationMessage
-	119, // 119: protowire.KaspadMessage.getBalanceByAddressRequest:type_name -> protowire.GetBalanceByAddressRequestMessage
-	120, // 120: protowire.KaspadMessage.getBalanceByAddressResponse:type_name -> protowire.GetBalanceByAddressResponseMessage
-	121, // 121: protowire.KaspadMessage.getBalancesByAddressesRequest:type_name -> protowire.GetBalancesByAddressesRequestMessage
-	122, // 122: protowire.KaspadMessage.getBalancesByAddressesResponse:type_name -> protowire.GetBalancesByAddressesResponseMessage
-	123, // 123: protowire.KaspadMessage.notifyNewBlockTemplateRequest:type_name -> protowire.NotifyNewBlockTemplateRequestMessage
-	124, // 124: protowire.KaspadMessage.notifyNewBlockTemplateResponse:type_name -> protowire.NotifyNewBlockTemplateResponseMessage
-	125, // 125: protowire.KaspadMessage.newBlockTemplateNotification:type_name -> protowire.NewBlockTemplateNotificationMessage
-	126, // 126: protowire.KaspadMessage.getMempoolEntriesByAddressesRequest:type_name -> protowire.GetMempoolEntriesByAddressesRequestMessage
-	127, // 127: protowire.KaspadMessage.getMempoolEntriesByAddressesResponse:type_name -> protowire.GetMempoolEntriesByAddressesResponseMessage
-	128, // 128: protowire.KaspadMessage.getCoinSupplyRequest:type_name -> protowire.GetCoinSupplyRequestMessage
-	129, // 129: protowire.KaspadMessage.getCoinSupplyResponse:type_name -> protowire.GetCoinSupplyResponseMessage
-	0,   // 130: protowire.P2P.MessageStream:input_type -> protowire.KaspadMessage
-	0,   // 131: protowire.RPC.MessageStream:input_type -> protowire.KaspadMessage
-	0,   // 132: protowire.P2P.MessageStream:output_type -> protowire.KaspadMessage
-	0,   // 133: protowire.RPC.MessageStream:output_type -> protowire.KaspadMessage
+	1,   // 0: protowire.RustweavedMessage.addresses:type_name -> protowire.AddressesMessage
+	2,   // 1: protowire.RustweavedMessage.block:type_name -> protowire.BlockMessage
+	3,   // 2: protowire.RustweavedMessage.transaction:type_name -> protowire.TransactionMessage
+	4,   // 3: protowire.RustweavedMessage.blockLocator:type_name -> protowire.BlockLocatorMessage
+	5,   // 4: protowire.RustweavedMessage.requestAddresses:type_name -> protowire.RequestAddressesMessage
+	6,   // 5: protowire.RustweavedMessage.requestRelayBlocks:type_name -> protowire.RequestRelayBlocksMessage
+	7,   // 6: protowire.RustweavedMessage.requestTransactions:type_name -> protowire.RequestTransactionsMessage
+	2,   // 7: protowire.RustweavedMessage.ibdBlock:type_name -> protowire.BlockMessage
+	8,   // 8: protowire.RustweavedMessage.invRelayBlock:type_name -> protowire.InvRelayBlockMessage
+	9,   // 9: protowire.RustweavedMessage.invTransactions:type_name -> protowire.InvTransactionsMessage
+	10,  // 10: protowire.RustweavedMessage.ping:type_name -> protowire.PingMessage
+	11,  // 11: protowire.RustweavedMessage.pong:type_name -> protowire.PongMessage
+	12,  // 12: protowire.RustweavedMessage.verack:type_name -> protowire.VerackMessage
+	13,  // 13: protowire.RustweavedMessage.version:type_name -> protowire.VersionMessage
+	14,  // 14: protowire.RustweavedMessage.transactionNotFound:type_name -> protowire.TransactionNotFoundMessage
+	15,  // 15: protowire.RustweavedMessage.reject:type_name -> protowire.RejectMessage
+	16,  // 16: protowire.RustweavedMessage.pruningPointUtxoSetChunk:type_name -> protowire.PruningPointUtxoSetChunkMessage
+	17,  // 17: protowire.RustweavedMessage.requestIBDBlocks:type_name -> protowire.RequestIBDBlocksMessage
+	18,  // 18: protowire.RustweavedMessage.unexpectedPruningPoint:type_name -> protowire.UnexpectedPruningPointMessage
+	19,  // 19: protowire.RustweavedMessage.ibdBlockLocator:type_name -> protowire.IbdBlockLocatorMessage
+	20,  // 20: protowire.RustweavedMessage.ibdBlockLocatorHighestHash:type_name -> protowire.IbdBlockLocatorHighestHashMessage
+	21,  // 21: protowire.RustweavedMessage.requestNextPruningPointUtxoSetChunk:type_name -> protowire.RequestNextPruningPointUtxoSetChunkMessage
+	22,  // 22: protowire.RustweavedMessage.donePruningPointUtxoSetChunks:type_name -> protowire.DonePruningPointUtxoSetChunksMessage
+	23,  // 23: protowire.RustweavedMessage.ibdBlockLocatorHighestHashNotFound:type_name -> protowire.IbdBlockLocatorHighestHashNotFoundMessage
+	24,  // 24: protowire.RustweavedMessage.blockWithTrustedData:type_name -> protowire.BlockWithTrustedDataMessage
+	25,  // 25: protowire.RustweavedMessage.doneBlocksWithTrustedData:type_name -> protowire.DoneBlocksWithTrustedDataMessage
+	26,  // 26: protowire.RustweavedMessage.requestPruningPointAndItsAnticone:type_name -> protowire.RequestPruningPointAndItsAnticoneMessage
+	27,  // 27: protowire.RustweavedMessage.blockHeaders:type_name -> protowire.BlockHeadersMessage
+	28,  // 28: protowire.RustweavedMessage.requestNextHeaders:type_name -> protowire.RequestNextHeadersMessage
+	29,  // 29: protowire.RustweavedMessage.DoneHeaders:type_name -> protowire.DoneHeadersMessage
+	30,  // 30: protowire.RustweavedMessage.requestPruningPointUTXOSet:type_name -> protowire.RequestPruningPointUTXOSetMessage
+	31,  // 31: protowire.RustweavedMessage.requestHeaders:type_name -> protowire.RequestHeadersMessage
+	32,  // 32: protowire.RustweavedMessage.requestBlockLocator:type_name -> protowire.RequestBlockLocatorMessage
+	33,  // 33: protowire.RustweavedMessage.pruningPoints:type_name -> protowire.PruningPointsMessage
+	34,  // 34: protowire.RustweavedMessage.requestPruningPointProof:type_name -> protowire.RequestPruningPointProofMessage
+	35,  // 35: protowire.RustweavedMessage.pruningPointProof:type_name -> protowire.PruningPointProofMessage
+	36,  // 36: protowire.RustweavedMessage.ready:type_name -> protowire.ReadyMessage
+	37,  // 37: protowire.RustweavedMessage.blockWithTrustedDataV4:type_name -> protowire.BlockWithTrustedDataV4Message
+	38,  // 38: protowire.RustweavedMessage.trustedData:type_name -> protowire.TrustedDataMessage
+	39,  // 39: protowire.RustweavedMessage.requestIBDChainBlockLocator:type_name -> protowire.RequestIBDChainBlockLocatorMessage
+	40,  // 40: protowire.RustweavedMessage.ibdChainBlockLocator:type_name -> protowire.IbdChainBlockLocatorMessage
+	41,  // 41: protowire.RustweavedMessage.requestAnticone:type_name -> protowire.RequestAnticoneMessage
+	42,  // 42: protowire.RustweavedMessage.requestNextPruningPointAndItsAnticoneBlocks:type_name -> protowire.RequestNextPruningPointAndItsAnticoneBlocksMessage
+	43,  // 43: protowire.RustweavedMessage.getCurrentNetworkRequest:type_name -> protowire.GetCurrentNetworkRequestMessage
+	44,  // 44: protowire.RustweavedMessage.getCurrentNetworkResponse:type_name -> protowire.GetCurrentNetworkResponseMessage
+	45,  // 45: protowire.RustweavedMessage.submitBlockRequest:type_name -> protowire.SubmitBlockRequestMessage
+	46,  // 46: protowire.RustweavedMessage.submitBlockResponse:type_name -> protowire.SubmitBlockResponseMessage
+	47,  // 47: protowire.RustweavedMessage.getBlockTemplateRequest:type_name -> protowire.GetBlockTemplateRequestMessage
+	48,  // 48: protowire.RustweavedMessage.getBlockTemplateResponse:type_name -> protowire.GetBlockTemplateResponseMessage
+	49,  // 49: protowire.RustweavedMessage.notifyBlockAddedRequest:type_name -> protowire.NotifyBlockAddedRequestMessage
+	50,  // 50: protowire.RustweavedMessage.notifyBlockAddedResponse:type_name -> protowire.NotifyBlockAddedResponseMessage
+	51,  // 51: protowire.RustweavedMessage.blockAddedNotification:type_name -> protowire.BlockAddedNotificationMessage
+	52,  // 52: protowire.RustweavedMessage.getPeerAddressesRequest:type_name -> protowire.GetPeerAddressesRequestMessage
+	53,  // 53: protowire.RustweavedMessage.getPeerAddressesResponse:type_name -> protowire.GetPeerAddressesResponseMessage
+	54,  // 54: protowire.RustweavedMessage.getSelectedTipHashRequest:type_name -> protowire.GetSelectedTipHashRequestMessage
+	55,  // 55: protowire.RustweavedMessage.getSelectedTipHashResponse:type_name -> protowire.GetSelectedTipHashResponseMessage
+	56,  // 56: protowire.RustweavedMessage.getMempoolEntryRequest:type_name -> protowire.GetMempoolEntryRequestMessage
+	57,  // 57: protowire.RustweavedMessage.getMempoolEntryResponse:type_name -> protowire.GetMempoolEntryResponseMessage
+	58,  // 58: protowire.RustweavedMessage.getConnectedPeerInfoRequest:type_name -> protowire.GetConnectedPeerInfoRequestMessage
+	59,  // 59: protowire.RustweavedMessage.getConnectedPeerInfoResponse:type_name -> protowire.GetConnectedPeerInfoResponseMessage
+	60,  // 60: protowire.RustweavedMessage.addPeerRequest:type_name -> protowire.AddPeerRequestMessage
+	61,  // 61: protowire.RustweavedMessage.addPeerResponse:type_name -> protowire.AddPeerResponseMessage
+	62,  // 62: protowire.RustweavedMessage.submitTransactionRequest:type_name -> protowire.SubmitTransactionRequestMessage
+	63,  // 63: protowire.RustweavedMessage.submitTransactionResponse:type_name -> protowire.SubmitTransactionResponseMessage
+	64,  // 64: protowire.RustweavedMessage.notifyVirtualSelectedParentChainChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentChainChangedRequestMessage
+	65,  // 65: protowire.RustweavedMessage.notifyVirtualSelectedParentChainChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentChainChangedResponseMessage
+	66,  // 66: protowire.RustweavedMessage.virtualSelectedParentChainChangedNotification:type_name -> protowire.VirtualSelectedParentChainChangedNotificationMessage
+	67,  // 67: protowire.RustweavedMessage.getBlockRequest:type_name -> protowire.GetBlockRequestMessage
+	68,  // 68: protowire.RustweavedMessage.getBlockResponse:type_name -> protowire.GetBlockResponseMessage
+	69,  // 69: protowire.RustweavedMessage.getSubnetworkRequest:type_name -> protowire.GetSubnetworkRequestMessage
+	70,  // 70: protowire.RustweavedMessage.getSubnetworkResponse:type_name -> protowire.GetSubnetworkResponseMessage
+	71,  // 71: protowire.RustweavedMessage.getVirtualSelectedParentChainFromBlockRequest:type_name -> protowire.GetVirtualSelectedParentChainFromBlockRequestMessage
+	72,  // 72: protowire.RustweavedMessage.getVirtualSelectedParentChainFromBlockResponse:type_name -> protowire.GetVirtualSelectedParentChainFromBlockResponseMessage
+	73,  // 73: protowire.RustweavedMessage.getBlocksRequest:type_name -> protowire.GetBlocksRequestMessage
+	74,  // 74: protowire.RustweavedMessage.getBlocksResponse:type_name -> protowire.GetBlocksResponseMessage
+	75,  // 75: protowire.RustweavedMessage.getBlockCountRequest:type_name -> protowire.GetBlockCountRequestMessage
+	76,  // 76: protowire.RustweavedMessage.getBlockCountResponse:type_name -> protowire.GetBlockCountResponseMessage
+	77,  // 77: protowire.RustweavedMessage.getBlockDagInfoRequest:type_name -> protowire.GetBlockDagInfoRequestMessage
+	78,  // 78: protowire.RustweavedMessage.getBlockDagInfoResponse:type_name -> protowire.GetBlockDagInfoResponseMessage
+	79,  // 79: protowire.RustweavedMessage.resolveFinalityConflictRequest:type_name -> protowire.ResolveFinalityConflictRequestMessage
+	80,  // 80: protowire.RustweavedMessage.resolveFinalityConflictResponse:type_name -> protowire.ResolveFinalityConflictResponseMessage
+	81,  // 81: protowire.RustweavedMessage.notifyFinalityConflictsRequest:type_name -> protowire.NotifyFinalityConflictsRequestMessage
+	82,  // 82: protowire.RustweavedMessage.notifyFinalityConflictsResponse:type_name -> protowire.NotifyFinalityConflictsResponseMessage
+	83,  // 83: protowire.RustweavedMessage.finalityConflictNotification:type_name -> protowire.FinalityConflictNotificationMessage
+	84,  // 84: protowire.RustweavedMessage.finalityConflictResolvedNotification:type_name -> protowire.FinalityConflictResolvedNotificationMessage
+	85,  // 85: protowire.RustweavedMessage.getMempoolEntriesRequest:type_name -> protowire.GetMempoolEntriesRequestMessage
+	86,  // 86: protowire.RustweavedMessage.getMempoolEntriesResponse:type_name -> protowire.GetMempoolEntriesResponseMessage
+	87,  // 87: protowire.RustweavedMessage.shutDownRequest:type_name -> protowire.ShutDownRequestMessage
+	88,  // 88: protowire.RustweavedMessage.shutDownResponse:type_name -> protowire.ShutDownResponseMessage
+	89,  // 89: protowire.RustweavedMessage.getHeadersRequest:type_name -> protowire.GetHeadersRequestMessage
+	90,  // 90: protowire.RustweavedMessage.getHeadersResponse:type_name -> protowire.GetHeadersResponseMessage
+	91,  // 91: protowire.RustweavedMessage.notifyUtxosChangedRequest:type_name -> protowire.NotifyUtxosChangedRequestMessage
+	92,  // 92: protowire.RustweavedMessage.notifyUtxosChangedResponse:type_name -> protowire.NotifyUtxosChangedResponseMessage
+	93,  // 93: protowire.RustweavedMessage.utxosChangedNotification:type_name -> protowire.UtxosChangedNotificationMessage
+	94,  // 94: protowire.RustweavedMessage.getUtxosByAddressesRequest:type_name -> protowire.GetUtxosByAddressesRequestMessage
+	95,  // 95: protowire.RustweavedMessage.getUtxosByAddressesResponse:type_name -> protowire.GetUtxosByAddressesResponseMessage
+	96,  // 96: protowire.RustweavedMessage.getVirtualSelectedParentBlueScoreRequest:type_name -> protowire.GetVirtualSelectedParentBlueScoreRequestMessage
+	97,  // 97: protowire.RustweavedMessage.getVirtualSelectedParentBlueScoreResponse:type_name -> protowire.GetVirtualSelectedParentBlueScoreResponseMessage
+	98,  // 98: protowire.RustweavedMessage.notifyVirtualSelectedParentBlueScoreChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage
+	99,  // 99: protowire.RustweavedMessage.notifyVirtualSelectedParentBlueScoreChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage
+	100, // 100: protowire.RustweavedMessage.virtualSelectedParentBlueScoreChangedNotification:type_name -> protowire.VirtualSelectedParentBlueScoreChangedNotificationMessage
+	101, // 101: protowire.RustweavedMessage.banRequest:type_name -> protowire.BanRequestMessage
+	102, // 102: protowire.RustweavedMessage.banResponse:type_name -> protowire.BanResponseMessage
+	103, // 103: protowire.RustweavedMessage.unbanRequest:type_name -> protowire.UnbanRequestMessage
+	104, // 104: protowire.RustweavedMessage.unbanResponse:type_name -> protowire.UnbanResponseMessage
+	105, // 105: protowire.RustweavedMessage.getInfoRequest:type_name -> protowire.GetInfoRequestMessage
+	106, // 106: protowire.RustweavedMessage.getInfoResponse:type_name -> protowire.GetInfoResponseMessage
+	107, // 107: protowire.RustweavedMessage.stopNotifyingUtxosChangedRequest:type_name -> protowire.StopNotifyingUtxosChangedRequestMessage
+	108, // 108: protowire.RustweavedMessage.stopNotifyingUtxosChangedResponse:type_name -> protowire.StopNotifyingUtxosChangedResponseMessage
+	109, // 109: protowire.RustweavedMessage.notifyPruningPointUTXOSetOverrideRequest:type_name -> protowire.NotifyPruningPointUTXOSetOverrideRequestMessage
+	110, // 110: protowire.RustweavedMessage.notifyPruningPointUTXOSetOverrideResponse:type_name -> protowire.NotifyPruningPointUTXOSetOverrideResponseMessage
+	111, // 111: protowire.RustweavedMessage.pruningPointUTXOSetOverrideNotification:type_name -> protowire.PruningPointUTXOSetOverrideNotificationMessage
+	112, // 112: protowire.RustweavedMessage.stopNotifyingPruningPointUTXOSetOverrideRequest:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideRequestMessage
+	113, // 113: protowire.RustweavedMessage.stopNotifyingPruningPointUTXOSetOverrideResponse:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideResponseMessage
+	114, // 114: protowire.RustweavedMessage.estimateNetworkHashesPerSecondRequest:type_name -> protowire.EstimateNetworkHashesPerSecondRequestMessage
+	115, // 115: protowire.RustweavedMessage.estimateNetworkHashesPerSecondResponse:type_name -> protowire.EstimateNetworkHashesPerSecondResponseMessage
+	116, // 116: protowire.RustweavedMessage.notifyVirtualDaaScoreChangedRequest:type_name -> protowire.NotifyVirtualDaaScoreChangedRequestMessage
+	117, // 117: protowire.RustweavedMessage.notifyVirtualDaaScoreChangedResponse:type_name -> protowire.NotifyVirtualDaaScoreChangedResponseMessage
+	118, // 118: protowire.RustweavedMessage.virtualDaaScoreChangedNotification:type_name -> protowire.VirtualDaaScoreChangedNotificationMessage
+	119, // 119: protowire.RustweavedMessage.getBalanceByAddressRequest:type_name -> protowire.GetBalanceByAddressRequestMessage
+	120, // 120: protowire.RustweavedMessage.getBalanceByAddressResponse:type_name -> protowire.GetBalanceByAddressResponseMessage
+	121, // 121: protowire.RustweavedMessage.getBalancesByAddressesRequest:type_name -> protowire.GetBalancesByAddressesRequestMessage
+	122, // 122: protowire.RustweavedMessage.getBalancesByAddressesResponse:type_name -> protowire.GetBalancesByAddressesResponseMessage
+	123, // 123: protowire.RustweavedMessage.notifyNewBlockTemplateRequest:type_name -> protowire.NotifyNewBlockTemplateRequestMessage
+	124, // 124: protowire.RustweavedMessage.notifyNewBlockTemplateResponse:type_name -> protowire.NotifyNewBlockTemplateResponseMessage
+	125, // 125: protowire.RustweavedMessage.newBlockTemplateNotification:type_name -> protowire.NewBlockTemplateNotificationMessage
+	126, // 126: protowire.RustweavedMessage.getMempoolEntriesByAddressesRequest:type_name -> protowire.GetMempoolEntriesByAddressesRequestMessage
+	127, // 127: protowire.RustweavedMessage.getMempoolEntriesByAddressesResponse:type_name -> protowire.GetMempoolEntriesByAddressesResponseMessage
+	128, // 128: protowire.RustweavedMessage.getCoinSupplyRequest:type_name -> protowire.GetCoinSupplyRequestMessage
+	129, // 129: protowire.RustweavedMessage.getCoinSupplyResponse:type_name -> protowire.GetCoinSupplyResponseMessage
+	0,   // 130: protowire.P2P.MessageStream:input_type -> protowire.RustweavedMessage
+	0,   // 131: protowire.RPC.MessageStream:input_type -> protowire.RustweavedMessage
+	0,   // 132: protowire.P2P.MessageStream:output_type -> protowire.RustweavedMessage
+	0,   // 133: protowire.RPC.MessageStream:output_type -> protowire.RustweavedMessage
 	132, // [132:134] is the sub-list for method output_type
 	130, // [130:132] is the sub-list for method input_type
 	130, // [130:130] is the sub-list for extension type_name
@@ -3086,7 +3086,7 @@ func file_messages_proto_init() {
 	file_rpc_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_messages_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*KaspadMessage); i {
+			switch v := v.(*RustweavedMessage); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3099,136 +3099,136 @@ func file_messages_proto_init() {
 		}
 	}
 	file_messages_proto_msgTypes[0].OneofWrappers = []interface{}{
-		(*KaspadMessage_Addresses)(nil),
-		(*KaspadMessage_Block)(nil),
-		(*KaspadMessage_Transaction)(nil),
-		(*KaspadMessage_BlockLocator)(nil),
-		(*KaspadMessage_RequestAddresses)(nil),
-		(*KaspadMessage_RequestRelayBlocks)(nil),
-		(*KaspadMessage_RequestTransactions)(nil),
-		(*KaspadMessage_IbdBlock)(nil),
-		(*KaspadMessage_InvRelayBlock)(nil),
-		(*KaspadMessage_InvTransactions)(nil),
-		(*KaspadMessage_Ping)(nil),
-		(*KaspadMessage_Pong)(nil),
-		(*KaspadMessage_Verack)(nil),
-		(*KaspadMessage_Version)(nil),
-		(*KaspadMessage_TransactionNotFound)(nil),
-		(*KaspadMessage_Reject)(nil),
-		(*KaspadMessage_PruningPointUtxoSetChunk)(nil),
-		(*KaspadMessage_RequestIBDBlocks)(nil),
-		(*KaspadMessage_UnexpectedPruningPoint)(nil),
-		(*KaspadMessage_IbdBlockLocator)(nil),
-		(*KaspadMessage_IbdBlockLocatorHighestHash)(nil),
-		(*KaspadMessage_RequestNextPruningPointUtxoSetChunk)(nil),
-		(*KaspadMessage_DonePruningPointUtxoSetChunks)(nil),
-		(*KaspadMessage_IbdBlockLocatorHighestHashNotFound)(nil),
-		(*KaspadMessage_BlockWithTrustedData)(nil),
-		(*KaspadMessage_DoneBlocksWithTrustedData)(nil),
-		(*KaspadMessage_RequestPruningPointAndItsAnticone)(nil),
-		(*KaspadMessage_BlockHeaders)(nil),
-		(*KaspadMessage_RequestNextHeaders)(nil),
-		(*KaspadMessage_DoneHeaders)(nil),
-		(*KaspadMessage_RequestPruningPointUTXOSet)(nil),
-		(*KaspadMessage_RequestHeaders)(nil),
-		(*KaspadMessage_RequestBlockLocator)(nil),
-		(*KaspadMessage_PruningPoints)(nil),
-		(*KaspadMessage_RequestPruningPointProof)(nil),
-		(*KaspadMessage_PruningPointProof)(nil),
-		(*KaspadMessage_Ready)(nil),
-		(*KaspadMessage_BlockWithTrustedDataV4)(nil),
-		(*KaspadMessage_TrustedData)(nil),
-		(*KaspadMessage_RequestIBDChainBlockLocator)(nil),
-		(*KaspadMessage_IbdChainBlockLocator)(nil),
-		(*KaspadMessage_RequestAnticone)(nil),
-		(*KaspadMessage_RequestNextPruningPointAndItsAnticoneBlocks)(nil),
-		(*KaspadMessage_GetCurrentNetworkRequest)(nil),
-		(*KaspadMessage_GetCurrentNetworkResponse)(nil),
-		(*KaspadMessage_SubmitBlockRequest)(nil),
-		(*KaspadMessage_SubmitBlockResponse)(nil),
-		(*KaspadMessage_GetBlockTemplateRequest)(nil),
-		(*KaspadMessage_GetBlockTemplateResponse)(nil),
-		(*KaspadMessage_NotifyBlockAddedRequest)(nil),
-		(*KaspadMessage_NotifyBlockAddedResponse)(nil),
-		(*KaspadMessage_BlockAddedNotification)(nil),
-		(*KaspadMessage_GetPeerAddressesRequest)(nil),
-		(*KaspadMessage_GetPeerAddressesResponse)(nil),
-		(*KaspadMessage_GetSelectedTipHashRequest)(nil),
-		(*KaspadMessage_GetSelectedTipHashResponse)(nil),
-		(*KaspadMessage_GetMempoolEntryRequest)(nil),
-		(*KaspadMessage_GetMempoolEntryResponse)(nil),
-		(*KaspadMessage_GetConnectedPeerInfoRequest)(nil),
-		(*KaspadMessage_GetConnectedPeerInfoResponse)(nil),
-		(*KaspadMessage_AddPeerRequest)(nil),
-		(*KaspadMessage_AddPeerResponse)(nil),
-		(*KaspadMessage_SubmitTransactionRequest)(nil),
-		(*KaspadMessage_SubmitTransactionResponse)(nil),
-		(*KaspadMessage_NotifyVirtualSelectedParentChainChangedRequest)(nil),
-		(*KaspadMessage_NotifyVirtualSelectedParentChainChangedResponse)(nil),
-		(*KaspadMessage_VirtualSelectedParentChainChangedNotification)(nil),
-		(*KaspadMessage_GetBlockRequest)(nil),
-		(*KaspadMessage_GetBlockResponse)(nil),
-		(*KaspadMessage_GetSubnetworkRequest)(nil),
-		(*KaspadMessage_GetSubnetworkResponse)(nil),
-		(*KaspadMessage_GetVirtualSelectedParentChainFromBlockRequest)(nil),
-		(*KaspadMessage_GetVirtualSelectedParentChainFromBlockResponse)(nil),
-		(*KaspadMessage_GetBlocksRequest)(nil),
-		(*KaspadMessage_GetBlocksResponse)(nil),
-		(*KaspadMessage_GetBlockCountRequest)(nil),
-		(*KaspadMessage_GetBlockCountResponse)(nil),
-		(*KaspadMessage_GetBlockDagInfoRequest)(nil),
-		(*KaspadMessage_GetBlockDagInfoResponse)(nil),
-		(*KaspadMessage_ResolveFinalityConflictRequest)(nil),
-		(*KaspadMessage_ResolveFinalityConflictResponse)(nil),
-		(*KaspadMessage_NotifyFinalityConflictsRequest)(nil),
-		(*KaspadMessage_NotifyFinalityConflictsResponse)(nil),
-		(*KaspadMessage_FinalityConflictNotification)(nil),
-		(*KaspadMessage_FinalityConflictResolvedNotification)(nil),
-		(*KaspadMessage_GetMempoolEntriesRequest)(nil),
-		(*KaspadMessage_GetMempoolEntriesResponse)(nil),
-		(*KaspadMessage_ShutDownRequest)(nil),
-		(*KaspadMessage_ShutDownResponse)(nil),
-		(*KaspadMessage_GetHeadersRequest)(nil),
-		(*KaspadMessage_GetHeadersResponse)(nil),
-		(*KaspadMessage_NotifyUtxosChangedRequest)(nil),
-		(*KaspadMessage_NotifyUtxosChangedResponse)(nil),
-		(*KaspadMessage_UtxosChangedNotification)(nil),
-		(*KaspadMessage_GetUtxosByAddressesRequest)(nil),
-		(*KaspadMessage_GetUtxosByAddressesResponse)(nil),
-		(*KaspadMessage_GetVirtualSelectedParentBlueScoreRequest)(nil),
-		(*KaspadMessage_GetVirtualSelectedParentBlueScoreResponse)(nil),
-		(*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)(nil),
-		(*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)(nil),
-		(*KaspadMessage_VirtualSelectedParentBlueScoreChangedNotification)(nil),
-		(*KaspadMessage_BanRequest)(nil),
-		(*KaspadMessage_BanResponse)(nil),
-		(*KaspadMessage_UnbanRequest)(nil),
-		(*KaspadMessage_UnbanResponse)(nil),
-		(*KaspadMessage_GetInfoRequest)(nil),
-		(*KaspadMessage_GetInfoResponse)(nil),
-		(*KaspadMessage_StopNotifyingUtxosChangedRequest)(nil),
-		(*KaspadMessage_StopNotifyingUtxosChangedResponse)(nil),
-		(*KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest)(nil),
-		(*KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse)(nil),
-		(*KaspadMessage_PruningPointUTXOSetOverrideNotification)(nil),
-		(*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)(nil),
-		(*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse)(nil),
-		(*KaspadMessage_EstimateNetworkHashesPerSecondRequest)(nil),
-		(*KaspadMessage_EstimateNetworkHashesPerSecondResponse)(nil),
-		(*KaspadMessage_NotifyVirtualDaaScoreChangedRequest)(nil),
-		(*KaspadMessage_NotifyVirtualDaaScoreChangedResponse)(nil),
-		(*KaspadMessage_VirtualDaaScoreChangedNotification)(nil),
-		(*KaspadMessage_GetBalanceByAddressRequest)(nil),
-		(*KaspadMessage_GetBalanceByAddressResponse)(nil),
-		(*KaspadMessage_GetBalancesByAddressesRequest)(nil),
-		(*KaspadMessage_GetBalancesByAddressesResponse)(nil),
-		(*KaspadMessage_NotifyNewBlockTemplateRequest)(nil),
-		(*KaspadMessage_NotifyNewBlockTemplateResponse)(nil),
-		(*KaspadMessage_NewBlockTemplateNotification)(nil),
-		(*KaspadMessage_GetMempoolEntriesByAddressesRequest)(nil),
-		(*KaspadMessage_GetMempoolEntriesByAddressesResponse)(nil),
-		(*KaspadMessage_GetCoinSupplyRequest)(nil),
-		(*KaspadMessage_GetCoinSupplyResponse)(nil),
+		(*RustweavedMessage_Addresses)(nil),
+		(*RustweavedMessage_Block)(nil),
+		(*RustweavedMessage_Transaction)(nil),
+		(*RustweavedMessage_BlockLocator)(nil),
+		(*RustweavedMessage_RequestAddresses)(nil),
+		(*RustweavedMessage_RequestRelayBlocks)(nil),
+		(*RustweavedMessage_RequestTransactions)(nil),
+		(*RustweavedMessage_IbdBlock)(nil),
+		(*RustweavedMessage_InvRelayBlock)(nil),
+		(*RustweavedMessage_InvTransactions)(nil),
+		(*RustweavedMessage_Ping)(nil),
+		(*RustweavedMessage_Pong)(nil),
+		(*RustweavedMessage_Verack)(nil),
+		(*RustweavedMessage_Version)(nil),
+		(*RustweavedMessage_TransactionNotFound)(nil),
+		(*RustweavedMessage_Reject)(nil),
+		(*RustweavedMessage_PruningPointUtxoSetChunk)(nil),
+		(*RustweavedMessage_RequestIBDBlocks)(nil),
+		(*RustweavedMessage_UnexpectedPruningPoint)(nil),
+		(*RustweavedMessage_IbdBlockLocator)(nil),
+		(*RustweavedMessage_IbdBlockLocatorHighestHash)(nil),
+		(*RustweavedMessage_RequestNextPruningPointUtxoSetChunk)(nil),
+		(*RustweavedMessage_DonePruningPointUtxoSetChunks)(nil),
+		(*RustweavedMessage_IbdBlockLocatorHighestHashNotFound)(nil),
+		(*RustweavedMessage_BlockWithTrustedData)(nil),
+		(*RustweavedMessage_DoneBlocksWithTrustedData)(nil),
+		(*RustweavedMessage_RequestPruningPointAndItsAnticone)(nil),
+		(*RustweavedMessage_BlockHeaders)(nil),
+		(*RustweavedMessage_RequestNextHeaders)(nil),
+		(*RustweavedMessage_DoneHeaders)(nil),
+		(*RustweavedMessage_RequestPruningPointUTXOSet)(nil),
+		(*RustweavedMessage_RequestHeaders)(nil),
+		(*RustweavedMessage_RequestBlockLocator)(nil),
+		(*RustweavedMessage_PruningPoints)(nil),
+		(*RustweavedMessage_RequestPruningPointProof)(nil),
+		(*RustweavedMessage_PruningPointProof)(nil),
+		(*RustweavedMessage_Ready)(nil),
+		(*RustweavedMessage_BlockWithTrustedDataV4)(nil),
+		(*RustweavedMessage_TrustedData)(nil),
+		(*RustweavedMessage_RequestIBDChainBlockLocator)(nil),
+		(*RustweavedMessage_IbdChainBlockLocator)(nil),
+		(*RustweavedMessage_RequestAnticone)(nil),
+		(*RustweavedMessage_RequestNextPruningPointAndItsAnticoneBlocks)(nil),
+		(*RustweavedMessage_GetCurrentNetworkRequest)(nil),
+		(*RustweavedMessage_GetCurrentNetworkResponse)(nil),
+		(*RustweavedMessage_SubmitBlockRequest)(nil),
+		(*RustweavedMessage_SubmitBlockResponse)(nil),
+		(*RustweavedMessage_GetBlockTemplateRequest)(nil),
+		(*RustweavedMessage_GetBlockTemplateResponse)(nil),
+		(*RustweavedMessage_NotifyBlockAddedRequest)(nil),
+		(*RustweavedMessage_NotifyBlockAddedResponse)(nil),
+		(*RustweavedMessage_BlockAddedNotification)(nil),
+		(*RustweavedMessage_GetPeerAddressesRequest)(nil),
+		(*RustweavedMessage_GetPeerAddressesResponse)(nil),
+		(*RustweavedMessage_GetSelectedTipHashRequest)(nil),
+		(*RustweavedMessage_GetSelectedTipHashResponse)(nil),
+		(*RustweavedMessage_GetMempoolEntryRequest)(nil),
+		(*RustweavedMessage_GetMempoolEntryResponse)(nil),
+		(*RustweavedMessage_GetConnectedPeerInfoRequest)(nil),
+		(*RustweavedMessage_GetConnectedPeerInfoResponse)(nil),
+		(*RustweavedMessage_AddPeerRequest)(nil),
+		(*RustweavedMessage_AddPeerResponse)(nil),
+		(*RustweavedMessage_SubmitTransactionRequest)(nil),
+		(*RustweavedMessage_SubmitTransactionResponse)(nil),
+		(*RustweavedMessage_NotifyVirtualSelectedParentChainChangedRequest)(nil),
+		(*RustweavedMessage_NotifyVirtualSelectedParentChainChangedResponse)(nil),
+		(*RustweavedMessage_VirtualSelectedParentChainChangedNotification)(nil),
+		(*RustweavedMessage_GetBlockRequest)(nil),
+		(*RustweavedMessage_GetBlockResponse)(nil),
+		(*RustweavedMessage_GetSubnetworkRequest)(nil),
+		(*RustweavedMessage_GetSubnetworkResponse)(nil),
+		(*RustweavedMessage_GetVirtualSelectedParentChainFromBlockRequest)(nil),
+		(*RustweavedMessage_GetVirtualSelectedParentChainFromBlockResponse)(nil),
+		(*RustweavedMessage_GetBlocksRequest)(nil),
+		(*RustweavedMessage_GetBlocksResponse)(nil),
+		(*RustweavedMessage_GetBlockCountRequest)(nil),
+		(*RustweavedMessage_GetBlockCountResponse)(nil),
+		(*RustweavedMessage_GetBlockDagInfoRequest)(nil),
+		(*RustweavedMessage_GetBlockDagInfoResponse)(nil),
+		(*RustweavedMessage_ResolveFinalityConflictRequest)(nil),
+		(*RustweavedMessage_ResolveFinalityConflictResponse)(nil),
+		(*RustweavedMessage_NotifyFinalityConflictsRequest)(nil),
+		(*RustweavedMessage_NotifyFinalityConflictsResponse)(nil),
+		(*RustweavedMessage_FinalityConflictNotification)(nil),
+		(*RustweavedMessage_FinalityConflictResolvedNotification)(nil),
+		(*RustweavedMessage_GetMempoolEntriesRequest)(nil),
+		(*RustweavedMessage_GetMempoolEntriesResponse)(nil),
+		(*RustweavedMessage_ShutDownRequest)(nil),
+		(*RustweavedMessage_ShutDownResponse)(nil),
+		(*RustweavedMessage_GetHeadersRequest)(nil),
+		(*RustweavedMessage_GetHeadersResponse)(nil),
+		(*RustweavedMessage_NotifyUtxosChangedRequest)(nil),
+		(*RustweavedMessage_NotifyUtxosChangedResponse)(nil),
+		(*RustweavedMessage_UtxosChangedNotification)(nil),
+		(*RustweavedMessage_GetUtxosByAddressesRequest)(nil),
+		(*RustweavedMessage_GetUtxosByAddressesResponse)(nil),
+		(*RustweavedMessage_GetVirtualSelectedParentBlueScoreRequest)(nil),
+		(*RustweavedMessage_GetVirtualSelectedParentBlueScoreResponse)(nil),
+		(*RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)(nil),
+		(*RustweavedMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)(nil),
+		(*RustweavedMessage_VirtualSelectedParentBlueScoreChangedNotification)(nil),
+		(*RustweavedMessage_BanRequest)(nil),
+		(*RustweavedMessage_BanResponse)(nil),
+		(*RustweavedMessage_UnbanRequest)(nil),
+		(*RustweavedMessage_UnbanResponse)(nil),
+		(*RustweavedMessage_GetInfoRequest)(nil),
+		(*RustweavedMessage_GetInfoResponse)(nil),
+		(*RustweavedMessage_StopNotifyingUtxosChangedRequest)(nil),
+		(*RustweavedMessage_StopNotifyingUtxosChangedResponse)(nil),
+		(*RustweavedMessage_NotifyPruningPointUTXOSetOverrideRequest)(nil),
+		(*RustweavedMessage_NotifyPruningPointUTXOSetOverrideResponse)(nil),
+		(*RustweavedMessage_PruningPointUTXOSetOverrideNotification)(nil),
+		(*RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)(nil),
+		(*RustweavedMessage_StopNotifyingPruningPointUTXOSetOverrideResponse)(nil),
+		(*RustweavedMessage_EstimateNetworkHashesPerSecondRequest)(nil),
+		(*RustweavedMessage_EstimateNetworkHashesPerSecondResponse)(nil),
+		(*RustweavedMessage_NotifyVirtualDaaScoreChangedRequest)(nil),
+		(*RustweavedMessage_NotifyVirtualDaaScoreChangedResponse)(nil),
+		(*RustweavedMessage_VirtualDaaScoreChangedNotification)(nil),
+		(*RustweavedMessage_GetBalanceByAddressRequest)(nil),
+		(*RustweavedMessage_GetBalanceByAddressResponse)(nil),
+		(*RustweavedMessage_GetBalancesByAddressesRequest)(nil),
+		(*RustweavedMessage_GetBalancesByAddressesResponse)(nil),
+		(*RustweavedMessage_NotifyNewBlockTemplateRequest)(nil),
+		(*RustweavedMessage_NotifyNewBlockTemplateResponse)(nil),
+		(*RustweavedMessage_NewBlockTemplateNotification)(nil),
+		(*RustweavedMessage_GetMempoolEntriesByAddressesRequest)(nil),
+		(*RustweavedMessage_GetMempoolEntriesByAddressesResponse)(nil),
+		(*RustweavedMessage_GetCoinSupplyRequest)(nil),
+		(*RustweavedMessage_GetCoinSupplyResponse)(nil),
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{

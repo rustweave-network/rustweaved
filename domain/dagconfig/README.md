@@ -5,8 +5,8 @@ dagconfig
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/rustweave-network/rustweaved/dagconfig)
 
 Package dagconfig defines DAG configuration parameters for the standard
-Kaspad networks and provides the ability for callers to define their own custom
-Kaspad networks.
+Rustweaved networks and provides the ability for callers to define their own custom
+Rustweaved networks.
 
 ## Sample Use
 
@@ -22,7 +22,7 @@ import (
 	"github.com/rustweave-network/rustweaved/domain/dagconfig"
 )
 
-var testnet = flag.Bool("testnet", false, "operate on the testnet Kaspa network")
+var testnet = flag.Bool("testnet", false, "operate on the testnet Rustweave network")
 
 // By default (without --testnet), use mainnet.
 var dagParams = &dagconfig.MainnetParams

@@ -6,7 +6,7 @@ supported kaspa messages to and from the appmessage. This package does not deal
 with the specifics of message handling such as what to do when a message is
 received. This provides the caller with a high level of flexibility.
 
-# Kaspa Message Overview
+# Rustweave Message Overview
 
 The kaspa protocol consists of exchanging messages between peers. Each
 message is preceded by a header which identifies information about it such as
@@ -60,7 +60,7 @@ latest protocol version this package supports and is typically the value to use
 for all outbound connections before a potentially lower protocol version is
 negotiated.
 
-# Kaspa Network
+# Rustweave Network
 
 The kaspa network is a magic number which is used to identify the start of a
 message and which kaspa network the message applies to. This package provides

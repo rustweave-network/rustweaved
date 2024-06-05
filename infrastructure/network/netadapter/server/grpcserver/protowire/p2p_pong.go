@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *KaspadMessage_Pong) toAppMessage() (appmessage.Message, error) {
+func (x *RustweavedMessage_Pong) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "RustweavedMessage_Pong is nil")
 	}
@@ -21,7 +21,7 @@ func (x *PongMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *KaspadMessage_Pong) fromAppMessage(msgPong *appmessage.MsgPong) error {
+func (x *RustweavedMessage_Pong) fromAppMessage(msgPong *appmessage.MsgPong) error {
 	x.Pong = &PongMessage{
 		Nonce: msgPong.Nonce,
 	}

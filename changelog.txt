@@ -1,14 +1,14 @@
-Kaspad v0.12.17 - 2024-02-19
+Rustweaved v0.12.17 - 2024-02-19
 ===========================
 
 * Wallet-related improvements and fixes (#2253, #2257, #2258, #2262)
 
-Kaspad v0.12.16 - 2023-12-25
+Rustweaved v0.12.16 - 2023-12-25
 ===========================
 
 * Adapt wallet UTXO selection to dust patch (#2254)
 
-Kaspad v0.12.15 - 2023-12-16
+Rustweaved v0.12.15 - 2023-12-16
 ===========================
 
 * Update ECDSA address test to use a valid public key (#2202)
@@ -20,19 +20,19 @@ Kaspad v0.12.15 - 2023-12-16
 * Adapt kaspawallet to support testnet 11 (#2211)
 * Fix type detection in RemoveInvalidTransactions (#2252)
 
-Kaspad v0.12.14 - 2023-09-26
+Rustweaved v0.12.14 - 2023-09-26
 ===========================
 
 * Anti-spam measurements against dust attack (#2223)
 
-Kaspad v0.12.13 - 2023-03-06
+Rustweaved v0.12.13 - 2023-03-06
 ===========================
 
 * Bump golang.org/x/crypto from 0.0.0-20210513164829-c07d793c2f9a to 0.1.0 (#2195)
 * Bump golang.org/x/net from 0.0.0-20210405180319-a5a99cb37ef4 to 0.7.0 (#2194)
 * Avoid sending transactions with no funds (#2193)
 
-Kaspad v0.12.12 - 2023-03-06
+Rustweaved v0.12.12 - 2023-03-06
 ===========================
 
 * Rename last references to blockheight (#2089)
@@ -43,12 +43,12 @@ Kaspad v0.12.12 - 2023-03-06
 * Bump golang.org/x/text from 0.3.5 to 0.3.8 (#2190)
 * Upgrade to go 1.19 (#2191)
 
-Kaspad v0.12.11 - 2022-12-1
+Rustweaved v0.12.11 - 2022-12-1
 ===========================
 
 * Fix IBD sync conditions (#2174)
 
-Kaspad v0.12.10 - 2022-11-23
+Rustweaved v0.12.10 - 2022-11-23
 ===========================
 
 * Increase devnet's initial difficulty (#2167)
@@ -61,12 +61,12 @@ Bug fixes:
 Wallet new features:
 * Use one of the From addresses as a change address (#2164)
 
-Kaspad v0.12.9 - 2022-10-23
+Rustweaved v0.12.9 - 2022-10-23
 ===========================
 
 * Create directory before locking lock file (#2160)
 
-Kaspad v0.12.8 - 2022-10-23
+Rustweaved v0.12.8 - 2022-10-23
 ===========================
 
 * Remove hard fork activation rules (#2152)
@@ -76,12 +76,12 @@ Kaspad v0.12.8 - 2022-10-23
 * Make more checks if status is invalid even if the block exists (#2158)
 
 
-Kaspad v0.12.7 - 2022-09-21
+Rustweaved v0.12.7 - 2022-09-21
 ===========================
 
 * Security Fix + Hard fork - Full details can be seen here: https://medium.com/@michaelsuttonil/kaspa-security-patch-and-hard-fork-september-2022-12da617b0094
 
-Kaspad v0.12.6 - 2022-09-09
+Rustweaved v0.12.6 - 2022-09-09
 ===========================
 
 * Remove tests from docker files (#2133)
@@ -92,7 +92,7 @@ Wallet new features:
 Bug fixes:
 * Update virtual on IBD if nearly synced (#2134)
 
-Kaspad v0.12.5 - 2022-08-28
+Rustweaved v0.12.5 - 2022-08-28
 ===========================
 
 * Add tests for hash writers (#2120)
@@ -110,22 +110,22 @@ Bug fixes:
 * Fix RPC client memory/goroutine leak (#2122)
 * Fix a subtle lock sync issue in consensus insert block  (#2121)
 * Mempool: Retrieve stable state of the mempool. Optimze get mempool entries by addresses (#2111)
-* Kaspawallet.send(): Make separate context for Broadcast, to prolong timeout (#2131)
+* Rustweavewallet.send(): Make separate context for Broadcast, to prolong timeout (#2131)
 
 
 
-Kaspad v0.12.4 - 2022-07-17
+Rustweaved v0.12.4 - 2022-07-17
 ===========================
 
 * Crucial fix for the UTXO difference mechanism (#2114)
 * Implement multi-layer auto-compound (#2115)
 
-Kaspad v0.12.3 - 2022-06-29
+Rustweaved v0.12.3 - 2022-06-29
 ===========================
 
 * Fixes a few bugs which can lead to node crashes or out-of-memory errors
 
-Kaspad v0.12.2 - 2022-06-17
+Rustweaved v0.12.2 - 2022-06-17
 ===========================
 
 * Clarify wallet message concerning a wallet daemon sync state  (#2045)
@@ -145,7 +145,7 @@ Bug Fixes:
 * Fix UTXO diff child error  (#2084)
 * Fix `not in selected chain` crash  (#2082)
 
-Kaspad v0.12.1 - 2022-05-31
+Rustweaved v0.12.1 - 2022-05-31
 ===========================
 
 * Fix utxoindex synchronization bug which resulted in kaspawallet orphan tx errors (#2052, #2056, #2059)
@@ -156,7 +156,7 @@ Kaspad v0.12.1 - 2022-05-31
 * Update Dockerfile for go 1.18 (#2038)
 * Remove HF1 activation code (#2042)
 
-Kaspa wallet:
+Rustweave wallet:
 * Various kaspawallet text fixes and log additions (#2032, #2047, #2062)
 * Wallet address synchronization improvement (#2025)
 * Add support for `from` address in `kaspawallet send` (#1964)
@@ -170,7 +170,7 @@ RPC API:
 * Allow blank address in NotifyUTXOsChanged to get all updates (#2027)
 * Include isSynced and isUtxoIndexed in GetInfoResponse (#2068)
 
-Kaspad v0.12.0 - 2022-04-14
+Rustweaved v0.12.0 - 2022-04-14
 ===========================
 Breaking changes:
     Hard-fork at DAA score 14687583 (estimated to be on 28/04 16:38 UTC) which includes:
@@ -186,17 +186,17 @@ Bug fixes:
 Non-breaking changes:
 * Adding a "sweep" command to `kaspawallet` (#2018)
 * Use `blue work` heuristic to skip irrelevant relay blocks
-* Kaspawallet daemon: Add Send and Sign commands (#2016)
+* Rustweavewallet daemon: Add Send and Sign commands (#2016)
 
-Kaspad v0.11.17 - 2022-04-06
+Rustweaved v0.11.17 - 2022-04-06
 ===========================
 * Decrement estimatedHeaderUpperBound from mempool's MaxBlockMass (#2009)
 
-Kaspad v0.11.16 - 2022-04-05
+Rustweaved v0.11.16 - 2022-04-05
 ===========================
 * Don't skip wallet address with different cosigner index (#2007)
 
-Kaspad v0.11.15 - 2022-04-05
+Rustweaved v0.11.15 - 2022-04-05
 ===========================
 * Add support for auto-compound in `kaspawallet send` (#1951)
 * Unite reachability stores (#1963, #1993, #2001)
@@ -214,13 +214,13 @@ Kaspad v0.11.15 - 2022-04-05
 * Fixed a bug in staging of pruning point by index (#2005)
 * Clean up debug log level by moving many frequent logs to trace level (#2004)
 
-Kaspad v0.11.14 - 2022-03-20
+Rustweaved v0.11.14 - 2022-03-20
 ===========================
 * Fix a bug in the new p2p v5 IBD chain negotiation (#1981)
 
-Kaspad v0.11.13 - 2022-03-16
+Rustweaved v0.11.13 - 2022-03-16
 ===========================
-* Display progress of IBD process in Kaspad logs (#1938, #1939, #1949, #1977)
+* Display progress of IBD process in Rustweaved logs (#1938, #1939, #1949, #1977)
 * Optimize DB writes during fresh IBD (#1937)
 * Add AllowConnectionToDifferentVersions flag to kaspactl (#1940)
 * Drop support for p2p v3 (#1942)
@@ -242,11 +242,11 @@ Kaspad v0.11.13 - 2022-03-16
 * Cleanup log output mistakes and try to be more clear to the user (#1976, #1978)
 * Apply avoiding IBD logic from patch10 to p2p v4 IBD handling (#1979)
 
-Kaspad v0.11.11 - 2022-01-27
+Rustweaved v0.11.11 - 2022-01-27
 ===========================
 * Fix for rare consensus bug regarding DAA window order. The bug only affected IBD from scratch and only today (#1934)
 
-Kaspad v0.11.10 - 2022-01-27
+Rustweaved v0.11.10 - 2022-01-27
 ===========================
 * Add monitoring of heap and save heap profile if size is over some limit (#1932)
 * Extract IBD management from invs relay flow to a new separated flow  (#1930)
@@ -254,7 +254,7 @@ Kaspad v0.11.10 - 2022-01-27
 * Filter redundant blocks from daa window on IBD (#1925)
 * Implement a P2P upgrade mechanism (#1921)
 
-Kaspad v0.11.9 - 2021-12-30
+Rustweaved v0.11.9 - 2021-12-30
 ===========================
 Breaking changes:
 * Implement the new monetary policy. Breaking change effective only in ~4 months (#1892)
@@ -271,7 +271,7 @@ Non-breaking changes:
 * Reject outdated non-DAA blocks submitted via RPC  (#1914)
 * Add a profile option to kaspawallet daemon (#1854)
 
-Kaspad v0.11.8 - 2021-12-13
+Rustweaved v0.11.8 - 2021-12-13
 ===========================
 Bug fixes:
 * Update reindex root for each block level (#1881)
@@ -280,7 +280,7 @@ Non-breaking changes:
 * Update readme (#1848)
 * Lower devnet's initial difficulty (#1869)
 
-Kaspad v0.11.7 - 2021-12-11
+Rustweaved v0.11.7 - 2021-12-11
 ===========================
 Breaking changes:
 * kaspawallet: show-address →new-address + show-addresses (#1870)
@@ -293,22 +293,22 @@ Non-breaking changes:
 * Ignore header mass in devnet and testnet (#1879)
 * Remove unused args from CalcSubsidy (#1877)
 * ExpectedHeaderPruningPoint fix (#1876)
-* Changes to libkaspawallet to support Kaspaper (#1878)
+* Changes to libkaspawallet to support Rustweaveper (#1878)
 * Get rid of genesis's UTXO dump (#1867)
 
-Kaspad v0.11.2 - 2021-11-11
+Rustweaved v0.11.2 - 2021-11-11
 ===========================
 Bug fixes:
 * Enlarge p2p max message size to 1gb
 * Fix UTXO chunks logic
 * Increase tests timeout to 20 minutes
 
-Kaspad v0.11.1 - 2021-11-09
+Rustweaved v0.11.1 - 2021-11-09
 ===========================
 Non-breaking changes:
 * Cache the miner state
 
-Kaspad v0.10.2 - 2021-05-18
+Rustweaved v0.10.2 - 2021-05-18
 ===========================
 Non-breaking changes:
 * Fix getBlock and getBlocks RPC commands to return blocks and transactions properly (#1716)
@@ -317,11 +317,11 @@ Non-breaking changes:
 * Fix calcTxSequenceLockFromReferencedUTXOEntries for loop break condition (#1723)
 * Fix overflow when checking coinbase maturity and don't ban peers that send transactions with immature spend (#1722)
 
-Kaspad v0.10.1 - 2021-05-11
+Rustweaved v0.10.1 - 2021-05-11
 ===========================
 * Calculate virtual's acceptance data and multiset after importing a new pruning point (#1700)
 
-Kaspad v0.10.0 - 2021-04-26
+Rustweaved v0.10.0 - 2021-04-26
 ===========================
 Major changes include:
 * Implementing a signature hashing scheme similar to BIP-143
@@ -365,15 +365,15 @@ A partial list of the more-important commits is as follows:
 * Make moving the pruning point faster (#1660)
 * Implement new mechanism for updating UTXO Diffs (#1671)
 
-Kaspad v0.9.2 - 2021-03-31
+Rustweaved v0.9.2 - 2021-03-31
 ===========================
 * Increase the route capacity of InvTransaction messages. (#1603) (#1637)
 
-Kaspad v0.9.1 - 2021-03-14
+Rustweaved v0.9.1 - 2021-03-14
 ===========================
 * Testnet network reset
 
-Kaspad v0.9.0 - 2021-03-04
+Rustweaved v0.9.0 - 2021-03-04
 ===========================
 
 * Merge big subdags in pick virtual parents (#1574)
@@ -392,7 +392,7 @@ Kaspad v0.9.0 - 2021-03-04
 * Add ScriptPublicKey.Version to RPC (#1559)
 * Fix the target block rate to create less bursty mining (#1554)
 
-Kaspad v0.8.10 - 2021-02-25
+Rustweaved v0.8.10 - 2021-02-25
 ===========================
 
 * Fix bug where invalid mempool transactions were not removed (#1551)
