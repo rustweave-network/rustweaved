@@ -7,8 +7,9 @@ import (
 	"github.com/kaspanet/kaspad/domain/consensus/utils/serialization"
 	"github.com/kaspanet/kaspad/util/difficulty"
 
-	"github.com/pkg/errors"
 	"math/big"
+
+	"github.com/pkg/errors"
 )
 
 // State is an intermediate data structure with pre-computed values to speed up mining.
@@ -44,7 +45,7 @@ func NewState(header externalapi.MutableBlockHeader) *State {
 // CalculateProofOfWorkValue hashes the internal header and returns its big.Int value
 func (state *State) CalculateProofOfWorkValue() *big.Int {
 	// PRE_POW_HASH || TIME || 32 zero byte padding || NONCE
-	writer := hashes.NewPoWHashWriter()
+	writer := hashes.PoWHashWriter()
 	writer.InfallibleWrite(state.prePowHash.ByteSlice())
 	err := serialization.WriteElement(writer, state.Timestamp)
 	if err != nil {

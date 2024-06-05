@@ -1,9 +1,10 @@
 package pow
 
 import (
+	"math"
+
 	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
-	"math"
 )
 
 const eps float64 = 1e-9
@@ -85,7 +86,7 @@ func (mat *matrix) HeavyHash(hash *externalapi.DomainHash) *externalapi.DomainHa
 		res[i] = hashBytes[i] ^ (byte(product[2*i]<<4) | byte(product[2*i+1]))
 	}
 	// Hash again
-	writer := hashes.NewHeavyHashWriter()
+	writer := hashes.HeavyHashWriter()
 	writer.InfallibleWrite(res[:])
 	return writer.Finalize()
 }
